@@ -1,0 +1,987 @@
+{
+ "_lisezmoi": "Every figure of the site lives here, never in a page (MASTERFACTORY §4, §17.4). Each value was read on the source named next to it on retrieved_at. RBT, BCBA and BCaBA are certification marks of the Behavior Analyst Certification Board; this site is independent of the BACB.",
+ "year": 2026,
+ "retrieved_at": "2026-11-13",
+ "valid_from": "2026-01-01",
+ "valid_to": "2026-12-31",
+ "sources": {
+  "rbt_handbook": {
+   "url": "https://www.bacb.com/rbt-handbook/",
+   "label": {
+    "en": "BACB, RBT Handbook (updated 10/2026): eligibility, fees, examination outline, retakes, supervision, recertification"
+   }
+  },
+  "rbt_tco": {
+   "url": "https://www.bacb.com/wp-content/rbt-outline-3rdEd/",
+   "label": {
+    "en": "BACB, RBT Test Content Outline (3rd ed.): 43 tasks in 6 domains and the number of questions per domain"
+   }
+  },
+  "rbt_training": {
+   "url": "https://www.bacb.com/wp-content/RBT-40-hr-Training-Requirements",
+   "label": {
+    "en": "BACB, RBT 2026 40-Hour Training Requirements and Curriculum Outline (version 03/2026)"
+   }
+  },
+  "rbt_competency": {
+   "url": "https://www.bacb.com/wp-content/RBT-Initial-Competency-Assessment-2026",
+   "label": {
+    "en": "BACB, RBT Initial Competency Assessment Packet, effective January 1, 2026 (version 11/2026)"
+   }
+  },
+  "rbt_renewal_competency": {
+   "url": "https://www.bacb.com/wp-content/rbt-renewal-competency",
+   "label": {
+    "en": "BACB, RBT Recertification Competency Assessment Packet (version 08/2025)"
+   }
+  },
+  "rbt_pass_rates": {
+   "url": "https://www.bacb.com/wp-content/rbt-pass-rates/",
+   "label": {
+    "en": "BACB, RBT Examination Pass Rates for 40-Hour Training Providers 2025 (updated 05/2026)"
+   }
+  },
+  "rbt_page": {
+   "url": "https://www.bacb.com/rbt/",
+   "label": {
+    "en": "BACB, Registered Behavior Technician: certification page"
+   }
+  },
+  "bacb_ip": {
+   "url": "https://www.bacb.com/bacb-intellectual-property/",
+   "label": {
+    "en": "BACB, Intellectual Property Guidelines: trademarks, domain names, fair use and citation"
+   }
+  },
+  "bacb_licensure": {
+   "url": "https://www.bacb.com/u-s-licensure-of-behavior-analysts/",
+   "label": {
+    "en": "BACB, U.S. Licensure of Behavior Analysts: states, year of the law and licensure board (compiled list, not a statute)"
+   }
+  },
+  "bacb_regbrief": {
+   "url": "https://www.bacb.com/wp-content/uploads/2025/12/Regulatory-Brief-LicensureLaws-250322-a.pdf",
+   "label": {
+    "en": "BACB, Regulatory Brief: A Summary of US Behavior Analyst Licensure Laws (version 09/2026)"
+   }
+  },
+  "bcba_handbook": {
+   "url": "https://www.bacb.com/bcba-handbook/",
+   "label": {
+    "en": "BACB, BCBA Handbook (updated 11/2026): pathways, fieldwork, fees, examination outline"
+   }
+  },
+  "bcba_tco": {
+   "url": "https://www.bacb.com/wp-content/bcba-outline-6thEd/",
+   "label": {
+    "en": "BACB, BCBA Test Content Outline (6th ed.): 104 tasks in 9 domains"
+   }
+  },
+  "pearson_bacb": {
+   "url": "https://www.pearsonvue.com/us/en/bacb.html",
+   "label": {
+    "en": "Pearson VUE, BACB testing page: scheduling, test centers"
+   }
+  },
+  "va_test_fees": {
+   "url": "https://www.va.gov/education/about-gi-bill-benefits/how-to-use-benefits/test-fees/",
+   "label": {
+    "en": "U.S. Department of Veterans Affairs, GI Bill reimbursement of licensing and certification test fees"
+   }
+  },
+  "wa_wac_990": {
+   "url": "https://app.leg.wa.gov/wac/default.aspx?cite=246-805-990",
+   "label": {
+    "en": "Washington State Legislature, WAC 246-805-990: applied behavior analysis fees (certified behavior technician)"
+   }
+  },
+  "wa_wac_300": {
+   "url": "https://app.leg.wa.gov/wac/default.aspx?cite=246-805-300",
+   "label": {
+    "en": "Washington State Legislature, WAC 246-805-300: certified behavior technician, application requirements"
+   }
+  },
+  "wa_doh": {
+   "url": "https://doh.wa.gov/licenses-permits-and-certificates/professions-new-renew-or-update/applied-behavior-analysis",
+   "label": {
+    "en": "Washington State Department of Health, Applied Behavior Analysis credentials (LBA, LABA, CBT)"
+   }
+  },
+  "or_hlo": {
+   "url": "https://www.oregon.gov/oha/PH/HLO/Pages/Board-Behavior-Analysis-Regulatory-License.aspx",
+   "label": {
+    "en": "Oregon Health Authority, Health Licensing Office: Behavior Analysis Regulatory Board, license and registration requirements"
+   }
+  },
+  "or_form": {
+   "url": "https://www.oregon.gov/oha/PH/HLO/Forms/BARB-Behavior_Analysis_Interventionist_Registration_Application.pdf",
+   "label": {
+    "en": "Oregon Health Licensing Office, Behavior Analysis Interventionist Registration Application (revised 11/01/2025): fees and proofs"
+   }
+  },
+  "nv_board": {
+   "url": "https://www.nvababoard.org/licensing-registration/",
+   "label": {
+    "en": "Nevada Applied Behavior Analysis Board, Licensing and Registration: RBT registration, background clearance, fees"
+   }
+  },
+  "la_rules": {
+   "url": "https://lababoard.org/rules-chapter-3/",
+   "label": {
+    "en": "Louisiana Behavior Analyst Board, Rules Chapter 3: registration of line technicians and fee schedule"
+   }
+  },
+  "la_forms": {
+   "url": "https://lababoard.org/registered-line-technician-rlt-forms/",
+   "label": {
+    "en": "Louisiana Behavior Analyst Board, Registered Line Technician (RLT) forms and renewal"
+   }
+  },
+  "tx_tdlr": {
+   "url": "https://www.tdlr.texas.gov/bhv/",
+   "label": {
+    "en": "Texas Department of Licensing and Regulation, Behavior Analysts program"
+   }
+  },
+  "ny_op": {
+   "url": "https://www.op.nysed.gov/professions-index/applied-behavior-analysis",
+   "label": {
+    "en": "New York State Education Department, Office of the Professions: Applied Behavior Analysis (licensed behavior analysts, certified behavior analyst assistants)"
+   }
+  },
+  "il_idfpr": {
+   "url": "https://idfpr.illinois.gov/profs/behavior-analysts.html",
+   "label": {
+    "en": "Illinois Department of Financial and Professional Regulation, Behavior Analysts"
+   }
+  },
+  "va_dhp": {
+   "url": "https://www.dhp.virginia.gov/Boards/Medicine/AbouttheBoard/RegulatedProfessions/BehaviorAnalyst/",
+   "label": {
+    "en": "Virginia Board of Medicine, Behavior Analyst and Assistant Behavior Analyst"
+   }
+  },
+  "in_pla": {
+   "url": "https://www.in.gov/pla/professions/behavior-analyst/",
+   "label": {
+    "en": "Indiana Professional Licensing Agency, Behavior Analyst"
+   }
+  },
+  "md_bopc": {
+   "url": "https://health.maryland.gov/bopc/Pages/analysts.aspx",
+   "label": {
+    "en": "Maryland Board of Professional Counselors and Therapists, Behavior Analyst License"
+   }
+  },
+  "mo_pr": {
+   "url": "https://pr.mo.gov/ba.asp",
+   "label": {
+    "en": "Missouri Division of Professional Registration, Behavior Analyst Advisory Board"
+   }
+  }
+ },
+ "exams": {
+  "rbt": {
+   "label": "RBT exam",
+   "name": "Registered Behavior Technician certification examination",
+   "owner": "BACB",
+   "vendor": "Pearson VUE",
+   "items": 85,
+   "scored": 75,
+   "unscored": 10,
+   "minutes": 90,
+   "options": 4,
+   "editionLabel": "RBT Test Content Outline (3rd ed.)",
+   "tasks": 43,
+   "scoring": "Pass/fail; passing score set by a modified Angoff panel and not published as a count of correct answers",
+   "passText": "Official result: pass or fail, with no published passing count",
+   "target": 0.8,
+   "feeApplication": 65,
+   "feeExam": 45,
+   "feeRetakeApplication": 0,
+   "retakeWaitDays": 7,
+   "attemptsMax": 8,
+   "authorizationMonths": 12,
+   "rescheduleFee5to30Days": 27,
+   "rescheduleFee48hTo5Days": 32,
+   "domains": [
+    {
+     "code": "A",
+     "name": "Data Collection and Graphing",
+     "short": "Data collection",
+     "items": 13,
+     "share": 0.17,
+     "tasks": 8
+    },
+    {
+     "code": "B",
+     "name": "Behavior Assessment",
+     "short": "Assessment",
+     "items": 8,
+     "share": 0.11,
+     "tasks": 3
+    },
+    {
+     "code": "C",
+     "name": "Behavior Acquisition",
+     "short": "Skill acquisition",
+     "items": 19,
+     "share": 0.25,
+     "tasks": 11
+    },
+    {
+     "code": "D",
+     "name": "Behavior Reduction",
+     "short": "Behavior reduction",
+     "items": 14,
+     "share": 0.19,
+     "tasks": 7
+    },
+    {
+     "code": "E",
+     "name": "Documentation and Reporting",
+     "short": "Documentation",
+     "items": 10,
+     "share": 0.13,
+     "tasks": 4
+    },
+    {
+     "code": "F",
+     "name": "Ethics",
+     "short": "Ethics",
+     "items": 11,
+     "share": 0.15,
+     "tasks": 10
+    }
+   ]
+  },
+  "bcba": {
+   "label": "BCBA exam",
+   "name": "Board Certified Behavior Analyst certification examination",
+   "owner": "BACB",
+   "vendor": "Pearson VUE",
+   "items": 185,
+   "scored": 175,
+   "unscored": 10,
+   "minutes": 240,
+   "options": 4,
+   "editionLabel": "BCBA Test Content Outline (6th ed.)",
+   "tasks": 104,
+   "scoring": "Pass/fail; result given at the testing center",
+   "passText": "Official result: pass or fail, with no published passing count",
+   "target": 0.8,
+   "feeApplication": 245,
+   "feeExam": 125,
+   "feeRetakeApplication": 140,
+   "retakeWaitDays": 30,
+   "attemptsMax": 8,
+   "authorizationMonths": 24,
+   "fieldworkSupervised": 2000,
+   "fieldworkConcentrated": 1500,
+   "concentratedMultiplier": 1.33,
+   "unrestrictedShare": 0.6,
+   "monthMinHours": 20,
+   "monthMaxHours": 130,
+   "domains": [
+    {
+     "code": "A",
+     "name": "Behaviorism and Philosophical Foundations",
+     "short": "Foundations",
+     "items": 8,
+     "share": 0.05
+    },
+    {
+     "code": "B",
+     "name": "Concepts and Principles",
+     "short": "Concepts",
+     "items": 24,
+     "share": 0.14
+    },
+    {
+     "code": "C",
+     "name": "Measurement, Data Display, and Interpretation",
+     "short": "Measurement",
+     "items": 21,
+     "share": 0.12
+    },
+    {
+     "code": "D",
+     "name": "Experimental Design",
+     "short": "Experimental design",
+     "items": 13,
+     "share": 0.07
+    },
+    {
+     "code": "E",
+     "name": "Ethical and Professional Issues",
+     "short": "Ethics",
+     "items": 22,
+     "share": 0.13
+    },
+    {
+     "code": "F",
+     "name": "Behavior Assessment",
+     "short": "Assessment",
+     "items": 23,
+     "share": 0.13
+    },
+    {
+     "code": "G",
+     "name": "Behavior-Change Procedures",
+     "short": "Behavior change",
+     "items": 25,
+     "share": 0.14
+    },
+    {
+     "code": "H",
+     "name": "Selecting and Implementing Interventions",
+     "short": "Interventions",
+     "items": 20,
+     "share": 0.11
+    },
+    {
+     "code": "I",
+     "name": "Personnel Supervision and Management",
+     "short": "Supervision",
+     "items": 19,
+     "share": 0.11
+    }
+   ]
+  }
+ },
+ "rules": {
+  "eligibility": {
+   "minAge": 18,
+   "education": "high school diploma or equivalent",
+   "checksWithinDays": 180,
+   "attestationWithinDays": 90
+  },
+  "training": {
+   "hours": 40,
+   "minDays": 5,
+   "maxDays": 180,
+   "sectionsHours": {
+    "intro": 2,
+    "preparing": 1,
+    "data": 3,
+    "assessment": 3,
+    "interventions": 20,
+    "documentation": 3,
+    "ethics": 5,
+    "nextSteps": 1,
+    "unallocated": 2
+   },
+   "trainerSupervisionTrainingHours": 8,
+   "sections": [
+    [
+     "A",
+     "Introduction to applied behavior analysis",
+     2
+    ],
+    [
+     "B",
+     "Preparing for service delivery",
+     1
+    ],
+    [
+     "C",
+     "Data collection and graphing",
+     3
+    ],
+    [
+     "D",
+     "Assisting with behavior assessments",
+     3
+    ],
+    [
+     "E",
+     "Behavior-change interventions",
+     20
+    ],
+    [
+     "F",
+     "Service delivery documentation and reporting",
+     3
+    ],
+    [
+     "G",
+     "Ethics and professionalism",
+     5
+    ],
+    [
+     "H",
+     "Next steps in the certification process",
+     1
+    ]
+   ],
+   "_source": "RBT 2026 40-Hour Training Requirements and Curriculum Outline, version 03/2026: 40 hours in 5 to 180 days, sections A to H totalling 38 hours plus 2 unallocated hours; Responsible Trainer BCaBA, BCBA or BCBA-D with the 8-hour supervision training; assistant trainers RBT or higher; in person or online; readings do not count."
+  },
+  "competency": {
+   "tasks": 19,
+   "withClientMin": 3,
+   "withinDaysBeforeApplication": 90,
+   "assessmentTypes": [
+    "With a client",
+    "Role-play",
+    "Interview"
+   ],
+   "list": [
+    {
+     "n": 1,
+     "section": "Measurement",
+     "name": "Continuous measurement",
+     "types": [
+      "client",
+      "roleplay"
+     ]
+    },
+    {
+     "n": 2,
+     "section": "Measurement",
+     "name": "Discontinuous measurement",
+     "types": [
+      "client",
+      "roleplay"
+     ]
+    },
+    {
+     "n": 3,
+     "section": "Measurement",
+     "name": "Entering data and updating graphs",
+     "types": [
+      "client",
+      "roleplay"
+     ]
+    },
+    {
+     "n": 4,
+     "section": "Assessment",
+     "name": "Preference assessments",
+     "types": [
+      "client",
+      "roleplay"
+     ]
+    },
+    {
+     "n": 5,
+     "section": "Assessment",
+     "name": "ABC data collection",
+     "types": [
+      "client",
+      "roleplay"
+     ]
+    },
+    {
+     "n": 6,
+     "section": "Skill acquisition and behavior reduction",
+     "name": "Discrete-trial teaching",
+     "types": [
+      "client",
+      "roleplay"
+     ]
+    },
+    {
+     "n": 7,
+     "section": "Skill acquisition and behavior reduction",
+     "name": "Naturalistic teaching",
+     "types": [
+      "client",
+      "roleplay"
+     ]
+    },
+    {
+     "n": 8,
+     "section": "Skill acquisition and behavior reduction",
+     "name": "Chaining from a task analysis",
+     "types": [
+      "client",
+      "roleplay"
+     ]
+    },
+    {
+     "n": 9,
+     "section": "Skill acquisition and behavior reduction",
+     "name": "Shaping",
+     "types": [
+      "client",
+      "roleplay"
+     ]
+    },
+    {
+     "n": 10,
+     "section": "Skill acquisition and behavior reduction",
+     "name": "Discrimination training",
+     "types": [
+      "client",
+      "roleplay"
+     ]
+    },
+    {
+     "n": 11,
+     "section": "Skill acquisition and behavior reduction",
+     "name": "Prompting and prompt fading",
+     "types": [
+      "client",
+      "roleplay"
+     ]
+    },
+    {
+     "n": 12,
+     "section": "Skill acquisition and behavior reduction",
+     "name": "Token systems",
+     "types": [
+      "client",
+      "roleplay"
+     ]
+    },
+    {
+     "n": 13,
+     "section": "Skill acquisition and behavior reduction",
+     "name": "Crisis or emergency procedure",
+     "types": [
+      "client",
+      "roleplay",
+      "interview"
+     ]
+    },
+    {
+     "n": 14,
+     "section": "Skill acquisition and behavior reduction",
+     "name": "One of: antecedent intervention, differential reinforcement, extinction",
+     "types": [
+      "client",
+      "roleplay"
+     ]
+    },
+    {
+     "n": 15,
+     "section": "Professionalism and requirements",
+     "name": "Objective session notes",
+     "types": [
+      "client",
+      "roleplay",
+      "interview"
+     ]
+    },
+    {
+     "n": 16,
+     "section": "Professionalism and requirements",
+     "name": "Client dignity, with examples",
+     "types": [
+      "interview"
+     ]
+    },
+    {
+     "n": 17,
+     "section": "Professionalism and requirements",
+     "name": "Professional boundaries, with examples",
+     "types": [
+      "interview"
+     ]
+    },
+    {
+     "n": 18,
+     "section": "Professionalism and requirements",
+     "name": "BACB supervision standards for RBTs",
+     "types": [
+      "interview"
+     ]
+    },
+    {
+     "n": 19,
+     "section": "Professionalism and requirements",
+     "name": "When to seek clinical direction",
+     "types": [
+      "interview"
+     ]
+    }
+   ],
+   "clientRange": [
+    6,
+    14
+   ],
+   "_source": "RBT Initial Competency Assessment Packet, effective 2026-01-01, version 11/2026, form pages 4 and 5: tasks 1 to 19, assessment types allowed per task, three of tasks 6 to 14 with a client. Task names shortened by the site."
+  },
+  "application": {
+   "activeDays": 90,
+   "monthsToTestAfterApproval": 12,
+   "resultEmailDays": 7,
+   "registryHours": 24,
+   "verificationLetterFee": 25
+  },
+  "supervision": {
+   "share": 0.05,
+   "contactsPerMonth": 2,
+   "observationsPerMonth": 1
+  },
+  "recertification": {
+   "cycleYears": 2,
+   "fee": 50,
+   "lateFee": 50,
+   "reinstatementDays": 30,
+   "returnedCheckFee": 45,
+   "voluntaryInactiveFee": 25,
+   "voluntaryInactiveMaxYears": 2,
+   "pduHours": 12,
+   "pduFrom": "2027-01-01",
+   "applicationWindowDays": 45,
+   "competencyWithinDays": 45,
+   "oldRulesUntil": "2026-12-31",
+   "_source": "RBT Handbook 10/2026, Certification maintenance: RBTs who recertify through December 31, 2026 meet the old annual requirements (Recertification Competency Assessment, no more than 45 days before the expiration date) one last time, then a 2-year cycle begins; under the 2026 maintenance requirements, 12 PDUs per 2-year cycle, application available within 45 days of the recertification date once PDUs are entered; fee $50, late fee $50 during the 30-day reinstatement period."
+  },
+  "exam": {
+   "idForms": 1,
+   "breakClockStops": false
+  }
+ },
+ "states": [
+  {
+   "id": "wa",
+   "name": "Washington",
+   "techCredential": "Certified behavior technician (CBT)",
+   "techRequired": true,
+   "techFee": 95,
+   "techRenewal": 150,
+   "techRenewalYears": null,
+   "techAuthority": "Washington State Department of Health",
+   "techSource": "wa_wac_990",
+   "techRuleSource": "wa_wac_300",
+   "techNote": "WAC 246-805-300: application and fee, proof of being at least 18, proof of a high school diploma or equivalent, and proof of a current behavior technician credential from a professional credentialing entity or completion of a behavior technician training program; and the name of the clinical supervisor as proof of ongoing supervision. WAC 246-805-990: application and initial certification $95, renewal $150, late renewal penalty $75.",
+   "analystLaw": 2015,
+   "analystBoard": "WA State Department of Health",
+   "analystSource": "wa_doh",
+   "techLateFee": 75,
+   "techDuplicateFee": 10,
+   "techVerificationFee": 25
+  },
+  {
+   "id": "or",
+   "name": "Oregon",
+   "techCredential": "Registered behavior analysis interventionist",
+   "techRequired": true,
+   "techFee": 175,
+   "techFeeDetail": "application fee $75 plus registration fee $100",
+   "techRenewal": null,
+   "techRenewalYears": null,
+   "techAuthority": "Oregon Health Licensing Office, Behavior Analysis Regulatory Board",
+   "techSource": "or_form",
+   "techRuleSource": "or_hlo",
+   "techNote": "Application form revised 11/01/2025: proof of being at least 18, proof of a high school diploma or equivalent or a post-secondary degree, two forms of government identification; the application fee is non-refundable.",
+   "analystLaw": 2013,
+   "analystBoard": "OR Behavior Analysis Regulatory Board",
+   "analystSource": "or_hlo"
+  },
+  {
+   "id": "nv",
+   "name": "Nevada",
+   "techCredential": "Registered behavior technician (state registration)",
+   "techRequired": true,
+   "techFee": 70,
+   "techBackgroundFee": 40,
+   "techBackgroundNote": "LiveScan state and federal background clearance: $40 plus the fee of the fingerprint vendor",
+   "techRenewal": null,
+   "techRenewalYears": null,
+   "techAuthority": "Nevada Applied Behavior Analysis Board",
+   "techSource": "nv_board",
+   "techRuleSource": "nv_board",
+   "techNote": "Board page: the RBT registration fee of $70 is due when the application is made; fees are non-refundable; the background clearance is requested through LiveScan in Nevada, results in about 10 to 14 days.",
+   "analystLaw": 2009,
+   "analystBoard": "NV Applied Behavior Analysis Board",
+   "analystSource": "nv_board"
+  },
+  {
+   "id": "la",
+   "name": "Louisiana",
+   "techCredential": "Registered line technician (RLT)",
+   "techRequired": true,
+   "techFee": 50,
+   "techRenewal": 50,
+   "techRenewalYears": 1,
+   "techAuthority": "Louisiana Behavior Analyst Board",
+   "techSource": "la_rules",
+   "techRuleSource": "la_forms",
+   "techNote": "Rules Chapter 3, section 304 and 305: a Louisiana licensed behavior analyst registers each line technician working under their direction, with a board-approved criminal background check; registration $50, annual renewal $50; both parties notify the board within 10 calendar days when the supervision ends.",
+   "analystLaw": 2013,
+   "analystBoard": "LA Behavior Analyst Board",
+   "analystSource": "la_rules"
+  },
+  {
+   "id": "tx",
+   "name": "Texas",
+   "techCredential": null,
+   "techRequired": false,
+   "techFee": 0,
+   "techAuthority": "Texas Department of Licensing and Regulation",
+   "techSource": "tx_tdlr",
+   "techNote": "TDLR runs the Behavior Analysts program (licensed behavior analysts and licensed assistant behavior analysts); its program page lists no technician license.",
+   "analystLaw": 2017,
+   "analystBoard": "TX Department of Licensing and Regulation",
+   "analystSource": "tx_tdlr"
+  },
+  {
+   "id": "ny",
+   "name": "New York",
+   "techCredential": null,
+   "techRequired": false,
+   "techFee": 0,
+   "techAuthority": "New York State Education Department, Office of the Professions",
+   "techSource": "ny_op",
+   "techNote": "The Office of the Professions lists two titles under applied behavior analysis: licensed behavior analysts and certified behavior analyst assistants.",
+   "analystLaw": 2014,
+   "analystBoard": "NY State Education Department, Office of the Professions",
+   "analystSource": "ny_op"
+  },
+  {
+   "id": "ca",
+   "name": "California",
+   "techCredential": null,
+   "techRequired": false,
+   "techFee": 0,
+   "techAuthority": "No state licensure board for behavior analysis",
+   "techSource": "bacb_licensure",
+   "techNote": "California is not among the states listed by the BACB as having a behavior analyst licensure law (list read on the BACB licensure page).",
+   "analystLaw": null,
+   "analystBoard": null,
+   "analystSource": "bacb_licensure"
+  },
+  {
+   "id": "fl",
+   "name": "Florida",
+   "techCredential": null,
+   "techRequired": false,
+   "techFee": 0,
+   "techAuthority": "No state licensure board for behavior analysis",
+   "techSource": "bacb_licensure",
+   "techNote": "Florida is not among the states listed by the BACB as having a behavior analyst licensure law (list read on the BACB licensure page).",
+   "analystLaw": null,
+   "analystBoard": null,
+   "analystSource": "bacb_licensure"
+  }
+ ],
+ "licensureStates": [
+  [
+   "Alabama",
+   2014,
+   "AL Behavior Analyst Advisory Council"
+  ],
+  [
+   "Alaska",
+   2014,
+   "AK Division of Corporations, Business and Professional Licensing"
+  ],
+  [
+   "Arizona",
+   2010,
+   "AZ Board of Psychologist Examiners"
+  ],
+  [
+   "Arkansas",
+   2025,
+   "AR Psychology Board"
+  ],
+  [
+   "Colorado",
+   2026,
+   "CO HB26-1425"
+  ],
+  [
+   "Connecticut",
+   2017,
+   "CT State Department of Public Health"
+  ],
+  [
+   "District of Columbia",
+   2024,
+   "DC Board of Psychology"
+  ],
+  [
+   "Georgia",
+   2022,
+   "GA Behavior Analyst Licensing Board"
+  ],
+  [
+   "Hawaii",
+   2015,
+   "HI Department of Commerce and Consumer Affairs"
+  ],
+  [
+   "Illinois",
+   2022,
+   "IL Dept. of Financial and Professional Regulation"
+  ],
+  [
+   "Indiana",
+   2021,
+   "IN Professional Licensing Agency"
+  ],
+  [
+   "Iowa",
+   2018,
+   "IA Board of Behavioral Health Professionals"
+  ],
+  [
+   "Kansas",
+   2014,
+   "KS Behavioral Sciences Regulatory Board"
+  ],
+  [
+   "Kentucky",
+   2010,
+   "KY Applied Behavior Analysis Licensing Board"
+  ],
+  [
+   "Louisiana",
+   2013,
+   "LA Behavior Analyst Board"
+  ],
+  [
+   "Maryland",
+   2014,
+   "MD State Board of Professional Counselors and Therapists"
+  ],
+  [
+   "Massachusetts",
+   2013,
+   "MA Board of Registration of Allied Mental Health and Human Services Professions"
+  ],
+  [
+   "Michigan",
+   2016,
+   "MI Board of Behavior Analysts"
+  ],
+  [
+   "Minnesota",
+   2024,
+   "MN Board of Psychology"
+  ],
+  [
+   "Mississippi",
+   2015,
+   "MS Autism Board"
+  ],
+  [
+   "Missouri",
+   2010,
+   "MO Behavior Analyst Advisory Board"
+  ],
+  [
+   "Montana",
+   2017,
+   "MT Board of Psychologists"
+  ],
+  [
+   "Nebraska",
+   2023,
+   "NE Dept. of Health and Human Services"
+  ],
+  [
+   "Nevada",
+   2009,
+   "NV Applied Behavior Analysis Board"
+  ],
+  [
+   "New Jersey",
+   2019,
+   "NJ State Board of Applied Behavior Analyst Examiners"
+  ],
+  [
+   "New York",
+   2014,
+   "NY State Education Department, Office of the Professions"
+  ],
+  [
+   "North Carolina",
+   2021,
+   "NC Behavior Analyst Licensure Board"
+  ],
+  [
+   "North Dakota",
+   2011,
+   "ND Board of Integrative Health Care"
+  ],
+  [
+   "Ohio",
+   2013,
+   "OH Board of Psychology"
+  ],
+  [
+   "Oklahoma",
+   2009,
+   "OK Licensed Behavior Analyst Board"
+  ],
+  [
+   "Oregon",
+   2013,
+   "OR Behavior Analysis Regulatory Board"
+  ],
+  [
+   "Rhode Island",
+   2012,
+   "State of RI Department of Health"
+  ],
+  [
+   "South Dakota",
+   2016,
+   "SD Applied Behavior Analyst Advisory Committee"
+  ],
+  [
+   "Tennessee",
+   2014,
+   "TN Applied Behavior Analyst Licensing Committee"
+  ],
+  [
+   "Texas",
+   2017,
+   "TX Department of Licensing and Regulation"
+  ],
+  [
+   "Utah",
+   2015,
+   "UT Division of Professional Licensing"
+  ],
+  [
+   "Vermont",
+   2015,
+   "VT Office of Professional Regulation"
+  ],
+  [
+   "Virginia",
+   2012,
+   "VA Board of Medicine"
+  ],
+  [
+   "Washington",
+   2015,
+   "WA State Department of Health"
+  ],
+  [
+   "Wisconsin",
+   2010,
+   "WI Department of Safety and Professional Services"
+  ],
+  [
+   "Wyoming",
+   2022,
+   "WY Board of Psychology"
+  ]
+ ],
+ "noLicensureStates": [
+  "California",
+  "Delaware",
+  "Florida",
+  "Idaho",
+  "Maine",
+  "New Hampshire",
+  "New Mexico",
+  "Pennsylvania",
+  "South Carolina",
+  "West Virginia"
+ ],
+ "regBrief": {
+  "statesLicensingAnalysts": 40,
+  "statesLicensingAssistants": 31,
+  "statesRegulatingTechnicians": 3,
+  "statesWithTechnicianRegistry": 2,
+  "version": "09/2026"
+ }
+}

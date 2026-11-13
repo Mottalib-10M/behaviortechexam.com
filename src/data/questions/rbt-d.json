@@ -1,0 +1,331 @@
+{
+ "questions": [
+  {
+   "id": "rbt-d-01",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.1",
+   "q": "A learner throws materials when a hard task is presented, and the task is often taken away. What function does the data suggest?",
+   "options": [
+    "Escape from demands",
+    "Access to attention",
+    "Access to tangibles",
+    "Automatic reinforcement"
+   ],
+   "answer": 0,
+   "explain": "When behavior reliably follows demands and the demand is removed afterward, escape is the likely function. Function is about what the behavior produces, not what it looks like. The supervisor confirms the hypothesis through assessment.",
+   "topics": [
+    "function"
+   ]
+  },
+  {
+   "id": "rbt-d-02",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.1",
+   "q": "A learner hums and rocks when alone, with no one responding, at the same rate in every setting. Which function is most likely?",
+   "options": [
+    "Escape from demands",
+    "Automatic reinforcement",
+    "Social attention",
+    "Access to tangibles"
+   ],
+   "answer": 1,
+   "explain": "Behavior that continues when no one is present and nothing in the environment changes is often maintained by the sensory consequences it produces itself, called automatic reinforcement. Social functions depend on other people's responses.",
+   "topics": [
+    "function"
+   ]
+  },
+  {
+   "id": "rbt-d-03",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.1",
+   "q": "A learner yells each time the parent starts a phone call, and the parent stops to talk to the learner. What function is suggested?",
+   "options": [
+    "Escape from demands",
+    "Automatic reinforcement",
+    "Access to attention",
+    "Access to a tangible"
+   ],
+   "answer": 2,
+   "explain": "The antecedent is a drop in attention (the parent on the phone) and the consequence is attention from the parent. That pattern points to an attention function. Two behaviors that look alike can serve different functions.",
+   "topics": [
+    "function"
+   ]
+  },
+  {
+   "id": "rbt-d-04",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.1",
+   "q": "Which are the four commonly named functions of behavior?",
+   "options": [
+    "Anger, boredom, fear, fatigue",
+    "Hitting, yelling, biting, running away",
+    "Home, school, clinic, community",
+    "Attention, escape, access to tangibles, automatic"
+   ],
+   "answer": 3,
+   "explain": "Behavior analysts group functions by the consequences that maintain behavior: social attention, escape or avoidance, access to items or activities, and automatic (sensory) reinforcement. Feelings, forms of behavior and settings are not functions.",
+   "topics": [
+    "function"
+   ]
+  },
+  {
+   "id": "rbt-d-05",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.2",
+   "q": "A learner gets the technician's attention on a fixed schedule every two minutes, whatever the learner does. Which procedure is this?",
+   "options": [
+    "Noncontingent reinforcement",
+    "Differential reinforcement of other behavior",
+    "Extinction",
+    "Response cost"
+   ],
+   "answer": 0,
+   "explain": "Noncontingent reinforcement (NCR) delivers the maintaining reinforcer on a time schedule, independent of behavior, which lowers motivation to engage in problem behavior for it. It is an antecedent intervention, unlike DRO, which depends on the absence of behavior."
+  },
+  {
+   "id": "rbt-d-06",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.2",
+   "q": "Before asking a learner to clean up, the technician asks for three quick, easy actions the learner usually completes. What is this?",
+   "options": [
+    "Demand fading",
+    "A high-probability request sequence",
+    "Overcorrection",
+    "Planned ignoring of the hard request"
+   ],
+   "answer": 1,
+   "explain": "A high-probability (high-p) request sequence presents a few requests the learner is very likely to follow, with reinforcement, just before a less likely request. Momentum from the easy requests raises the chance of compliance."
+  },
+  {
+   "id": "rbt-d-07",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.3",
+   "q": "A learner is reinforced for asking for a break instead of hitting, and hitting no longer gets a break. Which procedure is this?",
+   "options": [
+    "Differential reinforcement of low rates",
+    "Noncontingent reinforcement",
+    "Functional communication training",
+    "Positive punishment"
+   ],
+   "answer": 2,
+   "explain": "Functional communication training (FCT) teaches a communication response that gets the same reinforcer as the problem behavior, here a break, while the problem behavior is put on extinction. It is a form of differential reinforcement of an alternative behavior.",
+   "topics": [
+    "function"
+   ]
+  },
+  {
+   "id": "rbt-d-08",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.3",
+   "q": "A learner earns a token after each 5-minute interval with no spitting. Which procedure is this?",
+   "options": [
+    "Differential reinforcement of alternative behavior",
+    "Differential reinforcement of low rates",
+    "Noncontingent reinforcement",
+    "Differential reinforcement of other behavior"
+   ],
+   "answer": 3,
+   "explain": "In DRO, reinforcement follows an interval in which the target behavior did not occur, whatever else the learner did. DRA reinforces a specific replacement behavior, and DRL reinforces lower rates of a behavior that is acceptable in small amounts.",
+   "topics": [
+    "function"
+   ]
+  },
+  {
+   "id": "rbt-d-09",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.3",
+   "q": "A learner who leaves the seat during work is reinforced for keeping hands on the desk, which cannot happen while standing. What is this?",
+   "options": [
+    "Differential reinforcement of incompatible behavior",
+    "Differential reinforcement of low rates",
+    "Response blocking",
+    "Extinction"
+   ],
+   "answer": 0,
+   "explain": "DRI reinforces a behavior that cannot occur at the same time as the problem behavior. Hands on the desk while seated is incompatible with wandering. DRL is for behaviors to reduce but not eliminate, such as asking the same question too often.",
+   "topics": [
+    "function"
+   ]
+  },
+  {
+   "id": "rbt-d-10",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.4",
+   "q": "Attention used to follow a learner's whining, and the plan now says whining gets no attention. Which procedure is this?",
+   "options": [
+    "Positive punishment",
+    "Extinction",
+    "Negative reinforcement",
+    "Response cost"
+   ],
+   "answer": 1,
+   "explain": "Extinction stops the reinforcer that maintained a behavior, here attention for whining. Nothing aversive is added and nothing the learner has is taken away, which distinguishes it from punishment and response cost.",
+   "topics": [
+    "function"
+   ]
+  },
+  {
+   "id": "rbt-d-11",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.4",
+   "q": "For an escape-maintained behavior, what does extinction look like?",
+   "options": [
+    "The technician stops talking to the learner for the rest of the task",
+    "The learner loses a token",
+    "The task continues and is not removed when the behavior occurs",
+    "The learner is given a preferred toy"
+   ],
+   "answer": 2,
+   "explain": "Extinction must match the function. If behavior was reinforced by escape from a task, escape extinction means the demand stays in place. Ignoring the learner would not withhold the reinforcer and could even give the escape the learner wants.",
+   "topics": [
+    "function"
+   ]
+  },
+  {
+   "id": "rbt-d-12",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.5",
+   "q": "A learner loses two tokens each time they swear, and swearing decreases. What is this?",
+   "options": [
+    "Positive punishment by reprimand",
+    "Negative reinforcement",
+    "Extinction",
+    "Negative punishment by response cost"
+   ],
+   "answer": 3,
+   "explain": "Removing something the learner has (tokens) after a behavior, with the behavior then decreasing, is negative punishment, here in the form of response cost. Negative reinforcement would increase the behavior."
+  },
+  {
+   "id": "rbt-d-13",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.5",
+   "q": "Under a time-out procedure, what is removed after the behavior?",
+   "options": [
+    "Access to reinforcement for a short time",
+    "The task the learner disliked, for the rest of the day",
+    "All data collection",
+    "The learner's right to communicate"
+   ],
+   "answer": 0,
+   "explain": "Time-out from positive reinforcement removes the chance to earn reinforcement for a brief, set period. If the setting the learner leaves is not reinforcing, time-out may act as escape and increase the behavior. It is used only as the plan specifies."
+  },
+  {
+   "id": "rbt-d-14",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.5",
+   "q": "Which is an example of positive punishment if the behavior decreases afterward?",
+   "options": [
+    "A toy is taken away each time the learner hits a classmate",
+    "A reprimand is given each time the learner climbs the shelf",
+    "Attention is withheld after whining",
+    "A task is removed after crying"
+   ],
+   "answer": 1,
+   "explain": "Positive punishment adds something after a behavior and decreases that behavior. A reprimand added after climbing fits if climbing decreases. Taking a toy away is negative punishment, withholding attention is extinction, and removing a task after crying is negative reinforcement."
+  },
+  {
+   "id": "rbt-d-15",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.6",
+   "q": "On the first days of extinction, a learner's tantrums become longer and louder. What is this called?",
+   "options": [
+    "Spontaneous recovery",
+    "Resurgence",
+    "An extinction burst",
+    "Generalization"
+   ],
+   "answer": 2,
+   "explain": "An extinction burst is a temporary increase in the frequency, duration or intensity of a behavior when its reinforcer stops. Technicians should expect it and keep implementing the plan, informing the supervisor, rather than giving in."
+  },
+  {
+   "id": "rbt-d-16",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.6",
+   "q": "After weeks of no problem behavior, a learner's old behavior reappears when a newly taught request is no longer reinforced. What is this?",
+   "options": [
+    "Extinction burst",
+    "Shaping",
+    "Stimulus fading",
+    "Resurgence"
+   ],
+   "answer": 3,
+   "explain": "Resurgence is the return of a previously extinguished behavior when a more recent behavior, such as a request taught by FCT, stops being reinforced. It shows why replacement behaviors should keep being honored consistently."
+  },
+  {
+   "id": "rbt-d-17",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.6",
+   "q": "Which is a possible side effect of punishment procedures?",
+   "options": [
+    "Escape or avoidance of the person or setting",
+    "Faster learning of new skills in every case and every setting",
+    "Better generalization of skills",
+    "Less need for supervision"
+   ],
+   "answer": 0,
+   "explain": "Punishment can bring emotional responses, aggression, and escape or avoidance of the person who delivers it. That is one reason reinforcement-based procedures come first, and punishment, if used, is planned and closely supervised."
+  },
+  {
+   "id": "rbt-d-18",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.7",
+   "q": "A learner begins self-injury that could cause harm. What should the technician do first?",
+   "options": [
+    "Improvise a new way of holding the learner to stop it",
+    "Follow the learner's crisis plan and the workplace emergency procedures",
+    "Leave the room to get a snack",
+    "Wait until the end of the session to act"
+   ],
+   "answer": 1,
+   "explain": "Crisis and emergency procedures are set in advance by the supervisor and the employer. The technician follows them to keep everyone safe, uses only procedures they are trained for, and reports the incident. Improvised physical procedures can injure the learner."
+  },
+  {
+   "id": "rbt-d-19",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.7",
+   "q": "After a crisis procedure was used during a session, what must the technician do?",
+   "options": [
+    "Keep it private to protect the learner and the family from worry",
+    "Wait until the next team meeting",
+    "Document what happened and inform the supervisor promptly",
+    "Ask the learner to write the report"
+   ],
+   "answer": 2,
+   "explain": "Use of crisis or emergency procedures must be documented objectively and reported quickly, following workplace and legal requirements. The supervisor needs the information to review the plan and keep the learner safe."
+  },
+  {
+   "id": "rbt-d-20",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.7",
+   "q": "A learner runs toward a busy parking lot. Which response fits a safety protocol?",
+   "options": [
+    "Ignore it as planned extinction",
+    "Give a token to stop the running",
+    "Record it and continue the task",
+    "Keep the learner safe as the plan and training allow, then report"
+   ],
+   "answer": 3,
+   "explain": "Danger to the learner comes before any reduction procedure. Elopement plans usually describe safe responses. The technician acts as trained and the plan allows, then documents and reports to the supervisor. Extinction never applies to immediate danger."
+  }
+ ]
+}

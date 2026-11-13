@@ -1,0 +1,208 @@
+{
+ "questions": [
+  {
+   "id": "rbt-b-01",
+   "exam": "rbt",
+   "domain": "B",
+   "ref": "B.1",
+   "q": "A technician places five items in front of a learner, lets the learner pick one, then removes it and repeats with the rest. Which assessment is this?",
+   "options": [
+    "Multiple stimulus without replacement",
+    "Paired stimulus assessment",
+    "Free operant observation",
+    "Single stimulus presentation"
+   ],
+   "answer": 0,
+   "explain": "In a multiple stimulus without replacement (MSWO) assessment, the chosen item is not returned, so the remaining items compete in each trial and a ranking emerges. A paired stimulus assessment offers two items at a time, and a free operant observation watches play with no trials.",
+   "topics": [
+    "preference"
+   ]
+  },
+  {
+   "id": "rbt-b-02",
+   "exam": "rbt",
+   "domain": "B",
+   "ref": "B.1",
+   "q": "Items are offered two at a time until each has been paired with every other item. Which preference assessment is this?",
+   "options": [
+    "Multiple stimulus with replacement",
+    "Paired stimulus",
+    "Free operant",
+    "Single stimulus"
+   ],
+   "answer": 1,
+   "explain": "A paired stimulus (forced choice) assessment presents every item with every other item, and preference is ranked by how often each is chosen. It takes longer than an MSWO but gives a clear hierarchy.",
+   "topics": [
+    "preference"
+   ]
+  },
+  {
+   "id": "rbt-b-03",
+   "exam": "rbt",
+   "domain": "B",
+   "ref": "B.1",
+   "q": "A technician watches a learner play freely in a room with toys available for ten minutes and records time spent with each toy. What is this?",
+   "options": [
+    "Paired stimulus assessment",
+    "Functional analysis",
+    "Free operant preference assessment",
+    "Discrete trial probe"
+   ],
+   "answer": 2,
+   "explain": "In a free operant assessment the learner has open access to items and the observer records time with each. No item is removed, so it is less likely to evoke problem behavior. It is not a functional analysis, which tests the causes of a behavior.",
+   "topics": [
+    "preference"
+   ]
+  },
+  {
+   "id": "rbt-b-04",
+   "exam": "rbt",
+   "domain": "B",
+   "ref": "B.1",
+   "q": "Why are preference assessments repeated often during treatment?",
+   "options": [
+    "The BACB requires one before every single teaching trial",
+    "It replaces the need to collect data",
+    "Learners must try every item in the clinic",
+    "Preferences change, so a stale reinforcer loses value"
+   ],
+   "answer": 3,
+   "explain": "What a learner wants changes with satiation, deprivation and new experiences. Brief, frequent preference assessments help the technician offer items that still work as reinforcers. Their frequency is set by the supervisor's plan.",
+   "topics": [
+    "preference"
+   ]
+  },
+  {
+   "id": "rbt-b-05",
+   "exam": "rbt",
+   "domain": "B",
+   "ref": "B.1",
+   "q": "In an MSWO, a learner chooses the same tablet game first in every round. What can the technician conclude?",
+   "options": [
+    "The game is a highly preferred item",
+    "The game is proven to be a reinforcer for every task",
+    "The learner dislikes the other items",
+    "The assessment must be stopped"
+   ],
+   "answer": 0,
+   "explain": "Being chosen first consistently ranks an item as highly preferred. Preference predicts reinforcing value but does not prove it: only an increase in the behavior it follows shows that an item works as a reinforcer.",
+   "topics": [
+    "preference"
+   ]
+  },
+  {
+   "id": "rbt-b-06",
+   "exam": "rbt",
+   "domain": "B",
+   "ref": "B.1",
+   "q": "A learner cannot point or reach reliably. How might a preference assessment be adapted?",
+   "options": [
+    "Skip preference assessments entirely and use the items from the last client",
+    "Use another response, such as looking at an item, as the supervisor sets",
+    "Pick items the technician likes",
+    "Ask the learner's sibling to choose"
+   ],
+   "answer": 1,
+   "explain": "The selection response can be adapted to the learner, for example gaze, approach or a switch, under the supervisor's direction. Skipping assessments or choosing items for the learner removes the information the assessment is meant to give.",
+   "topics": [
+    "preference"
+   ]
+  },
+  {
+   "id": "rbt-b-07",
+   "exam": "rbt",
+   "domain": "B",
+   "ref": "B.1",
+   "q": "During a preference assessment, what should the technician do with an item the learner selects?",
+   "options": [
+    "Record the choice but do not let the learner have the item",
+    "Remove it from the clinic",
+    "Give brief access to it before the next trial",
+    "Ask the learner to explain the choice"
+   ],
+   "answer": 2,
+   "explain": "Giving brief access after each selection lets the learner contact the item, which keeps choices meaningful. Recording a choice without delivering the item can change later selections. Explanations are not part of the procedure.",
+   "topics": [
+    "preference"
+   ]
+  },
+  {
+   "id": "rbt-b-08",
+   "exam": "rbt",
+   "domain": "B",
+   "ref": "B.1",
+   "q": "Which statement best separates a preference from a reinforcer?",
+   "options": [
+    "A reinforcer is anything the learner says they like",
+    "A preferred item always works as a reinforcer",
+    "A reinforcer must be food",
+    "A reinforcer is shown by a rise in the behavior it follows"
+   ],
+   "answer": 3,
+   "explain": "A reinforcer is defined by its effect: delivered after a behavior, it makes that behavior more likely in the future. A preference assessment shows which items are chosen, which predicts but does not guarantee that effect. Reinforcers can be social, tangible, activities or food.",
+   "topics": [
+    "preference"
+   ]
+  },
+  {
+   "id": "rbt-b-09",
+   "exam": "rbt",
+   "domain": "B",
+   "ref": "B.2",
+   "q": "A supervisor asks a technician to run probes for a curriculum-based skills assessment. What is the technician's role?",
+   "options": [
+    "Present the items exactly as written and record responses",
+    "Choose new goals from the results",
+    "Score the learner higher if the answer was close to correct",
+    "Explain the results to the family"
+   ],
+   "answer": 0,
+   "explain": "Technicians help with skills assessments by delivering items as instructed and recording what happens. Interpreting results, selecting goals and discussing results with caregivers are tasks of the supervising analyst."
+  },
+  {
+   "id": "rbt-b-10",
+   "exam": "rbt",
+   "domain": "B",
+   "ref": "B.3",
+   "q": "A technician is asked to collect ABC data. What does the record contain?",
+   "options": [
+    "The learner's age, behavior and medication",
+    "What happened just before, the behavior, and what followed",
+    "Attention, behavior and consequences planned for next week",
+    "Only the behavior and the time of day"
+   ],
+   "answer": 1,
+   "explain": "ABC stands for antecedent, behavior and consequence. Noting the events right before and right after each instance helps the supervisor form a hypothesis about the function of a behavior as part of a descriptive assessment."
+  },
+  {
+   "id": "rbt-b-11",
+   "exam": "rbt",
+   "domain": "B",
+   "ref": "B.3",
+   "q": "During a functional analysis run by the supervisor, what is the technician most likely to do?",
+   "options": [
+    "Change the condition as soon as the behavior gets more intense",
+    "Decide which function the behavior serves",
+    "Follow the scripted condition exactly and record data",
+    "Skip conditions that seem boring"
+   ],
+   "answer": 2,
+   "explain": "A functional analysis manipulates conditions such as attention or demands to test what maintains behavior. Its validity depends on running each condition as scripted. The technician implements and records; the analyst designs it, decides when to stop and interprets the results."
+  },
+  {
+   "id": "rbt-b-12",
+   "exam": "rbt",
+   "domain": "B",
+   "ref": "B.3",
+   "q": "Which is an example of descriptive assessment?",
+   "options": [
+    "Setting up test conditions with attention and without attention",
+    "Giving a reinforcer for every correct response",
+    "Teaching a new skill with prompts",
+    "Observing the learner in the classroom and recording antecedents and consequences"
+   ],
+   "answer": 3,
+   "explain": "Descriptive assessment observes behavior in natural settings without changing conditions, often with ABC recording. A functional analysis, by contrast, arranges test and control conditions on purpose."
+  }
+ ]
+}

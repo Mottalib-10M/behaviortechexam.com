@@ -1,0 +1,244 @@
+{
+ "questions": [
+  {
+   "id": "rbt-f-01",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.1",
+   "q": "A learner's family invites the technician to a birthday party at their home. Which principle should guide the answer?",
+   "options": [
+    "Avoid a multiple relationship; tell the supervisor",
+    "Attend to build rapport with the family outside of sessions",
+    "Attend but do not bring a gift",
+    "Ask the learner whether you should come"
+   ],
+   "answer": 0,
+   "explain": "Attending social events with a client's family can create a multiple relationship that blurs professional boundaries. The ethics code for technicians asks them to avoid such relationships and to involve the supervisor when one arises."
+  },
+  {
+   "id": "rbt-f-02",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.1",
+   "q": "Which action best shows treating a learner with dignity?",
+   "options": [
+    "Talking about the learner's behavior loudly in the waiting room",
+    "Offering choices and privacy during care routines",
+    "Using a nickname the learner dislikes",
+    "Rushing through toileting in a hallway"
+   ],
+   "answer": 1,
+   "explain": "Dignity includes respecting choices and privacy, especially during personal care. Discussing a learner in public spaces or using unwanted names fails to treat the learner with respect."
+  },
+  {
+   "id": "rbt-f-03",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.2",
+   "q": "A technician is asked to run a procedure they have never been trained on. What should they do?",
+   "options": [
+    "Try it and learn from any mistakes along the way with the learner",
+    "Watch an online video and start",
+    "Tell the supervisor and get trained first",
+    "Ask the learner to show how it works"
+   ],
+   "answer": 2,
+   "explain": "Technicians provide services only after showing competence. When a new procedure comes up, they ask for training from the supervisor, which may include instructions, modeling, rehearsal and feedback."
+  },
+  {
+   "id": "rbt-f-04",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.3",
+   "q": "A technician's supervisor leaves the company, and no new supervisor is assigned. What follows?",
+   "options": [
+    "Services can continue as usual for six months while the company looks",
+    "The technician can supervise themselves",
+    "A teacher can sign the supervision form",
+    "No RBT services until a qualified supervisor is in place"
+   ],
+   "answer": 3,
+   "explain": "Technicians practice only under ongoing supervision by someone who meets the board's requirements. Without a qualified supervisor, they cannot deliver services as RBTs. The organization must arrange new supervision."
+  },
+  {
+   "id": "rbt-f-05",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.4",
+   "q": "Which is part of effective supervision for a technician?",
+   "options": [
+    "Training with feedback and observation of sessions",
+    "Occasional emails with no observation of the technician at work",
+    "Supervision only when problems occur",
+    "A yearly written test"
+   ],
+   "answer": 0,
+   "explain": "Effective supervision uses behavioral skills training (instructions, modeling, rehearsal and feedback) and direct observation of the technician working with clients. Supervision is ongoing, not only when there is a problem."
+  },
+  {
+   "id": "rbt-f-06",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.4",
+   "q": "A supervisor gives corrective feedback after observing a session. What is the most professional response?",
+   "options": [
+    "Explain in detail why the feedback is wrong for that learner",
+    "Listen, clarify and apply the feedback",
+    "Stop working with that learner",
+    "Ask another supervisor for a different opinion"
+   ],
+   "answer": 1,
+   "explain": "Accepting feedback and applying it is part of the professional skills expected of technicians. Asking clarifying questions is helpful. Arguing, shopping for other opinions or withdrawing from a case are not constructive."
+  },
+  {
+   "id": "rbt-f-07",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.5",
+   "q": "A technician wants to take a photo of a learner's great work to share with friends. What does confidentiality require?",
+   "options": [
+    "Share it if the learner's face is not shown and names are visible",
+    "Share it only with close friends",
+    "Share nothing that identifies a client outside the rules",
+    "Share it if the learner agrees verbally"
+   ],
+   "answer": 2,
+   "explain": "Client information, including photos and work samples, is confidential. It is collected, stored and shared only as the workplace's policies and the law allow, usually with written consent. Partial hiding or a verbal okay from a learner is not enough."
+  },
+  {
+   "id": "rbt-f-08",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.5",
+   "q": "Where should printed data sheets with client names be kept after a session?",
+   "options": [
+    "In the technician's car until the weekend, in a closed bag",
+    "On the clinic's front desk",
+    "In a personal folder at home",
+    "In the secure place the workplace sets"
+   ],
+   "answer": 3,
+   "explain": "Records that identify clients must be stored securely as required by workplace policies and privacy laws. Leaving them in cars, public areas or at home risks unauthorized disclosure."
+  },
+  {
+   "id": "rbt-f-09",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.6",
+   "q": "A technician posts on social media that their company \"cures autism.\" What is the problem?",
+   "options": [
+    "It misrepresents the field and its outcomes",
+    "Nothing is wrong, because it is posted on a personal account",
+    "It is fine if the company approves",
+    "The post should include a client's name for proof"
+   ],
+   "answer": 0,
+   "explain": "Public statements, including on social media, must not misrepresent the field, outcomes or credentials. Claiming a cure is false. Adding a client's name would also break confidentiality."
+  },
+  {
+   "id": "rbt-f-10",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.6",
+   "q": "Which statement about credentials is accurate in a public profile?",
+   "options": [
+    "Calling oneself a behavior analyst because one works in ABA",
+    "The credential exactly as held, while active",
+    "Keeping the credential listed after it expires",
+    "Adding a credential that is in progress"
+   ],
+   "answer": 1,
+   "explain": "Technicians must represent their credentials accurately. A technician is not a behavior analyst, an expired credential cannot be displayed as current, and a credential in progress is not yet held."
+  },
+  {
+   "id": "rbt-f-11",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.7",
+   "q": "A technician is offered the chance to babysit for a current client's family on weekends. What is the concern?",
+   "options": [
+    "There is no concern as long as the babysitting hours are paid",
+    "It is fine if the supervisor is not told",
+    "A multiple relationship that risks harm",
+    "It is required to build rapport"
+   ],
+   "answer": 2,
+   "explain": "Taking a second role with a client's family, such as babysitting, is a multiple relationship. It risks conflicts of interest and harm to the client. Such roles are avoided, and any that arise are discussed with the supervisor."
+  },
+  {
+   "id": "rbt-f-12",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.7",
+   "q": "A technician discovers that a new client is the child of a close friend. What should happen?",
+   "options": [
+    "Continue the case and give the friend extra updates each week",
+    "Keep quiet to avoid awkwardness",
+    "Ask the friend to sign a waiver",
+    "Tell the supervisor so the risk is handled"
+   ],
+   "answer": 3,
+   "explain": "Existing personal relationships with a client's family create a multiple relationship. The technician informs the supervisor promptly, who can reduce the risk, for example by assigning another technician."
+  },
+  {
+   "id": "rbt-f-13",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.8",
+   "q": "At the end of services, a family offers the technician an expensive watch. What should they do?",
+   "options": [
+    "Decline politely, as the gift rules require",
+    "Accept it because services are ending and the gift is a thank you",
+    "Accept it and share it with the team",
+    "Accept it if the family insists twice"
+   ],
+   "answer": 0,
+   "explain": "The ethics code for technicians limits gifts to items of small monetary value and the workplace may be stricter. An expensive gift crosses that line whatever the timing. A kind refusal protects the professional relationship."
+  },
+  {
+   "id": "rbt-f-14",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.8",
+   "q": "A learner draws a picture for the technician as a thank you. What is a reasonable response?",
+   "options": [
+    "Refuse it because every gift from a family is banned",
+    "Accept it if workplace policy allows",
+    "Ask for a more useful gift",
+    "Sell it"
+   ],
+   "answer": 1,
+   "explain": "Small tokens of appreciation with little monetary value, like a drawing, are generally within the gift rules of the ethics code. The technician still follows the employer's policy, which may be stricter."
+  },
+  {
+   "id": "rbt-f-15",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.9",
+   "q": "During a team meeting, a caregiver disagrees with the technician's account of a session. What shows good interpersonal skills?",
+   "options": [
+    "Defend the account until the caregiver agrees with every detail",
+    "Leave the meeting",
+    "Listen, acknowledge and refer plan questions to the supervisor",
+    "Change the data to match the caregiver's view"
+   ],
+   "answer": 2,
+   "explain": "Active listening, respect and collaboration are expected professional skills. The technician can share objective data and refer decisions to the supervisor. Changing data to end a disagreement would be falsification."
+  },
+  {
+   "id": "rbt-f-16",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.10",
+   "q": "A technician realizes they hold a bias about a family's cultural practices. What reflects cultural humility?",
+   "options": [
+    "Ignore it because it does not affect data",
+    "Ask to be removed from every case of that culture",
+    "Teach the family to adopt the technician's own practices at home",
+    "Reflect, learn the family's values, raise it in supervision"
+   ],
+   "answer": 3,
+   "explain": "Cultural humility involves ongoing self-reflection, learning about each family's values, and raising biases in supervision so services stay respectful and effective. Ignoring a bias or imposing one's own practices does not serve the client."
+  }
+ ]
+}

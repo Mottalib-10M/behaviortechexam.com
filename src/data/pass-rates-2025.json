@@ -1,0 +1,365 @@
+{
+ "_source": "BACB, RBT Examination Pass Rates for 40-Hour Training Providers 2025 (updated 05/2026), table sorted alphabetically; providers publicly available with 10 or more first-time candidates in 2025. Read on 2026-11-13.",
+ "sourceKey": "rbt_pass_rates",
+ "year": 2025,
+ "updated": "05/2026",
+ "providers": [
+  {
+   "name": "ABA 4 LOVE",
+   "rate": 36.7,
+   "n": 1201,
+   "pass": 441,
+   "fail": 760
+  },
+  {
+   "name": "ABA Courses",
+   "rate": 40.0,
+   "n": 15,
+   "pass": 6,
+   "fail": 9
+  },
+  {
+   "name": "ABA International Academy",
+   "rate": 43.2,
+   "n": 37,
+   "pass": 16,
+   "fail": 21
+  },
+  {
+   "name": "ABA Professional Learning Center",
+   "rate": 50.0,
+   "n": 46,
+   "pass": 23,
+   "fail": 23
+  },
+  {
+   "name": "Advanced Behavior Education LLC.",
+   "rate": 90.9,
+   "n": 11,
+   "pass": 10,
+   "fail": 1
+  },
+  {
+   "name": "AppleTree Connection",
+   "rate": 91.1,
+   "n": 79,
+   "pass": 72,
+   "fail": 7
+  },
+  {
+   "name": "Applied ABC",
+   "rate": 46.2,
+   "n": 65,
+   "pass": 30,
+   "fail": 35
+  },
+  {
+   "name": "Arc Educates",
+   "rate": 54.6,
+   "n": 11,
+   "pass": 6,
+   "fail": 5
+  },
+  {
+   "name": "ATCC",
+   "rate": 86.4,
+   "n": 747,
+   "pass": 645,
+   "fail": 102
+  },
+  {
+   "name": "Autism Partnership Foundation",
+   "rate": 61.2,
+   "n": 13456,
+   "pass": 8236,
+   "fail": 5220
+  },
+  {
+   "name": "AutismBXTraining DBA Autism Skills Development",
+   "rate": 60.6,
+   "n": 66,
+   "pass": 40,
+   "fail": 26
+  },
+  {
+   "name": "Behavior Analyst Supervisor",
+   "rate": 60.0,
+   "n": 25,
+   "pass": 15,
+   "fail": 10
+  },
+  {
+   "name": "Behavior Development Solutions",
+   "rate": 93.5,
+   "n": 923,
+   "pass": 863,
+   "fail": 60
+  },
+  {
+   "name": "Behavior University",
+   "rate": 76.6,
+   "n": 2008,
+   "pass": 1538,
+   "fail": 470
+  },
+  {
+   "name": "Behavior Webinars",
+   "rate": 79.0,
+   "n": 4100,
+   "pass": 3239,
+   "fail": 861
+  },
+  {
+   "name": "Bhavioral Corporation",
+   "rate": 50.0,
+   "n": 16,
+   "pass": 8,
+   "fail": 8
+  },
+  {
+   "name": "California Unified Service Providers, LLC",
+   "rate": 81.8,
+   "n": 55,
+   "pass": 45,
+   "fail": 10
+  },
+  {
+   "name": "CentralReach",
+   "rate": 79.6,
+   "n": 13705,
+   "pass": 10912,
+   "fail": 2793
+  },
+  {
+   "name": "Child Hope Center",
+   "rate": 21.4,
+   "n": 14,
+   "pass": 3,
+   "fail": 11
+  },
+  {
+   "name": "Developing New Horizons Inc.",
+   "rate": 41.4,
+   "n": 70,
+   "pass": 29,
+   "fail": 41
+  },
+  {
+   "name": "Easy as Pie ABA Training",
+   "rate": 36.4,
+   "n": 11,
+   "pass": 4,
+   "fail": 7
+  },
+  {
+   "name": "Essential CEU Institute",
+   "rate": 46.3,
+   "n": 80,
+   "pass": 37,
+   "fail": 43
+  },
+  {
+   "name": "Exceptional Minds ABA Therapy",
+   "rate": 32.9,
+   "n": 76,
+   "pass": 25,
+   "fail": 51
+  },
+  {
+   "name": "Florida Tech/ABA Technologies",
+   "rate": 86.3,
+   "n": 1074,
+   "pass": 927,
+   "fail": 147
+  },
+  {
+   "name": "GoBeyond Premier Training Labs",
+   "rate": 69.2,
+   "n": 13,
+   "pass": 9,
+   "fail": 4
+  },
+  {
+   "name": "Happy Children",
+   "rate": 32.5,
+   "n": 117,
+   "pass": 38,
+   "fail": 79
+  },
+  {
+   "name": "Harcum College",
+   "rate": 64.3,
+   "n": 14,
+   "pass": 9,
+   "fail": 5
+  },
+  {
+   "name": "Institute for Behavioral Training",
+   "rate": 60.8,
+   "n": 181,
+   "pass": 110,
+   "fail": 71
+  },
+  {
+   "name": "Ivy Tech Community College",
+   "rate": 96.2,
+   "n": 26,
+   "pass": 25,
+   "fail": 1
+  },
+  {
+   "name": "Jigsaw Training",
+   "rate": 79.2,
+   "n": 77,
+   "pass": 61,
+   "fail": 16
+  },
+  {
+   "name": "José María Vargas University",
+   "rate": 8.1,
+   "n": 37,
+   "pass": 3,
+   "fail": 34
+  },
+  {
+   "name": "May Behavioral Services",
+   "rate": 80.0,
+   "n": 15,
+   "pass": 12,
+   "fail": 3
+  },
+  {
+   "name": "MedCerts",
+   "rate": 83.3,
+   "n": 36,
+   "pass": 30,
+   "fail": 6
+  },
+  {
+   "name": "Miami Dade College",
+   "rate": 37.5,
+   "n": 40,
+   "pass": 15,
+   "fail": 25
+  },
+  {
+   "name": "Middle Tennessee State University",
+   "rate": 90.0,
+   "n": 10,
+   "pass": 9,
+   "fail": 1
+  },
+  {
+   "name": "Mississippi State University",
+   "rate": 94.7,
+   "n": 19,
+   "pass": 18,
+   "fail": 1
+  },
+  {
+   "name": "Northern Michigan University Bear Center",
+   "rate": 100.0,
+   "n": 18,
+   "pass": 18,
+   "fail": 0
+  },
+  {
+   "name": "Path 2 Potential, LLC",
+   "rate": 78.6,
+   "n": 14,
+   "pass": 11,
+   "fail": 3
+  },
+  {
+   "name": "Positive Behavior Supports, Corp.",
+   "rate": 79.1,
+   "n": 1500,
+   "pass": 1187,
+   "fail": 313
+  },
+  {
+   "name": "Power In-Service Training Center",
+   "rate": 17.7,
+   "n": 186,
+   "pass": 33,
+   "fail": 153
+  },
+  {
+   "name": "Relias",
+   "rate": 80.4,
+   "n": 19418,
+   "pass": 15602,
+   "fail": 3816
+  },
+  {
+   "name": "Rethink",
+   "rate": 81.1,
+   "n": 10690,
+   "pass": 8670,
+   "fail": 2020
+  },
+  {
+   "name": "Sidekick Learning",
+   "rate": 84.5,
+   "n": 658,
+   "pass": 556,
+   "fail": 102
+  },
+  {
+   "name": "Skillometry",
+   "rate": 59.6,
+   "n": 89,
+   "pass": 53,
+   "fail": 36
+  },
+  {
+   "name": "Special Learning",
+   "rate": 77.5,
+   "n": 71,
+   "pass": 55,
+   "fail": 16
+  },
+  {
+   "name": "The Applied Behavior Analysis Center",
+   "rate": 82.1,
+   "n": 39,
+   "pass": 32,
+   "fail": 7
+  },
+  {
+   "name": "The Center for Behavior Analysis at the University of West Florida",
+   "rate": 100.0,
+   "n": 12,
+   "pass": 12,
+   "fail": 0
+  },
+  {
+   "name": "University of Kansas",
+   "rate": 87.1,
+   "n": 178,
+   "pass": 155,
+   "fail": 23
+  },
+  {
+   "name": "University of Missouri",
+   "rate": 80.0,
+   "n": 10,
+   "pass": 8,
+   "fail": 2
+  },
+  {
+   "name": "University of South Florida",
+   "rate": 90.2,
+   "n": 163,
+   "pass": 147,
+   "fail": 16
+  },
+  {
+   "name": "University of Texas at San Antonio",
+   "rate": 69.7,
+   "n": 33,
+   "pass": 23,
+   "fail": 10
+  }
+ ]
+}

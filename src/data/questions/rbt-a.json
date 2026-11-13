@@ -1,0 +1,301 @@
+{
+ "questions": [
+  {
+   "id": "rbt-a-01",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.1",
+   "q": "A technician tallies each time a learner raises a hand during a 30-minute group lesson. Which measure is being recorded?",
+   "options": [
+    "Frequency",
+    "Duration",
+    "Latency",
+    "Partial interval"
+   ],
+   "answer": 0,
+   "explain": "Counting every occurrence of a discrete behavior in an observation period is frequency (event) recording. Duration would time how long each hand raise lasts, latency would time the delay after an instruction, and partial interval would only note whether it happened in each interval.",
+   "topics": [
+    "measurement"
+   ]
+  },
+  {
+   "id": "rbt-a-02",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.1",
+   "q": "The plan asks how long a learner takes to start putting on a coat after the instruction is given. What does the technician measure?",
+   "options": [
+    "Interresponse time",
+    "Latency",
+    "Total duration",
+    "Rate per minute"
+   ],
+   "answer": 1,
+   "explain": "Latency is the time from a stimulus, here the instruction, to the start of the response. Interresponse time is the time between two responses, duration is how long the response lasts, and rate divides a count by the minutes observed.",
+   "topics": [
+    "measurement"
+   ]
+  },
+  {
+   "id": "rbt-a-03",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.1",
+   "q": "A learner screams in episodes, and the team wants to know whether the episodes are getting shorter. Which measure fits best?",
+   "options": [
+    "Count of episodes per day",
+    "Momentary time sampling",
+    "Duration of each episode",
+    "Permanent product"
+   ],
+   "answer": 2,
+   "explain": "When the question is how long a behavior lasts, duration recording answers it directly. A count would show how often episodes occur but not whether each one is shorter, and time sampling only estimates the behavior. Screaming leaves no lasting product to inspect.",
+   "topics": [
+    "measurement"
+   ]
+  },
+  {
+   "id": "rbt-a-04",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.1",
+   "q": "A technician records the time between one bite of food and the next to see whether a learner eats too fast. What is this measure called?",
+   "options": [
+    "Latency",
+    "Frequency",
+    "Whole interval recording",
+    "Interresponse time"
+   ],
+   "answer": 3,
+   "explain": "Interresponse time (IRT) is the time elapsed between the end of one response and the start of the next of the same kind. It suits pacing goals such as eating speed. Latency starts from a cue, not from the previous response.",
+   "topics": [
+    "measurement"
+   ]
+  },
+  {
+   "id": "rbt-a-05",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.2",
+   "q": "In 10-second intervals, the technician marks an interval only if the learner stayed seated for the whole interval. Which procedure is this?",
+   "options": [
+    "Whole interval recording",
+    "Partial interval recording",
+    "Momentary time sampling",
+    "Frequency recording"
+   ],
+   "answer": 0,
+   "explain": "Whole interval recording scores an interval only when the behavior lasts throughout it. It tends to underestimate the behavior and suits behaviors the team wants to increase, such as staying seated. Partial interval scores any occurrence, and momentary time sampling looks only at the end of the interval.",
+   "topics": [
+    "measurement"
+   ]
+  },
+  {
+   "id": "rbt-a-06",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.2",
+   "q": "A behavior the team wants to reduce is scored if it occurs at any moment during each 15-second interval. Which procedure is in use?",
+   "options": [
+    "Whole interval recording",
+    "Partial interval recording",
+    "Momentary time sampling",
+    "Duration recording"
+   ],
+   "answer": 1,
+   "explain": "Partial interval recording marks an interval when the behavior occurs at any point in it. It tends to overestimate the behavior, which is why it is often chosen for behaviors to reduce. Whole interval needs the behavior across the whole interval.",
+   "topics": [
+    "measurement"
+   ]
+  },
+  {
+   "id": "rbt-a-07",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.2",
+   "q": "Every 5 minutes a timer vibrates and the technician notes only whether the learner is on task at that exact moment. What is this?",
+   "options": [
+    "Partial interval recording",
+    "Whole interval recording",
+    "Momentary time sampling",
+    "Latency recording"
+   ],
+   "answer": 2,
+   "explain": "Momentary time sampling looks at the behavior only at the instant each interval ends. It lets a technician sample behavior while teaching other skills. Interval methods watch the whole interval, and latency times a delay after a cue.",
+   "topics": [
+    "measurement"
+   ]
+  },
+  {
+   "id": "rbt-a-08",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.2",
+   "q": "Which statement about discontinuous measurement is accurate?",
+   "options": [
+    "It always gives the exact count of responses",
+    "It is used only for behaviors with a clear start and end",
+    "It must be scored by two observers at once",
+    "It estimates behavior rather than recording every instance"
+   ],
+   "answer": 3,
+   "explain": "Interval recording and time sampling are discontinuous: they sample behavior and give an estimate, often reported as a percentage of intervals. Continuous methods such as frequency and duration capture every instance. Two observers are used for agreement checks, not as a defining feature.",
+   "topics": [
+    "measurement"
+   ]
+  },
+  {
+   "id": "rbt-a-09",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.3",
+   "q": "After a session, a technician counts the worksheets a learner completed correctly. Which type of measurement is this?",
+   "options": [
+    "Permanent product recording",
+    "Momentary time sampling",
+    "Interresponse time",
+    "Partial interval recording"
+   ],
+   "answer": 0,
+   "explain": "Permanent product recording measures the lasting result of behavior, here completed worksheets, after the behavior has happened. It does not require watching the behavior as it occurs. The other options all require live observation.",
+   "topics": [
+    "measurement"
+   ]
+  },
+  {
+   "id": "rbt-a-10",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.4",
+   "q": "A technician finishes recording a session. When should the data be entered into the learner's graph?",
+   "options": [
+    "Only at the end of the month, all at once",
+    "As soon as possible, following the clinic's procedure",
+    "Only when the supervisor asks for it",
+    "After rounding numbers so the graph looks consistent"
+   ],
+   "answer": 1,
+   "explain": "Data should be entered promptly and accurately so the supervisor can see changes and adjust the plan. Waiting weeks delays decisions, and altering numbers to look tidy is falsifying data. Follow the clinic's procedure for entry and graph updates."
+  },
+  {
+   "id": "rbt-a-11",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.4",
+   "q": "On a line graph of session data, what usually runs along the horizontal axis?",
+   "options": [
+    "The behavior count for each session",
+    "The name of the technician",
+    "Sessions or dates in time order",
+    "The reinforcer used"
+   ],
+   "answer": 2,
+   "explain": "The horizontal (x) axis of a line graph shows time, as sessions or dates, and the vertical (y) axis shows the measure of behavior. Data points are connected within a phase so trends are easy to read."
+  },
+  {
+   "id": "rbt-a-12",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.5",
+   "q": "Which description of a target behavior is written in observable and measurable terms?",
+   "options": [
+    "Gets angry when the task is hard",
+    "Acts out to get attention",
+    "Has a meltdown because of anxiety about the work",
+    "Hits the table with an open hand hard enough to be heard"
+   ],
+   "answer": 3,
+   "explain": "An operational definition describes what the behavior looks like so two observers would agree it happened. Hitting the table with an open hand, audibly, can be seen and counted. The other options name feelings, motives or labels that cannot be observed."
+  },
+  {
+   "id": "rbt-a-13",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.5",
+   "q": "A session note says the learner was \"defiant.\" What would make the note more useful to the supervisor?",
+   "options": [
+    "Describe what the learner did and said, and what came right before",
+    "Add that the learner was very defiant all afternoon",
+    "Remove the behavior from the note",
+    "Guess the reason for the defiance and write it down"
+   ],
+   "answer": 0,
+   "explain": "Objective notes describe observable behavior and the surrounding events, such as the instruction given and the learner's words. Labels like defiant mix judgment with fact, and guesses about reasons belong to the supervisor's assessment, not to the record."
+  },
+  {
+   "id": "rbt-a-14",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.6",
+   "q": "A learner made 18 requests during a 30-minute session. What is the rate per minute?",
+   "options": [
+    "1.7 requests per minute",
+    "0.6 requests per minute",
+    "18 requests per minute",
+    "6 requests per minute"
+   ],
+   "answer": 1,
+   "explain": "Rate is the count divided by the observation time: 18 divided by 30 minutes equals 0.6 per minute. Rate allows sessions of different lengths to be compared, which a raw count does not."
+  },
+  {
+   "id": "rbt-a-15",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.6",
+   "q": "A learner answered 16 of 20 trials correctly. What percentage correct is recorded?",
+   "options": [
+    "16 percent",
+    "20 percent",
+    "80 percent",
+    "64 percent"
+   ],
+   "answer": 2,
+   "explain": "Percentage correct is the number of correct trials divided by the total trials, times 100: 16 divided by 20 is 0.8, or 80 percent. Percentages work best when the number of opportunities is stable from session to session."
+  },
+  {
+   "id": "rbt-a-16",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.7",
+   "q": "Over eight sessions the data points on a graph keep rising for a behavior the team wants to reduce. What should the technician report?",
+   "options": [
+    "A stable level with no change across the sessions",
+    "A decreasing trend",
+    "Data that cannot be interpreted",
+    "An increasing trend in the target behavior"
+   ],
+   "answer": 3,
+   "explain": "Trend is the overall direction of the data path. Points that keep rising show an increasing trend. For a behavior targeted for reduction, that is important to share promptly with the supervisor, who decides whether to change the plan."
+  },
+  {
+   "id": "rbt-a-17",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.7",
+   "q": "Data points jump between very high and very low values from one session to the next. What does this pattern show?",
+   "options": [
+    "High variability",
+    "A stable trend",
+    "A steady decrease",
+    "Perfect agreement between observers"
+   ],
+   "answer": 0,
+   "explain": "Variability is how much the data points differ from each other. Wide swings make trends hard to read and may point to uncontrolled factors such as sleep, schedule changes or inconsistent procedures, which the technician should report."
+  },
+  {
+   "id": "rbt-a-18",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.8",
+   "q": "A technician sometimes forgets to record and fills in the sheet later from memory. What is the main risk?",
+   "options": [
+    "Sessions will run longer than the time that was billed",
+    "Unreliable data that can lead to wrong decisions",
+    "The learner will notice the data sheet",
+    "The graph will have fewer phases"
+   ],
+   "answer": 1,
+   "explain": "Supervisors change goals and procedures based on the data. Values filled in from memory are less accurate, so a skill may be marked mastered too early or a behavior plan judged ineffective when it was working. Record during or right after the session."
+  }
+ ]
+}

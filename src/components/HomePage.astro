@@ -1,0 +1,122 @@
+---
+/**
+ * Home: the full mock first (75 scored questions, domain weights of the 3rd edition outline), then the
+ * exam at a glance, the six domains, the cost, the steps, the states, renewal, and every page by group.
+ * Every figure is read from params-2026.json, the pass-rate file or the bank.
+ */
+import PageLayout from '../layouts/PageLayout.astro';
+import Tool from './Tool.astro';
+import Clamp from './Clamp.astro';
+import Sources from './Sources.astro';
+import { route, hasRoute } from '../i18n/routes';
+import { PAGES } from '../lib/guides';
+import { GROUPS_ORDER, groupLabel } from '../i18n/nav';
+import { helpers } from '../lib/helpers';
+import { t } from '../i18n/ui';
+import { LAST_UPDATED, AUTHOR_NAME } from '../data/site-config';
+import { displayDate } from '../lib/format';
+import { domainsOf } from '../lib/engine/exam';
+import { faqSchema, webApplicationSchema, websiteSchema, organizationSchema } from '../lib/seo';
+const lang = 'en';
+const ui = t(lang);
+const h = helpers(lang, !process.env.LAX);
+const { X, R } = h;
+const x = X('rbt');
+const cards = (g: (typeof GROUPS_ORDER)[number]) => PAGES.filter((p) => p.group === g).map((p) => ({ href: route(p.id, lang), name: p.en.nav, text: p.en.card }));
+const href = (id: string) => (hasRoute(id, lang) ? route(id, lang) : route('home', lang));
+const a = (id: string, text: string) => `<a href="${href(id)}">${text}</a>`;
+const domPage: Record<string, string> = { A: 'rbt-data-collection', B: 'rbt-behavior-assessment', C: 'rbt-skill-acquisition', D: 'rbt-behavior-reduction', E: 'rbt-documentation-reporting', F: 'rbt-ethics' };
+const domText: Record<string, string> = {
+  A: 'Frequency, duration, latency and interresponse time; partial interval, whole interval and momentary time sampling; permanent products; rate and percentage; reading trend and variability on a graph.',
+  B: 'Multiple stimulus, paired stimulus and free operant preference assessments; helping with skills assessments; ABC data and the technician’s part in a functional analysis.',
+  C: 'Positive and negative reinforcement, conditioned reinforcers, discrete trials, naturalistic teaching, chaining, discrimination, prompts and their fading, generalization, maintenance, shaping and token systems.',
+  D: 'The four functions, antecedent strategies such as noncontingent reinforcement and high-probability requests, differential reinforcement and FCT, extinction, punishment, their side effects and crisis procedures.',
+  E: 'Passing on what caregivers and teachers say, asking the supervisor for direction, reporting illness or schedule changes, and writing objective session notes.',
+  F: 'The ethics code for technicians: competence, supervision, confidentiality, public statements, multiple relationships, gifts, professional skills and cultural humility.',
+};
+const title = 'RBT Practice Exam: Free 75-Question Mock, 2026 Outline';
+const description = 'Free RBT practice exam: a timed 75-question mock with the six domain weights of the 2026 outline, every answer explained, plus fees, deadlines and state rules.';
+const faqs = [
+  { q: 'How many questions are on the RBT exam?', a: `${x.items}: ${x.scored} scored questions and ${x.unscored} unscored pilot questions mixed in, in ${h.time('rbt')}. You cannot tell the pilot questions apart, so treat every question as if it counts. Our mock gives the ${x.scored} scored questions in the published domain proportions, and you can add ${x.unscored} unscored ones to train at the full length.` },
+  { q: 'What score do you need to pass the RBT exam?', a: `The board reports pass or fail and does not publish a number of right answers. Its passing standard is set by a panel of experts with a modified Angoff method, and the handbook explains that method rather than a cut score. A site that quotes a fixed percentage is guessing. Our mock uses a study target of ${h.pc(x.target)}, labelled as ours.` },
+  { q: 'How much does it cost to become an RBT?', a: `At least ${h.usd(h.floor)} in fees paid to the board and the test vendor: ${h.usd(x.feeApplication)} for the application and ${h.usd(x.feeExam)} for each exam appointment. Training, background checks and, in a few states, a state credential come on top. Many employers pay for the training and the checks. The cost calculator adds the lines for your case.` },
+  { q: 'Is the RBT exam hard?', a: `About ${h.pc(h.pr.rate)} of first-time candidates passed in ${h.pr.year} across the ${h.pr.providers.length} training providers in the board's report, with wide gaps between providers. The exam asks you to apply procedures to short scenarios, so knowing definitions is not enough. Candidates who practice by domain and review their mistakes usually find the format familiar on the day.` },
+  { q: 'How soon can I retake the RBT exam after failing?', a: `After ${x.retakeWaitDays} days, and you pay the exam appointment again each time. You may take the exam up to ${x.attemptsMax} times within the ${x.authorizationMonths}-month authorization that follows the approval of your application. After that period or those attempts, a new application is needed.` },
+  { q: 'Can I take the RBT exam online?', a: 'No. The handbook says the board contracts with Pearson VUE to deliver its exams in person, at authorized Pearson VUE testing sites and on some US military bases. You schedule in your Pearson VUE account after your application is approved. Arriving more than 30 minutes late means you are turned away and the scheduling fee is lost.' },
+];
+const jsonLd = [websiteSchema(lang), organizationSchema(lang), webApplicationSchema({ name: 'RBT practice exam', description, path: route('home', lang), lang }), faqSchema(faqs, lang)];
+const resume = `The Registered Behavior Technician credential of the Behavior Analyst Certification Board is the entry ticket to most ABA therapy jobs in the United States. The exam behind it has ${x.items} multiple-choice questions in ${h.time('rbt')}, ${x.scored} of them scored, drawn from ${x.tasks} tasks in six domains of the third edition test content outline, in force since 2026. To sit it you must be at least ${R.eligibility.minAge}, hold a ${R.eligibility.education}, complete ${R.training.hours} hours of training, pass a competency assessment of ${R.competency.tasks} tasks with a qualified assessor, and clear background and abuse registry checks. The mock above follows the published count of questions per domain and runs a clock; the corrections come at the end, as on the real form. The board's fees are ${h.usd(x.feeApplication)} for the application and ${h.usd(x.feeExam)} per exam appointment. This site is independent: the application, the payment and the appointment happen only in your board account and with Pearson VUE.`;
+const glance = [
+  ['Questions', `${x.items} (${x.scored} scored, ${x.unscored} unscored pilot)`],
+  ['Time', h.time('rbt')],
+  ['Answer options', `${x.options} per question`],
+  ['Result', 'Pass or fail; passing standard set by a modified Angoff panel, not published as a count'],
+  ['Board fees', `${h.usd(x.feeApplication)} application, ${h.usd(x.feeExam)} per appointment`],
+  ['Retakes', `after ${x.retakeWaitDays} days, up to ${x.attemptsMax} attempts in ${x.authorizationMonths} months`],
+  ['Renewal', `every ${R.recertification.cycleYears} years, ${h.usd(R.recertification.fee)}`],
+];
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={jsonLd} faqs={faqs} breadcrumbs={[]}>
+  <header class="mb-3">
+    <p class="mb-1 text-xs font-semibold uppercase tracking-wide text-accent-600">Registered Behavior Technician exam · {x.editionLabel}</p>
+    <h1 class="mt-0 text-[1.75rem] font-bold text-navy-900 max-sm:leading-tight sm:text-3xl md:text-4xl">Free RBT practice exam: the full {x.scored}-question mock</h1>
+    <p class="mt-2 text-base text-navy-700 sm:text-lg">This RBT practice exam gives {x.scored} questions in the published domain weights with a clock, then marks it: {h.dom('rbt', 'C').items} on skill acquisition, {h.dom('rbt', 'D').items} on behavior reduction, {h.dom('rbt', 'A').items} on data collection. No account, nothing to pay.</p>
+    <p data-chrome data-independant class="mt-1 text-xs font-medium text-navy-600">{ui.independent}</p>
+  </header>
+  <div data-outil class="mb-4"><Tool tool={{ kind: 'quiz', props: { exam: 'rbt', mode: 'mock' } }} primary={true} seedKey="home" /></div>
+  <Clamp text={resume} id="clamp-home" lang={lang} class="mb-3" />
+  <p class="mb-8 text-sm text-navy-600">Format, fees and rules checked on <time datetime={LAST_UPDATED}>{displayDate(LAST_UPDATED, 'en-US')}</time> · {AUTHOR_NAME} · <a href={route('method', lang)} class="underline hover:text-navy-900">How questions and mocks are built</a> · <a href={route('about', lang)} class="underline hover:text-navy-900">About this site</a></p>
+
+  <div class="prose prose-slate max-w-none">
+    <h2>The RBT practice exam and the real exam, side by side</h2>
+    <p>The real exam is delivered by Pearson VUE. Our mock copies what can be copied: the number of scored questions in each domain, the clock, the question map with flags, and corrections only at the end. What it cannot copy is the board's own wording and its passing standard, which are not public. Read the comparison below before you judge a mock score.</p>
+    <Fragment set:html={h.table(['Item', 'Real exam (RBT Handbook)'], glance, `Read in the RBT Handbook and the outline on ${h.read}.`, ['l', 'l'])} />
+    <p>The mock opens with {x.scored} questions and a prorated time. Switch on the unscored option to sit all {x.items} questions in {h.time('rbt')}: ten of them are then left out of the score, which is how the real exam treats its pilot questions. Your answers stay in this browser and feed the <Fragment set:html={a('review-mistakes', 'review of mistakes')} />.</p>
+
+    <h2>What each of the six domains asks</h2>
+    <p>The outline lists {x.tasks} tasks. The table gives the scored questions per domain; the lines under it say what the questions are about, in our words. Each domain has its own practice page with its own set of questions.</p>
+    <Fragment set:html={h.outline('rbt', `${x.editionLabel}: ${x.scored} scored questions.`)} />
+    <ul>
+      {domainsOf('rbt').map((d) => <li><strong><a href={href(domPage[d.code])}>{d.code}. {d.name}</a></strong> ({d.items} questions, {d.tasks} tasks): {domText[d.code]}</li>)}
+    </ul>
+    <p>Two domains carry {h.dom('rbt', 'C').items + h.dom('rbt', 'D').items} of the {x.scored} scored questions, so a candidate who is solid on teaching procedures and on reduction procedures has most of the exam covered. Ethics, at {h.dom('rbt', 'F').items} questions, is worth more than its short list of rules suggests, because its scenarios mix confidentiality, gifts and multiple relationships in ways that are easy to misread.</p>
+
+    <h2>Who can sit the exam</h2>
+    <p>The board's requirements come in a fixed order. Each step has a validity window, which is where most delays come from.</p>
+    <ol>
+      <li><strong>Basic eligibility</strong>: at least {R.eligibility.minAge} years old and a {R.eligibility.education}.</li>
+      <li><strong>{R.training.hours}-hour training</strong>, completed in no fewer than {R.training.minDays} days and no more than {R.training.maxDays} days, under the 2026 curriculum. See <Fragment set:html={a('rbt-40-hour-training', 'the training page')} />.</li>
+      <li><strong>Initial competency assessment</strong> of {R.competency.tasks} tasks, at least {R.competency.withClientMin} of the teaching and reduction tasks with a client, completed within {R.competency.withinDaysBeforeApplication} days before you apply. See <Fragment set:html={a('rbt-competency-assessment', 'the competency checklist')} />.</li>
+      <li><strong>Background and abuse registry checks</strong>, confirmed with your age and education by an attesting certificant no more than {R.eligibility.checksWithinDays} days before you apply.</li>
+      <li><strong>Application</strong> in your board account with a {h.usd(x.feeApplication)} fee. Once approved, you have {R.application.monthsToTestAfterApproval} months to pass.</li>
+      <li><strong>Exam appointment</strong> with Pearson VUE for {h.usd(x.feeExam)}, paid at each scheduling.</li>
+    </ol>
+    <p>The <Fragment set:html={a('how-to-become-an-rbt', 'step-by-step page')} /> turns these windows into dates for your own application month.</p>
+
+    <h2>The cost, line by line</h2>
+    <p>The board and the test vendor charge {h.usd(h.floor)} for a first attempt. Everything else depends on your employer and your state: many clinics pay for the training and the checks, while a candidate who studies alone pays for them. Washington, Oregon, Nevada and Louisiana add a state credential or registration for technicians, from {h.usd(h.state('la').techFee)} in Louisiana to {h.usd(h.state('or').techFee)} in Oregon. The <Fragment set:html={a('rbt-certification-cost', 'cost calculator')} /> adds the lines for your state and your number of attempts.</p>
+
+    <h2>Pass rates: what the board publishes</h2>
+    <p>The board publishes first-time pass rates for training providers that had at least ten first-time candidates. In its {h.pr.year} report, the {h.pr.providers.length} providers listed sent {h.num(h.pr.n)} first-time candidates, of whom {h.num(h.pr.pass)} passed, a pooled rate of {h.pc(h.pr.rate, 1)}. Rates range widely from one provider to another, and they depend on who enrolls as much as on the course. The <Fragment set:html={a('rbt-pass-rates', 'pass rate page')} /> lets you sort the whole list.</p>
+
+    <h2>States that add their own rules</h2>
+    <p>The board's certification is national, but states regulate behavior analysis on their own. In its brief on licensure laws (version {h.RB.version}), the board counts {h.RB.statesLicensingAnalysts} states that license behavior analysts, {h.RB.statesLicensingAssistants} that license assistant analysts, {h.RB.statesRegulatingTechnicians} that regulate technicians and {h.RB.statesWithTechnicianRegistry} that keep a technician registry. The <Fragment set:html={a('rbt-requirements-by-state', 'state finder')} /> shows what applies where you work, with the fee of each state credential we could read on the state's own page.</p>
+
+    <h2>After you pass</h2>
+    <p>Under the 2026 maintenance rules, the credential is renewed every {R.recertification.cycleYears} years for {h.usd(R.recertification.fee)}, with {R.recertification.pduHours} hours of professional development in each cycle. Technicians whose renewal still falls in 2026 meet the old annual rules one last time, including a recertification competency assessment. Throughout, you work under ongoing supervision of at least {h.pc(R.supervision.share)} of your service hours each month, with at least {R.supervision.contactsPerMonth} contacts. The <Fragment set:html={a('rbt-renewal', 'renewal page')} /> and the <Fragment set:html={a('rbt-supervision', 'supervision calculator')} /> do the arithmetic.</p>
+
+    <h2>How to use this site in the weeks before the exam</h2>
+    <p>Begin with a mixed <Fragment set:html={a('rbt-practice-test', 'practice set')} /> to see where you stand. Then take each domain in turn, starting with the weakest, and read every explanation. Mix in the <Fragment set:html={a('preference-assessments', 'topic pages')} />, which drill the procedures that come back most often. Keep the <Fragment set:html={a('review-mistakes', 'review page')} /> for the last days: it serves only what you missed. Sit two full mocks on different days before the appointment; the <Fragment set:html={a('rbt-study-plan', 'study plan')} /> spreads the rest over the days you have.</p>
+    <h2>Every page of the site</h2>
+  </div>
+  <div class="not-prose mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-sommaire>
+    {GROUPS_ORDER.map((g) => (
+      <section><h3 class="mb-2 text-lg font-semibold text-navy-900">{groupLabel(g)}</h3><ul class="space-y-2 text-sm">{cards(g).map((c) => <li><a href={c.href} class="font-medium text-accent-700 underline">{c.name}</a><span class="block text-navy-700">{c.text}</span></li>)}</ul></section>
+    ))}
+  </div>
+  <div class="prose prose-slate mt-8 max-w-none">
+    <h2>Independent, and what that means</h2>
+    <p>{AUTHOR_NAME} publishes this site on its own. It is not the Behavior Analyst Certification Board, Pearson VUE, a state board, a training provider or an employer, and it sells nothing. The outline it works from is public, but its wording is not reproduced: each question is our own scenario for one task. The clinical scenarios are exam material, not treatment advice. When the board changes a fee or a rule, the parameter file changes and every page follows.</p>
+    <Sources lang={lang} intro="The format, fees, deadlines and state rules on this site were read in these documents of the board, the test vendor and the state boards, on" />
+  </div>
+</PageLayout>

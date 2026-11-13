@@ -1,0 +1,30 @@
+# BACB : organisme qui délivre les certifications RBT et BCBA, publie les handbooks, plans d'examen, taux de réussite et la liste des États qui réglementent
+bacb.com
+# Pearson VUE : prestataire qui fait passer les examens du BACB (pages d'inscription et de centres)
+pearsonvue.com
+# Législature de l'État de Washington : texte officiel du WAC 246-805 (certified behavior technician, frais)
+app.leg.wa.gov
+# Département de la santé de l'État de Washington : autorité qui délivre le CBT
+doh.wa.gov
+# État de l'Oregon (Health Licensing Office) : formulaire et règles du behavior analysis interventionist
+oregon.gov
+# Nevada Applied Behavior Analysis Board : enregistrement d'État des RBT et frais
+nvababoard.org
+# Louisiana Behavior Analyst Board : règles du registered line technician et formulaires
+lababoard.org
+# Texas Department of Licensing and Regulation : licence d'analyste du comportement au Texas
+tdlr.texas.gov
+# New York State Education Department, Office of the Professions : licence d'analyste du comportement à New York
+op.nysed.gov
+# Illinois Department of Financial and Professional Regulation : licence d'analyste du comportement en Illinois
+idfpr.illinois.gov
+# Virginia Department of Health Professions : licence d'analyste du comportement en Virginie
+dhp.virginia.gov
+# État de l'Indiana (Professional Licensing Agency) : licence d'analyste du comportement
+in.gov
+# Département de la santé du Maryland (Board of Professional Counselors) : licence d'analyste du comportement
+health.maryland.gov
+# Missouri Division of Professional Registration : licence d'analyste du comportement
+pr.mo.gov
+# Department of Veterans Affairs : remboursement des frais d'examen RBT et BCBA (GI Bill)
+va.gov

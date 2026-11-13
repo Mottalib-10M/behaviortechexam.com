@@ -1,0 +1,21 @@
+{
+ "name": "Behavior Tech Exam",
+ "short_name": "Behavior Tech Exam",
+ "description": "Free behavior technician practice exam: 75 questions weighted like the RBT Test Content Outline (3rd ed.), 90-minute mock, score by domain, fees and state rules.",
+ "start_url": "/en/",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#2B4C7E",
+ "icons": [
+  {
+   "src": "/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

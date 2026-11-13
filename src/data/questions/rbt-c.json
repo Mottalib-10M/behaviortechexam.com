@@ -1,0 +1,502 @@
+{
+ "questions": [
+  {
+   "id": "rbt-c-01",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.1",
+   "q": "Each time a learner asks for help, the technician gives the help right away, and asking for help increases. What happened?",
+   "options": [
+    "Positive reinforcement of asking for help",
+    "Negative punishment of asking for help",
+    "Extinction",
+    "Positive punishment"
+   ],
+   "answer": 0,
+   "explain": "Something was added after the behavior (help), and the behavior increased in the future, which is positive reinforcement. Negative punishment removes something and decreases behavior, and extinction withholds a reinforcer that used to follow the behavior.",
+   "topics": [
+    "reinforcement"
+   ]
+  },
+  {
+   "id": "rbt-c-02",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.1",
+   "q": "A learner says \"break please\" and is allowed to leave a hard task for one minute; saying it increases. Which process is this?",
+   "options": [
+    "Positive reinforcement",
+    "Negative reinforcement",
+    "Negative punishment",
+    "Response cost"
+   ],
+   "answer": 1,
+   "explain": "Removing something aversive (the task) after a behavior, with the behavior becoming more frequent, is negative reinforcement. Negative does not mean bad; it means something is taken away. Response cost and negative punishment decrease behavior.",
+   "topics": [
+    "reinforcement"
+   ]
+  },
+  {
+   "id": "rbt-c-03",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.1",
+   "q": "Why does a technician deliver the reinforcer immediately after the target response when teaching a new skill?",
+   "options": [
+    "Because delays are banned by the ethics code for technicians",
+    "So the learner does not get full",
+    "So the reinforcer follows the response it should strengthen",
+    "So the session ends sooner"
+   ],
+   "answer": 2,
+   "explain": "Immediacy makes it clear which behavior produced the reinforcer. With a delay, another behavior, even problem behavior, may occur in between and be strengthened instead. Delays are introduced later, on purpose, as the skill becomes stable.",
+   "topics": [
+    "reinforcement"
+   ]
+  },
+  {
+   "id": "rbt-c-04",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.2",
+   "q": "A technician says \"great job\" right before giving a preferred snack, many times. Praise later increases behavior on its own. What has been established?",
+   "options": [
+    "An unconditioned reinforcer",
+    "A punisher",
+    "An establishing operation",
+    "A conditioned reinforcer"
+   ],
+   "answer": 3,
+   "explain": "Pairing a neutral stimulus with an existing reinforcer can turn it into a conditioned reinforcer. Unconditioned reinforcers, such as food or warmth, need no learning history. Praise that now strengthens behavior on its own has become conditioned.",
+   "topics": [
+    "reinforcement"
+   ]
+  },
+  {
+   "id": "rbt-c-05",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.3",
+   "q": "What are the parts of a discrete trial, in order?",
+   "options": [
+    "Instruction, response, consequence, then an intertrial interval",
+    "Consequence, instruction, response, prompt",
+    "Response, instruction, prompt, consequence",
+    "Intertrial interval, consequence, response"
+   ],
+   "answer": 0,
+   "explain": "A discrete trial starts with a discriminative stimulus (the instruction), may include a prompt, then the learner's response, then the consequence. A short intertrial interval separates trials so each one is clearly marked.",
+   "topics": [
+    "dtt"
+   ]
+  },
+  {
+   "id": "rbt-c-06",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.3",
+   "q": "In discrete-trial teaching, the technician says \"touch red\" and the learner touches blue. Under an error correction procedure, what usually comes next?",
+   "options": [
+    "Give the reinforcer anyway to keep the learner motivated",
+    "Repeat the instruction with a prompt so the learner gets it right",
+    "Say \"no\" loudly and end the session",
+    "Move to an unrelated program"
+   ],
+   "answer": 1,
+   "explain": "A common error correction repeats the trial with a prompt that ensures a correct response, then often runs an independent trial. The exact steps come from the supervisor's plan. Reinforcing errors would strengthen them.",
+   "topics": [
+    "dtt"
+   ]
+  },
+  {
+   "id": "rbt-c-07",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.3",
+   "q": "Why should the technician keep instructions short and consistent in discrete trials?",
+   "options": [
+    "Because long sentences are against the rules",
+    "So the session sounds more professional",
+    "So the learner can tell which cue signals which response",
+    "So the learner stops listening to other people"
+   ],
+   "answer": 2,
+   "explain": "Consistent, concise instructions make the discriminative stimulus clear, which speeds learning. Varied wording can be added later on purpose to build generalization once the response is acquired.",
+   "topics": [
+    "dtt"
+   ]
+  },
+  {
+   "id": "rbt-c-08",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.3",
+   "q": "What is the intertrial interval in discrete-trial teaching?",
+   "options": [
+    "The time a learner takes to answer an instruction",
+    "The break at the end of the session",
+    "The delay before a prompt is given",
+    "A brief pause between the end of one trial and the next instruction"
+   ],
+   "answer": 3,
+   "explain": "The intertrial interval is the short pause after the consequence and before the next instruction. It marks the end of each trial. The time before a prompt is a prompt delay, and the response time is a latency.",
+   "topics": [
+    "dtt"
+   ]
+  },
+  {
+   "id": "rbt-c-09",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.3",
+   "q": "A learner answers correctly but only after a gesture from the technician. How is the trial usually recorded?",
+   "options": [
+    "As a prompted response",
+    "As an independent correct response",
+    "As no response",
+    "As problem behavior"
+   ],
+   "answer": 0,
+   "explain": "A response that needed a prompt is recorded as prompted, so the data show how close the learner is to independence. Counting it as independent would overstate progress and could lead to fading support too fast.",
+   "topics": [
+    "dtt"
+   ]
+  },
+  {
+   "id": "rbt-c-10",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.3",
+   "q": "During a discrete trial, the learner stops looking at the materials. Before giving the instruction, what should the technician usually do?",
+   "options": [
+    "Give the instruction louder and faster than before",
+    "Secure the learner's attention as the plan describes",
+    "Deliver a reinforcer first",
+    "Record an incorrect response for the trial, then move on"
+   ],
+   "answer": 1,
+   "explain": "Many plans ask for attending before the instruction, for example a brief orienting cue. Giving the cue without attention may produce errors not linked to the skill. Delivering a reinforcer before a response is not part of the trial.",
+   "topics": [
+    "dtt"
+   ]
+  },
+  {
+   "id": "rbt-c-11",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.3",
+   "q": "Mass trials of the same target give way to mixed trials of several targets. What is this mixing called?",
+   "options": [
+    "Extinction of known targets",
+    "Forward chaining",
+    "Interspersal or mixing of targets",
+    "Overcorrection"
+   ],
+   "answer": 2,
+   "explain": "After a target is acquired in massed trials, technicians often mix it with other targets so the learner must discriminate among cues. Interspersing known targets also keeps reinforcement rates up. The other options are unrelated procedures.",
+   "topics": [
+    "dtt"
+   ]
+  },
+  {
+   "id": "rbt-c-12",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.3",
+   "q": "In a teaching session, the learner gives the correct answer on a trial before the technician finishes the instruction. What should be recorded?",
+   "options": [
+    "Always score it as an independent correct response",
+    "Always score it as an error",
+    "Skip recording the trial",
+    "Follow the plan's scoring rule and ask the supervisor if unsure"
+   ],
+   "answer": 3,
+   "explain": "Data rules for responses that start before the instruction ends differ between programs, so the technician follows the plan and asks the supervisor when unsure. Choosing a scoring rule on the spot makes data inconsistent across staff.",
+   "topics": [
+    "dtt"
+   ]
+  },
+  {
+   "id": "rbt-c-13",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.4",
+   "q": "A learner reaches for a ball on a high shelf, and the technician waits for the learner to say \"ball\" before handing it over. Which procedure is this?",
+   "options": [
+    "Incidental teaching",
+    "Discrete-trial teaching",
+    "Backward chaining",
+    "Response cost"
+   ],
+   "answer": 0,
+   "explain": "Incidental teaching uses a moment of motivation the learner shows in the natural environment to teach a response, then delivers the item the learner wanted. It is a naturalistic procedure. Discrete trials are led by the technician's instruction."
+  },
+  {
+   "id": "rbt-c-14",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.4",
+   "q": "What is a main advantage of natural environment teaching?",
+   "options": [
+    "It needs no data collection during play",
+    "Skills are taught where they are used, which helps them generalize",
+    "It removes the need for reinforcement",
+    "It avoids any teaching in play"
+   ],
+   "answer": 1,
+   "explain": "Teaching during play and routines, with natural reinforcers, often leads to skills that carry over to daily life. Data and reinforcement remain part of the procedure, and play is often the very setting used."
+  },
+  {
+   "id": "rbt-c-15",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.5",
+   "q": "A learner is taught to wash hands by completing all steps but the last with help, then doing the last step alone. What is this?",
+   "options": [
+    "Forward chaining",
+    "Total task chaining",
+    "Backward chaining",
+    "Shaping"
+   ],
+   "answer": 2,
+   "explain": "In backward chaining the learner performs the last step independently first, and earlier steps are added one by one. The learner contacts the natural end of the chain right away. Forward chaining starts with the first step, and total task teaches every step every time."
+  },
+  {
+   "id": "rbt-c-16",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.5",
+   "q": "Which describes total task chaining?",
+   "options": [
+    "Only the first step is taught, until it is mastered alone",
+    "Only the last step is taught until mastered",
+    "Steps are taught in random order",
+    "The learner is taught every step of the task analysis in each session"
+   ],
+   "answer": 3,
+   "explain": "Total task chaining has the learner go through the whole sequence each session, with prompts on steps not yet mastered. It suits learners who already have some of the steps. Forward and backward chaining teach one step at a time."
+  },
+  {
+   "id": "rbt-c-17",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.6",
+   "q": "A learner is taught to pick the cup when told \"cup\" and the spoon when told \"spoon,\" with reinforcement only for the correct one. What is being taught?",
+   "options": [
+    "Discrimination between two cues",
+    "Generalization across people",
+    "Shaping of a new sound",
+    "A chain of behaviors"
+   ],
+   "answer": 0,
+   "explain": "Discrimination training reinforces a response in the presence of one stimulus and not another, so the learner comes to respond differently to each. Generalization is about responding the same way across settings or people."
+  },
+  {
+   "id": "rbt-c-18",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.7",
+   "q": "A technician starts with full physical guidance and moves to lighter prompts as the learner succeeds. Which prompt fading method is this?",
+   "options": [
+    "Least-to-most",
+    "Most-to-least",
+    "Time delay",
+    "Stimulus fading"
+   ],
+   "answer": 1,
+   "explain": "Most-to-least starts with the most intrusive prompt the learner needs and fades to less intrusive ones as the learner succeeds. It limits errors during early learning. Least-to-most starts with the lightest prompt and adds help only if needed.",
+   "topics": [
+    "prompting"
+   ]
+  },
+  {
+   "id": "rbt-c-19",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.7",
+   "q": "The technician gives the learner a chance to respond alone, then a gesture, then a model, then physical help, only as needed. Which method is this?",
+   "options": [
+    "Most-to-least prompting",
+    "Errorless teaching",
+    "Least-to-most prompting",
+    "Graduated guidance"
+   ],
+   "answer": 2,
+   "explain": "Least-to-most prompting gives the learner a chance to respond independently and adds more help at each step only if the response does not occur. It gives the learner chances to show what they can do but may allow more errors.",
+   "topics": [
+    "prompting"
+   ]
+  },
+  {
+   "id": "rbt-c-20",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.7",
+   "q": "The technician waits 0 seconds before prompting on the first trials, then 2 seconds, then 4. What is this?",
+   "options": [
+    "Constant time delay",
+    "Stimulus fading",
+    "Backward chaining",
+    "Progressive time delay"
+   ],
+   "answer": 3,
+   "explain": "In progressive time delay the wait between the instruction and the prompt grows step by step, giving the learner more time to respond before help. Constant time delay uses a zero delay then a single fixed delay.",
+   "topics": [
+    "prompting"
+   ]
+  },
+  {
+   "id": "rbt-c-21",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.7",
+   "q": "A picture of an apple is drawn darker than the other pictures at first and then made lighter over trials. What is this?",
+   "options": [
+    "Stimulus fading of a within-stimulus prompt",
+    "Response prompt fading by modeling",
+    "Extinction of the wrong choices",
+    "Differential reinforcement of the right choice"
+   ],
+   "answer": 0,
+   "explain": "Changing a feature of the materials, such as color intensity, to guide the learner, then fading that feature, is a stimulus prompt with stimulus fading. Response prompts, such as gestures or models, act on the learner's response instead.",
+   "topics": [
+    "prompting"
+   ]
+  },
+  {
+   "id": "rbt-c-22",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.7",
+   "q": "Why must prompts be faded?",
+   "options": [
+    "Because prompts are not allowed after week one",
+    "To avoid prompt dependence and reach independent responding",
+    "To make sessions harder for the learner",
+    "So the technician can stop collecting data"
+   ],
+   "answer": 1,
+   "explain": "If prompts stay in place, the learner may wait for them instead of responding to the natural cue. Planned fading transfers control to the instruction or the natural setting. Data remain needed to decide when to fade.",
+   "topics": [
+    "prompting"
+   ]
+  },
+  {
+   "id": "rbt-c-23",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.7",
+   "q": "Which is an example of a gestural prompt?",
+   "options": [
+    "Guiding the learner's hand to the card",
+    "Saying the answer aloud",
+    "Pointing toward the correct card",
+    "Placing the correct card closer to the learner"
+   ],
+   "answer": 2,
+   "explain": "A gestural prompt is a movement such as pointing or nodding. Guiding the hand is physical, saying the answer is verbal, and moving the card closer changes the materials, which is a positional stimulus prompt.",
+   "topics": [
+    "prompting"
+   ]
+  },
+  {
+   "id": "rbt-c-24",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.7",
+   "q": "Errorless teaching is used with a learner who becomes upset after mistakes. What does the technician do?",
+   "options": [
+    "Wait until the learner makes and corrects the error",
+    "Teach only targets the learner already knows",
+    "Withhold reinforcement for prompted responses",
+    "Prompt right away so a correct response occurs, then fade the prompt"
+   ],
+   "answer": 3,
+   "explain": "Errorless teaching arranges prompts at once, often most-to-least or zero-second delay, so mistakes are rare, then fades them systematically. Teaching only known targets would not build new skills.",
+   "topics": [
+    "prompting"
+   ]
+  },
+  {
+   "id": "rbt-c-25",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.7",
+   "q": "Which prompt type is usually considered the most intrusive?",
+   "options": [
+    "Full physical prompt",
+    "Gestural prompt",
+    "Verbal prompt",
+    "Visual prompt"
+   ],
+   "answer": 0,
+   "explain": "A full physical prompt guides the learner through the whole response with hand-over-hand help, so it is the most intrusive. It is used only as the plan allows and with the learner's dignity and comfort in mind.",
+   "topics": [
+    "prompting"
+   ]
+  },
+  {
+   "id": "rbt-c-26",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.8",
+   "q": "A learner labels animals with the technician at the table but not with a parent at home. What does the plan need?",
+   "options": [
+    "More massed trials at the table with the technician",
+    "Generalization across people and settings",
+    "A punishment procedure",
+    "A shorter session"
+   ],
+   "answer": 1,
+   "explain": "Generalization means the skill occurs across people, settings and materials that were not part of teaching. Planned teaching with several adults, places and pictures helps. More table trials alone may keep the skill tied to one setting."
+  },
+  {
+   "id": "rbt-c-27",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.9",
+   "q": "Which describes a maintenance procedure?",
+   "options": [
+    "Teaching a skill for the first time with dense reinforcement",
+    "Increasing prompts for a new target",
+    "Practicing mastered skills now and then so they are kept",
+    "Running a functional analysis"
+   ],
+   "answer": 2,
+   "explain": "Maintenance procedures review skills already acquired, usually at a lower rate and with thinner reinforcement, so they do not fade. Acquisition procedures teach new skills, often with prompts and dense reinforcement."
+  },
+  {
+   "id": "rbt-c-28",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.10",
+   "q": "To teach a learner to say \"water,\" the technician first reinforces \"wa,\" then only \"wat,\" then only \"water.\" Which procedure is this?",
+   "options": [
+    "Chaining",
+    "Stimulus fading",
+    "Extinction burst",
+    "Shaping"
+   ],
+   "answer": 3,
+   "explain": "Shaping reinforces successive approximations of a target behavior, each closer than the last, while earlier approximations stop being reinforced. Chaining links separate steps into a sequence, which is a different procedure."
+  },
+  {
+   "id": "rbt-c-29",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.11",
+   "q": "A learner earns a sticker for each completed task and trades five stickers for a game. What is this system?",
+   "options": [
+    "A token economy",
+    "Response cost alone",
+    "Noncontingent reinforcement",
+    "A preference assessment"
+   ],
+   "answer": 0,
+   "explain": "In a token economy, tokens earned for target behaviors are exchanged for backup reinforcers. The tokens are conditioned reinforcers. Response cost may be part of some token systems, but the earning and exchange define the economy.",
+   "topics": [
+    "reinforcement"
+   ]
+  }
+ ]
+}

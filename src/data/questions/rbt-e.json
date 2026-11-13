@@ -1,0 +1,214 @@
+{
+ "questions": [
+  {
+   "id": "rbt-e-01",
+   "exam": "rbt",
+   "domain": "E",
+   "ref": "E.1",
+   "q": "A teacher tells the technician that the learner's behavior plan does not work in class. What should the technician do?",
+   "options": [
+    "Pass the concern to the supervisor promptly",
+    "Change the plan to fit the classroom",
+    "Tell the teacher the plan is correct",
+    "Ignore it because the teacher is not the supervisor"
+   ],
+   "answer": 0,
+   "explain": "Concerns and suggestions from caregivers, teachers and other providers go to the supervisor without delay. The supervisor decides whether the plan changes. Changing it alone, or dismissing the concern, would step outside the technician's role."
+  },
+  {
+   "id": "rbt-e-02",
+   "exam": "rbt",
+   "domain": "E",
+   "ref": "E.1",
+   "q": "A parent suggests a new reinforcer that the learner loves at home. What is the best response?",
+   "options": [
+    "Start using it right away in every program",
+    "Thank the parent and share the idea with the supervisor",
+    "Tell the parent only the supervisor may talk about reinforcers",
+    "Write it down and keep it for the next renewal"
+   ],
+   "answer": 1,
+   "explain": "Caregiver input is valuable, and the technician's job is to relay it promptly. The supervisor may add the item to a preference assessment or to the plan. Using it before the supervisor agrees could change the program without review."
+  },
+  {
+   "id": "rbt-e-03",
+   "exam": "rbt",
+   "domain": "E",
+   "ref": "E.1",
+   "q": "A speech therapist recommends a different way to prompt words. How should this be handled?",
+   "options": [
+    "Use both prompting methods at once to see which works best",
+    "Stop all prompting until the team meets",
+    "Report the recommendation to the supervisor for coordination",
+    "Ask the parent which method to use"
+   ],
+   "answer": 2,
+   "explain": "Coordinating with other providers is the supervisor's responsibility. The technician reports the recommendation promptly and keeps following the current plan until the supervisor gives direction."
+  },
+  {
+   "id": "rbt-e-04",
+   "exam": "rbt",
+   "domain": "E",
+   "ref": "E.2",
+   "q": "A technician is unsure how to run a new program the supervisor wrote. What should they do?",
+   "options": [
+    "Run it the way a previous client's program worked",
+    "Skip the program until the next visit",
+    "Look for instructions on social media",
+    "Ask the supervisor for direction before running it"
+   ],
+   "answer": 3,
+   "explain": "Technicians seek clinical direction when they are unsure about a procedure. Guessing can harm the learner and makes data meaningless. Skipping programs without telling the supervisor also changes treatment."
+  },
+  {
+   "id": "rbt-e-05",
+   "exam": "rbt",
+   "domain": "E",
+   "ref": "E.2",
+   "q": "A technician notices that the data show a sudden drop in a skill that had been mastered. What is the right step?",
+   "options": [
+    "Tell the supervisor about the irregularity promptly",
+    "Delete the low data points so the graph shows the real level",
+    "Go back to teaching it as a new skill",
+    "Wait to see whether it improves next month"
+   ],
+   "answer": 0,
+   "explain": "Data irregularities are reported to the supervisor in a timely manner, who decides what to do. Deleting data is falsification, and changing the program on one's own steps outside the role."
+  },
+  {
+   "id": "rbt-e-06",
+   "exam": "rbt",
+   "domain": "E",
+   "ref": "E.2",
+   "q": "A technician has a concern about a procedure and the supervisor is not reachable. What should they do?",
+   "options": [
+    "Decide alone and explain later",
+    "Use the organization's chain of command to reach another supervisor",
+    "Post the question in an online forum",
+    "Ask the learner's family to decide"
+   ],
+   "answer": 1,
+   "explain": "Organizations set a chain of command for when the supervisor is unavailable. Following it gets clinical direction from a qualified person. Online forums break confidentiality, and families do not supervise treatment."
+  },
+  {
+   "id": "rbt-e-07",
+   "exam": "rbt",
+   "domain": "E",
+   "ref": "E.3",
+   "q": "A learner arrives very sleepy, and the caregiver mentions a new medication. What should the technician do?",
+   "options": [
+    "Give advice about the medication",
+    "Change the reinforcers for the day",
+    "Note it objectively and report it to the supervisor",
+    "Leave it out because it is medical"
+   ],
+   "answer": 2,
+   "explain": "Illness, medication and sleep can affect behavior and progress. The technician reports the facts promptly without giving medical opinions. The supervisor decides whether anything in the plan should change."
+  },
+  {
+   "id": "rbt-e-08",
+   "exam": "rbt",
+   "domain": "E",
+   "ref": "E.3",
+   "q": "The learner's school schedule changed this week. Why should the technician report it?",
+   "options": [
+    "Only so the technician can change their own working hours",
+    "Because the BACB records schedules",
+    "So the learner can skip sessions",
+    "Schedule changes can affect behavior and progress"
+   ],
+   "answer": 3,
+   "explain": "Changes in routine, such as a new school schedule, can explain changes in behavior and in data. Reporting them in time helps the supervisor interpret the graphs correctly."
+  },
+  {
+   "id": "rbt-e-09",
+   "exam": "rbt",
+   "domain": "E",
+   "ref": "E.3",
+   "q": "A learner's family is moving next month. What is the technician's best action?",
+   "options": [
+    "Inform the supervisor so continuity of services can be planned",
+    "Stop collecting data until the move is over and services restart",
+    "Tell the learner sessions are ending",
+    "Start new goals to finish before the move"
+   ],
+   "answer": 0,
+   "explain": "Life events like a move can affect progress and services. The supervisor and organization plan for transitions. The technician reports, keeps implementing the plan, and does not change goals or announce endings alone."
+  },
+  {
+   "id": "rbt-e-10",
+   "exam": "rbt",
+   "domain": "E",
+   "ref": "E.3",
+   "q": "During a session, the learner refuses all food and seems in pain. What should the technician do?",
+   "options": [
+    "Diagnose the cause",
+    "Follow the workplace health procedure and inform those required",
+    "Continue the session as usual without telling anyone",
+    "Offer the learner medicine from home"
+   ],
+   "answer": 1,
+   "explain": "Health concerns are reported following workplace procedures and the law. The technician does not diagnose or give medication, and continuing as if nothing happened could put the learner at risk."
+  },
+  {
+   "id": "rbt-e-11",
+   "exam": "rbt",
+   "domain": "E",
+   "ref": "E.4",
+   "q": "Which sentence belongs in an objective session note?",
+   "options": [
+    "The learner was in a terrible mood today",
+    "The learner cried because he hates me",
+    "The learner cried for 3 minutes after the tablet was removed",
+    "The session went fine"
+   ],
+   "answer": 2,
+   "explain": "Objective notes describe observable events, measures and context, such as a duration and what happened before. Opinions, guesses about feelings or motives, and vague statements cannot be checked and are less useful to the supervisor."
+  },
+  {
+   "id": "rbt-e-12",
+   "exam": "rbt",
+   "domain": "E",
+   "ref": "E.4",
+   "q": "When should session notes be completed?",
+   "options": [
+    "Whenever the technician has some free time later in the week",
+    "Only when a session went badly",
+    "Once a year for the renewal",
+    "When the workplace and funders require"
+   ],
+   "answer": 3,
+   "explain": "Session notes follow legal, regulatory and workplace requirements, including timing and format, which funders often specify. Late or missing notes can affect billing and the continuity of care."
+  },
+  {
+   "id": "rbt-e-13",
+   "exam": "rbt",
+   "domain": "E",
+   "ref": "E.4",
+   "q": "A technician made an error in a signed session note. What is the right way to correct it?",
+   "options": [
+    "Use the workplace's dated correction procedure",
+    "Erase the note and write a new one with the right details",
+    "Leave it because it is signed",
+    "Ask a coworker to change it"
+   ],
+   "answer": 0,
+   "explain": "Records are corrected through the employer's procedure, usually a dated amendment that keeps the original visible. Erasing or rewriting records hides changes and can be seen as falsification."
+  },
+  {
+   "id": "rbt-e-14",
+   "exam": "rbt",
+   "domain": "E",
+   "ref": "E.4",
+   "q": "A caregiver asks what happened during the session. What should the technician share?",
+   "options": [
+    "Their own opinion of the treatment plan and the goals chosen",
+    "An objective summary, within what is allowed",
+    "Details about other clients",
+    "Advice on changing the plan"
+   ],
+   "answer": 1,
+   "explain": "Technicians can describe what occurred objectively, within the limits set by the supervisor and the workplace. Opinions on the plan and plan changes are the supervisor's domain, and other clients' information is confidential."
+  }
+ ]
+}

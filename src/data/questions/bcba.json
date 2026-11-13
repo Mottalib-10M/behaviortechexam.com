@@ -1,0 +1,544 @@
+{
+ "questions": [
+  {
+   "id": "bcba-a-01",
+   "exam": "bcba",
+   "domain": "A",
+   "ref": "A.3",
+   "q": "Radical behaviorism differs from methodological behaviorism mainly because it",
+   "options": [
+    "includes private events such as thoughts as behavior to be explained",
+    "rejects the study of any behavior that only the person can observe directly",
+    "explains behavior by mental states",
+    "studies only reflexes"
+   ],
+   "answer": 0,
+   "explain": "Radical behaviorism, as described by Skinner, treats private events such as thinking and feeling as behavior subject to the same environmental analysis. Methodological behaviorism leaves them out because they cannot be observed publicly. Neither explains behavior by mental causes."
+  },
+  {
+   "id": "bcba-a-02",
+   "exam": "bcba",
+   "domain": "A",
+   "ref": "A.2",
+   "q": "Which assumption holds that behavior is lawful and caused by environmental and biological variables?",
+   "options": [
+    "Mentalism",
+    "Determinism",
+    "Parsimony",
+    "Philosophic doubt"
+   ],
+   "answer": 1,
+   "explain": "Determinism assumes the universe, behavior included, is lawful and orderly, so its causes can be found. Parsimony prefers the simplest explanation, and philosophic doubt keeps findings open to revision. Mentalism is the view behavior analysis rejects."
+  },
+  {
+   "id": "bcba-a-03",
+   "exam": "bcba",
+   "domain": "A",
+   "ref": "A.5",
+   "q": "An intervention produces change that lasts over time and appears in new settings. Which dimension of applied behavior analysis does this show?",
+   "options": [
+    "Technological",
+    "Conceptually systematic",
+    "Generality",
+    "Analytic"
+   ],
+   "answer": 2,
+   "explain": "Generality means behavior change lasts over time, appears in other settings or spreads to other behaviors. Technological refers to procedures described clearly enough to replicate, and analytic to a shown functional relation."
+  },
+  {
+   "id": "bcba-a-04",
+   "exam": "bcba",
+   "domain": "A",
+   "ref": "A.4",
+   "q": "Which branch of the field tests interventions on socially significant behavior in applied settings?",
+   "options": [
+    "Experimental analysis of behavior",
+    "Behaviorism as a philosophy",
+    "Methodological behaviorism",
+    "Applied behavior analysis"
+   ],
+   "answer": 3,
+   "explain": "Applied behavior analysis uses the principles found by the experimental analysis of behavior to improve socially significant behavior. The experimental analysis studies basic processes, often in the laboratory, and behaviorism is the philosophy of the science."
+  },
+  {
+   "id": "bcba-b-01",
+   "exam": "bcba",
+   "domain": "B",
+   "ref": "B.9",
+   "q": "Reinforcement is delivered after an average of 10 responses, with the exact number changing each time. Which schedule is this?",
+   "options": [
+    "Variable ratio",
+    "Fixed ratio",
+    "Variable interval",
+    "Fixed interval"
+   ],
+   "answer": 0,
+   "explain": "Variable ratio (VR) schedules reinforce after a varying number of responses around a mean, and they tend to produce high, steady response rates. Interval schedules depend on time passing before a response is reinforced."
+  },
+  {
+   "id": "bcba-b-02",
+   "exam": "bcba",
+   "domain": "B",
+   "ref": "B.16",
+   "q": "A child who has had no snacks all afternoon works harder for crackers. What is the lack of snacks an example of?",
+   "options": [
+    "A discriminative stimulus",
+    "A conditioned punisher",
+    "An abolishing operation",
+    "An establishing operation"
+   ],
+   "answer": 3,
+   "explain": "Deprivation is an establishing operation: it raises the value of a reinforcer and evokes behavior that has produced it. A discriminative stimulus signals that reinforcement is available, but does not change its value. Satiation would be an abolishing operation."
+  },
+  {
+   "id": "bcba-b-03",
+   "exam": "bcba",
+   "domain": "B",
+   "ref": "B.19",
+   "q": "A child says \"dog\" when seeing a dog, with no prompt and no request involved. Which verbal operant is this?",
+   "options": [
+    "Mand",
+    "Echoic",
+    "Tact",
+    "Intraverbal"
+   ],
+   "answer": 2,
+   "explain": "A tact is verbal behavior under the control of a nonverbal stimulus, here the sight of a dog, maintained by generalized reinforcement. A mand is controlled by motivation and specifies its reinforcer, an echoic repeats a verbal model, and an intraverbal answers other words."
+  },
+  {
+   "id": "bcba-b-04",
+   "exam": "bcba",
+   "domain": "B",
+   "ref": "B.11",
+   "q": "Which statement best describes operant extinction?",
+   "options": [
+    "An aversive stimulus is added after behavior",
+    "Reinforcement for a previously reinforced behavior is discontinued",
+    "A conditioned stimulus is presented without the unconditioned stimulus",
+    "A reinforcer is given on a time schedule"
+   ],
+   "answer": 1,
+   "explain": "Operant extinction stops the reinforcement that maintained a behavior, which leads to a decrease over time. Presenting a conditioned stimulus alone describes respondent extinction. Adding aversive stimuli is punishment, and time-based delivery is noncontingent reinforcement."
+  },
+  {
+   "id": "bcba-c-01",
+   "exam": "bcba",
+   "domain": "C",
+   "ref": "C.2",
+   "q": "Counting the number of completed assembly kits at the end of a shift is which type of measure?",
+   "options": [
+    "Product measure",
+    "Direct measure of the response as it occurs",
+    "Indirect measure",
+    "Interobserver agreement"
+   ],
+   "answer": 0,
+   "explain": "Product, or permanent product, measures count the lasting effects of behavior after it occurs. Direct measures observe the behavior itself as it happens, and indirect measures rely on reports such as interviews or rating scales."
+  },
+  {
+   "id": "bcba-c-02",
+   "exam": "bcba",
+   "domain": "C",
+   "ref": "C.8",
+   "q": "Two observers record the same session and agree on 45 of 50 intervals. What is the interval-by-interval agreement?",
+   "options": [
+    "45 percent",
+    "90 percent",
+    "95 percent",
+    "50 percent"
+   ],
+   "answer": 1,
+   "explain": "Interval-by-interval agreement divides intervals with agreement by the total intervals and multiplies by 100: 45 divided by 50 is 0.9, or 90 percent. Agreement supports the believability of data but does not prove accuracy."
+  },
+  {
+   "id": "bcba-c-03",
+   "exam": "bcba",
+   "domain": "C",
+   "ref": "C.11",
+   "q": "Data in a phase show a stable level, then an immediate change in level after the intervention starts. What does this support?",
+   "options": [
+    "No effect, since the trend inside each phase did not change",
+    "A measurement error",
+    "An effect of the intervention, if replicated",
+    "An extinction burst"
+   ],
+   "answer": 2,
+   "explain": "An immediate, clear change in level when the intervention begins suggests an effect. In single-case designs, replication of that change, for example across baselines or phases, is what builds confidence in a functional relation."
+  },
+  {
+   "id": "bcba-c-04",
+   "exam": "bcba",
+   "domain": "C",
+   "ref": "C.5",
+   "q": "Which measurement procedure is continuous?",
+   "options": [
+    "Partial interval recording",
+    "Momentary time sampling",
+    "Whole interval recording",
+    "Duration recording"
+   ],
+   "answer": 3,
+   "explain": "Continuous procedures capture every instance of the behavior during the observation, as event, duration or latency recording do. Interval methods and time sampling are discontinuous and give estimates."
+  },
+  {
+   "id": "bcba-d-01",
+   "exam": "bcba",
+   "domain": "D",
+   "ref": "D.1",
+   "q": "In a study of a token system on homework completion, what is the independent variable?",
+   "options": [
+    "The token system",
+    "Homework completion",
+    "The child's age",
+    "The observer"
+   ],
+   "answer": 0,
+   "explain": "The independent variable is what the experimenter manipulates, here the token system. The dependent variable is the behavior measured, homework completion. Other factors are held constant or noted as possible confounds."
+  },
+  {
+   "id": "bcba-d-02",
+   "exam": "bcba",
+   "domain": "D",
+   "ref": "D.7",
+   "q": "An intervention is introduced to three behaviors at staggered times, and each changes only when treated. Which design is this?",
+   "options": [
+    "Reversal design with a return to baseline",
+    "Changing criterion design",
+    "Alternating treatments design",
+    "Multiple baseline across behaviors"
+   ],
+   "answer": 3,
+   "explain": "A multiple baseline introduces the intervention at different times across behaviors, settings or participants. Change that occurs only when each baseline is treated shows experimental control without withdrawing treatment."
+  },
+  {
+   "id": "bcba-d-03",
+   "exam": "bcba",
+   "domain": "D",
+   "ref": "D.3",
+   "q": "Children in a study improve partly because they mature over the months of the study. Which threat to internal validity is this?",
+   "options": [
+    "History",
+    "Instrumentation",
+    "Maturation",
+    "Regression to the mean"
+   ],
+   "answer": 2,
+   "explain": "Maturation refers to changes within participants over time, such as growth, that could explain results. History is an outside event during the study, and instrumentation is a change in how behavior is measured."
+  },
+  {
+   "id": "bcba-d-04",
+   "exam": "bcba",
+   "domain": "D",
+   "ref": "D.7",
+   "q": "Which design is best suited to a behavior that should be increased in gradual steps, such as minutes of exercise?",
+   "options": [
+    "Reversal design",
+    "Changing criterion design",
+    "Multielement design",
+    "Multiple probe design across settings"
+   ],
+   "answer": 1,
+   "explain": "A changing criterion design sets successive performance criteria and shows control when behavior shifts to match each new criterion. It suits goals reached step by step, such as increasing exercise or decreasing cigarettes smoked."
+  },
+  {
+   "id": "bcba-e-01",
+   "exam": "bcba",
+   "domain": "E",
+   "ref": "E.7",
+   "q": "A behavior analyst is asked to provide services to a coworker's child. What is the main ethical concern?",
+   "options": [
+    "A multiple relationship that may impair objectivity",
+    "The child's age compared with other clients on the caseload",
+    "The length of sessions",
+    "The type of data collected"
+   ],
+   "answer": 0,
+   "explain": "Serving a coworker's family creates a multiple relationship that can impair objectivity and harm the client. The ethics code asks analysts to avoid such relationships and to address risks when they cannot be avoided."
+  },
+  {
+   "id": "bcba-e-02",
+   "exam": "bcba",
+   "domain": "E",
+   "ref": "E.6",
+   "q": "When should services to a client be discontinued?",
+   "options": [
+    "As soon as the funder delays a payment by a few days",
+    "When the client no longer benefits or the goals are met, with a transition plan",
+    "When the analyst wants a new caseload",
+    "Without notice when the family misses one session"
+   ],
+   "answer": 1,
+   "explain": "Services are discontinued when clients no longer benefit, goals are met or continued services would harm, and the analyst plans a transition. Ending services abruptly, without transition planning, can harm the client."
+  },
+  {
+   "id": "bcba-e-03",
+   "exam": "bcba",
+   "domain": "E",
+   "ref": "E.4",
+   "q": "A behavior analyst wants to present a client's graph at a conference. What is required?",
+   "options": [
+    "Nothing more, as long as the graph does not show a photo of the client",
+    "The client's school's approval only",
+    "Consent, and removing identifying information as required",
+    "A fee paid to the client"
+   ],
+   "answer": 2,
+   "explain": "Using client information in presentations needs informed consent and the protection of confidentiality, including removing identifiers. Graphs without photos can still identify a client through context or names."
+  },
+  {
+   "id": "bcba-e-04",
+   "exam": "bcba",
+   "domain": "E",
+   "ref": "E.3",
+   "q": "How does a behavior analyst maintain competence in a new area of practice?",
+   "options": [
+    "By reading one article on the topic and starting with clients the next day",
+    "By trying it with a client first",
+    "By attending a social event",
+    "Through training, supervised experience and study before practicing it alone"
+   ],
+   "answer": 3,
+   "explain": "Analysts practice within their competence and extend it through professional development such as training, consultation and supervised experience before working independently in a new area."
+  },
+  {
+   "id": "bcba-f-01",
+   "exam": "bcba",
+   "domain": "F",
+   "ref": "F.6",
+   "q": "A functional analysis shows high rates of behavior only in the demand condition. Which function is indicated?",
+   "options": [
+    "Escape from demands",
+    "Attention",
+    "Access to tangibles",
+    "Automatic reinforcement"
+   ],
+   "answer": 0,
+   "explain": "Elevated behavior only in the demand condition, compared with the play control, points to negative reinforcement by escape. Attention and tangible functions show up in their own conditions, and automatic reinforcement often in the alone or ignore condition."
+  },
+  {
+   "id": "bcba-f-02",
+   "exam": "bcba",
+   "domain": "F",
+   "ref": "F.4",
+   "q": "Which preference assessment is likely to take the most time when many items are tested?",
+   "options": [
+    "Brief multiple stimulus without replacement",
+    "Free operant observation",
+    "Single stimulus engagement",
+    "Paired stimulus"
+   ],
+   "answer": 3,
+   "explain": "In a paired stimulus assessment, every item is presented with every other item, so the number of trials grows quickly with the number of items. Multiple stimulus and free operant formats test many items in fewer trials."
+  },
+  {
+   "id": "bcba-f-03",
+   "exam": "bcba",
+   "domain": "F",
+   "ref": "F.5",
+   "q": "Which is a limitation of descriptive assessment?",
+   "options": [
+    "It cannot be done in natural settings such as homes or classrooms",
+    "It always causes problem behavior",
+    "It shows correlations, not functional relations",
+    "It requires a reversal design"
+   ],
+   "answer": 2,
+   "explain": "Descriptive assessment observes antecedents and consequences as they naturally occur, so it can show which events go with behavior but not which ones cause it. A functional analysis tests causation by manipulating conditions."
+  },
+  {
+   "id": "bcba-f-04",
+   "exam": "bcba",
+   "domain": "F",
+   "ref": "F.8",
+   "q": "When choosing targets from assessment data, which should come first?",
+   "options": [
+    "Behaviors that are the easiest to measure and graph each session",
+    "Socially significant goals the client and caregivers value",
+    "Goals that match the analyst's interests",
+    "Targets that use the most sessions"
+   ],
+   "answer": 1,
+   "explain": "Target selection prioritizes socially significant behavior that improves the client's life, informed by client and caregiver input. Convenience of measurement or the analyst's preferences are not the basis for selecting goals."
+  },
+  {
+   "id": "bcba-g-01",
+   "exam": "bcba",
+   "domain": "G",
+   "ref": "G.3",
+   "q": "A behavior analyst delivers attention every 3 minutes regardless of behavior to reduce attention-maintained yelling. What is this?",
+   "options": [
+    "Fixed-time schedule of noncontingent reinforcement",
+    "Fixed-interval schedule of reinforcement for any response",
+    "Differential reinforcement of low rates",
+    "Response cost"
+   ],
+   "answer": 0,
+   "explain": "Delivering a reinforcer on a fixed-time schedule, independent of behavior, is noncontingent reinforcement. A fixed-interval schedule, by contrast, reinforces the first response after the interval, so it depends on behavior."
+  },
+  {
+   "id": "bcba-g-02",
+   "exam": "bcba",
+   "domain": "G",
+   "ref": "G.14",
+   "q": "A whole class earns extra recess if every student completes their work. Which group contingency is this?",
+   "options": [
+    "Independent group contingency",
+    "Interdependent group contingency",
+    "Dependent group contingency",
+    "Individual contingency"
+   ],
+   "answer": 1,
+   "explain": "In an interdependent contingency, the whole group earns the reinforcer only if the group meets the criterion. In a dependent contingency, the group's reward depends on one or a few members, and in an independent one each person earns on their own."
+  },
+  {
+   "id": "bcba-g-03",
+   "exam": "bcba",
+   "domain": "G",
+   "ref": "G.11",
+   "q": "Which dimension of behavior can be shaped?",
+   "options": [
+    "Only its form, since other dimensions are fixed",
+    "Only latency",
+    "Duration, force, rate or form",
+    "Only frequency"
+   ],
+   "answer": 2,
+   "explain": "Shaping differentially reinforces successive approximations along any dimension of behavior: its form, duration, force, latency or rate. For example, a target duration of reading can be shaped minute by minute."
+  },
+  {
+   "id": "bcba-g-04",
+   "exam": "bcba",
+   "domain": "G",
+   "ref": "G.17",
+   "q": "Which practice should accompany any punishment procedure?",
+   "options": [
+    "Removal of all reinforcement from the client's day",
+    "Increasing intensity slowly over weeks of treatment",
+    "Use without data collection",
+    "Reinforcement of an alternative behavior and close monitoring"
+   ],
+   "answer": 3,
+   "explain": "Punishment, when used, should be combined with reinforcement for alternative behavior, with data and supervision to detect side effects. Starting at low intensity and raising it slowly can make the behavior resistant to punishment."
+  },
+  {
+   "id": "bcba-h-01",
+   "exam": "bcba",
+   "domain": "H",
+   "ref": "H.1",
+   "q": "Which intervention goal is written in observable and measurable terms?",
+   "options": [
+    "The learner will request a break with a card in 80 percent of opportunities",
+    "The learner will feel calmer during work periods at school and at home",
+    "The learner will understand breaks",
+    "The learner will be less frustrated"
+   ],
+   "answer": 0,
+   "explain": "A measurable goal names the behavior, the condition and the criterion, so progress can be checked. Feelings and understanding cannot be measured directly and need to be translated into observable behavior."
+  },
+  {
+   "id": "bcba-h-02",
+   "exam": "bcba",
+   "domain": "H",
+   "ref": "H.3",
+   "q": "When reducing a behavior, which alternative should be selected?",
+   "options": [
+    "Any behavior that is easy to prompt and quick to teach",
+    "A behavior that serves a different function",
+    "Sitting quietly in every case",
+    "A socially valid behavior that meets the same function"
+   ],
+   "answer": 3,
+   "explain": "Replacement behaviors should serve the same function as the target behavior and be valued in the client's environment, so they will be reinforced naturally. A replacement serving another function will not compete with the problem behavior."
+  },
+  {
+   "id": "bcba-h-03",
+   "exam": "bcba",
+   "domain": "H",
+   "ref": "H.6",
+   "q": "Data show a learner is not improving, and observations reveal staff skip steps of the plan. What should be addressed first?",
+   "options": [
+    "Changing the reinforcer to a more preferred item",
+    "Ending services",
+    "Procedural integrity through training and feedback",
+    "Adding punishment"
+   ],
+   "answer": 2,
+   "explain": "Before judging an intervention ineffective, the analyst checks whether it was implemented as written. Low procedural integrity calls for staff training and feedback, then a new look at the data."
+  },
+  {
+   "id": "bcba-h-04",
+   "exam": "bcba",
+   "domain": "H",
+   "ref": "H.5",
+   "q": "Which strategy helps reduce the risk of relapse after successful treatment?",
+   "options": [
+    "Stopping all reinforcement at once after the last session",
+    "Thinning reinforcement gradually and programming generalization",
+    "Ending data collection at mastery",
+    "Removing the replacement behavior"
+   ],
+   "answer": 1,
+   "explain": "Gradual schedule thinning and planned generalization across settings and people help keep gains. Abrupt removal of reinforcement can lead to resurgence of the old behavior."
+  },
+  {
+   "id": "bcba-i-01",
+   "exam": "bcba",
+   "domain": "I",
+   "ref": "I.2",
+   "q": "Which practice supports an effective supervisory relationship?",
+   "options": [
+    "Clear expectations agreed at the start, with regular feedback",
+    "Feedback only at the end of the year, in a written review",
+    "Rules that change without notice",
+    "Supervision by email only"
+   ],
+   "answer": 0,
+   "explain": "Effective supervision starts with a clear agreement on expectations and goals and continues with frequent, specific feedback. Infrequent or unclear supervision reduces its benefits for supervisees and clients."
+  },
+  {
+   "id": "bcba-i-02",
+   "exam": "bcba",
+   "domain": "I",
+   "ref": "I.5",
+   "q": "Which performance management tool uses checklists of steps and feedback after observation?",
+   "options": [
+    "Annual reviews only, with a rating from one to five on each skill",
+    "Behavioral skills training with performance feedback",
+    "Pay cuts after errors",
+    "Unannounced written tests"
+   ],
+   "answer": 1,
+   "explain": "Behavioral skills training (instructions, modeling, rehearsal, feedback) and performance feedback are empirically supported ways to build staff skills. Penalties and rare reviews are less effective and can harm the relationship."
+  },
+  {
+   "id": "bcba-i-03",
+   "exam": "bcba",
+   "domain": "I",
+   "ref": "I.6",
+   "q": "A technician often fails to collect data. What is a function-based approach to this problem?",
+   "options": [
+    "Assume a lack of motivation and remind the technician of the rules",
+    "Remove the technician from the case",
+    "Assess why: missing skills, unclear instructions or competing demands",
+    "Increase caseload as a challenge"
+   ],
+   "answer": 2,
+   "explain": "A function-based approach looks at the variables behind the performance problem, such as missing skills, unclear expectations, poor materials or competing demands, and targets the cause. Labels like unmotivated do not point to a solution."
+  },
+  {
+   "id": "bcba-i-04",
+   "exam": "bcba",
+   "domain": "I",
+   "ref": "I.7",
+   "q": "How does a supervisor judge whether supervision practices are working?",
+   "options": [
+    "By the number of meetings held with each supervisee during the year",
+    "By the supervisee's opinion only",
+    "By the length of each meeting",
+    "By data on supervisee performance and client outcomes"
+   ],
+   "answer": 3,
+   "explain": "Supervisory practices are evaluated with data: changes in the supervisee's performance, procedural integrity and client outcomes. The count or length of meetings does not show whether supervision improves practice."
+  }
+ ]
+}
