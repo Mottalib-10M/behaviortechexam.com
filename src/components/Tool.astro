@@ -33,6 +33,8 @@ const link = (id?: string) => (id && hasRoute(id, lang) ? route(id, lang) : unde
 const numDefaults: Record<string, number> = {};
 for (const [k, v] of Object.entries(props)) if (typeof v === 'number') numDefaults[k] = v;
 const locked = typeof props.locked === 'string' ? String(props.locked).split(',') : [];
+// Page en cours (seedKey = id de la page, suivi de -mini ou -sN) : le lien du calculateur ne renvoie pas vers elle-même.
+const pageId = seedKey.replace(/-(mini|s\d+)$/, '');
 const pre = idPrefix ?? (primary ? 'p' : 'm');
 ---
 {kind === 'quiz' && <Quiz client:load exam={exam} mode={mode} domain={domain} topic={topic} n={n} pick={!!props.pick} initial={initial} seed={seed} idPrefix={pre} secondary={!primary} />}
@@ -41,4 +43,4 @@ const pre = idPrefix ?? (primary ? 'p' : 'm');
 {kind === 'states' && <StateRules client:load state={String(props.state ?? 'Washington')} idPrefix={pre} secondary={!primary} />}
 {kind === 'passrates' && <PassRates client:load minN={Number(props.minN ?? 500)} idPrefix={pre} secondary={!primary} />}
 {kind === 'checklist' && <Competency client:load idPrefix={pre} secondary={!primary} />}
-{mini && <MiniSim client:load kind={mini} href={link(CTA_PAGE[mini])} defaults={numDefaults} idPrefix={pre} title={title} locked={locked} />}
+{mini && <MiniSim client:load kind={mini} href={CTA_PAGE[mini] === pageId ? undefined : link(CTA_PAGE[mini])} defaults={numDefaults} idPrefix={pre} title={title} locked={locked} />}

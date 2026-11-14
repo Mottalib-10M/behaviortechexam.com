@@ -41,6 +41,8 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
   const n = qs.length;
   const minutes = isMock ? x.minutes * (n > x.scored ? 1 : x.scored / x.items) : minutesFor(exam, Math.max(1, n));
   const mins = Math.round(minutes);
+  const minsScored = Math.round((x.minutes * x.scored) / x.items);
+  const hm = (m: number) => (m >= 60 ? `${Math.floor(m / 60)} h${m % 60 ? ` ${m % 60} min` : ''}` : `${m} min`);
 
   const draw = async (ex: ExamId, dom: string | null, seed: number, withPilot = pilot) => {
     setLoading(true);
@@ -89,7 +91,7 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
     setAnswers((o) => o.map((v, j) => (j === cur ? i : v)));
     if (!isMock) recordAnswer(q.id, i === q.answer);
   };
-  const newSet = () => { const s = Math.floor(Math.random() * 2 ** 31); if (!secondary) updateURL({ set: s }); draw(exam, domain, s); };
+  const newSet = () => { if (isMock && !done && answeredN > 0 && !window.confirm('Start a new mock? Your answers to this one will be cleared.')) return; const s = Math.floor(Math.random() * 2 ** 31); if (!secondary) updateURL({ set: s }); draw(exam, domain, s); };
   const byDomain = domainsOf(exam).map((d) => {
     const idx = counted.filter((i) => qs[i].domain === d.code);
     return { code: d.code, short: d.short, n: idx.length, r: idx.filter((i) => answers[i] === qs[i].answer).length };
@@ -108,10 +110,16 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
           <div className="grid gap-3 sm:grid-cols-2">
             {pick && <SelectField id={`${idPrefix}-exam`} label="Exam" value={exam} onChange={(v) => { const ex = v as ExamId; setExam(ex); setDomain(null); draw(ex, null, seedRef.current); }} options={EXAM_IDS.map((id) => ({ value: id, label: `${LABEL(id)}: ${examOf(id).name.replace(' certification examination', '')}` }))} />}
             {mode === 'practice' && !topic && <SelectField id={`${idPrefix}-domain`} label="Outline domain" value={domain ?? ''} onChange={(v) => { const d = v || null; setDomain(d); draw(exam, d, seedRef.current); }} options={[{ value: '', label: 'All domains, mixed' }, ...domainsOf(exam).map((d) => ({ value: d.code, label: `${d.code}. ${d.short}` }))]} />}
-            {isMock && <SelectField id={`${idPrefix}-pilot`} label="Unscored pilot questions" value={pilot ? '1' : '0'} onChange={(v) => { const p = v === '1'; setPilot(p); draw(exam, null, seedRef.current, p); }} options={[{ value: '0', label: `No: ${x.scored} scored questions` }, { value: '1', label: `Yes: ${x.items} questions, ${x.unscored} unscored` }]} />}
+            {isMock && <SelectField id={`${idPrefix}-pilot`} className="sm:col-span-2" label="Exam length" value={pilot ? '1' : '0'} onChange={(v) => { const p = v === '1'; setPilot(p); draw(exam, null, seedRef.current, p); }} options={[{ value: '0', label: `${x.scored} questions that count, ${minsScored} min` }, { value: '1', label: `All ${x.items} questions in ${hm(x.minutes)}, like the real exam` }]} help={`Real exam: ${x.items} questions in ${hm(x.minutes)}, ${x.unscored} of them trial questions that do not count. Here: the ${x.scored} that count, same pace.`} />}
           </div>
         )}
         <div className="rounded-lg border border-navy-300 bg-white">
+          {isMock && !done && n > 0 && (
+            <div data-chrono className="sticky top-16 z-10 flex flex-wrap items-center justify-between gap-x-3 gap-y-0.5 rounded-t-lg border-b border-navy-200 bg-navy-50 px-4 py-2 text-sm text-navy-800">
+              <span className="tabular-nums font-semibold">Time left {clock}{started.current == null ? ' (starts at first answer)' : ''}</span>
+              <span className="tabular-nums">{answeredN} of {n} answered</span>
+            </div>
+          )}
           <div className="flex flex-wrap items-center justify-between gap-2 border-b border-navy-200 px-4 py-2.5 text-sm text-navy-700">
             <span className="tabular-nums font-medium">{n ? `Question ${cur + 1} of ${n}` : LABEL(exam)}{q && <span className="font-normal text-navy-600"> · {domName(q.domain)}</span>}</span>
             {q && isMock && !done && <button type="button" onClick={() => setFlags((f) => f.map((v, j) => (j === cur ? !v : v)))} aria-pressed={flags[cur]} className={`h-9 rounded border px-3 text-xs font-semibold ${flags[cur] ? 'border-amber-700 bg-amber-50 text-amber-900' : 'border-navy-300 bg-white text-navy-700 hover:bg-navy-50'}`}>{flags[cur] ? 'Flagged' : 'Flag for later'}</button>}
@@ -174,8 +182,8 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
         <div className="mt-3 h-2 w-full overflow-hidden rounded bg-navy-200" aria-hidden="true"><div className="h-2 bg-accent-700" style={{ width: `${(answeredN / Math.max(1, n)) * 100}%` }} /></div>
         <p className={`mt-3 text-base font-semibold ${tone}`}>{status}</p>
         <table className="mt-2 w-full text-sm"><tbody className="divide-y divide-navy-200">
-          <tr><td className="py-1.5 text-navy-700">Study target: {target} of {counted.length || 0} ({Math.round(x.target * 100)}%), set by this site, not an official passing score</td></tr>
-          {isMock && <tr><td className="tabular-nums py-1.5 text-navy-700">Time left: {clock} of {mins} min</td></tr>}
+          <tr><td className="py-1.5 text-navy-700">Study target: {target} of {counted.length || 0} (at least {Math.round(x.target * 100)}%), set by this site, not an official passing score</td></tr>
+          {isMock && <tr><td className="tabular-nums py-1.5 text-navy-700">Time left: {clock} of {mins} min{!pilot ? ` (${n} questions; the real exam gives ${hm(x.minutes)} for ${x.items})` : ''}</td></tr>}
           {isMock && <tr><td className="py-1.5 text-navy-700">{x.passText}</td></tr>}
         </tbody></table>
         {reveal && answeredN > 0 && byDomain.length > 1 && (

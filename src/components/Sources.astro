@@ -13,8 +13,10 @@ import P from '../data/params-2026.json';
 import { displayDate } from '../lib/format';
 import { LANG_TAGS } from '../data/site-config';
 // `intro` : phrase propre au site (check-portefeuille refuse la phrase commune recopiée d'un site à l'autre).
-interface Props { lang: string; intro?: string }
-const { lang, intro } = Astro.props;
+// `replie` : liste repliée dans un <details> (liens toujours dans le HTML) ; sur l'accueil, 25 liens occupaient
+// quatre écrans de téléphone avant la FAQ (testeurs naïfs, behaviortechexam.com, 2026-11-14).
+interface Props { lang: string; intro?: string; replie?: boolean }
+const { lang, intro, replie = false } = Astro.props;
 
 const INTRO: Record<string, string> = {
   fr: 'Chaque chiffre de cette page provient d’une de ces sources officielles, consultées le',
@@ -40,10 +42,21 @@ const sources: Src[] = Object.values((P as { sources?: Record<string, Src> }).so
     {/* Gabarit littéral : « {A} {B} » perdait l'espace au rendu (« read on2026-11-07 ») et la date restait
          au format machine (financecertcost.com, dumpfeesbystate.com, testeurs naïfs du 2026-11-08). */}
     <p>{`${intro ?? INTRO[lang] ?? INTRO.en} ${/^\d{4}-\d{2}-\d{2}$/.test(P.retrieved_at) ? displayDate(P.retrieved_at, LANG_TAGS[lang] ?? lang) : P.retrieved_at}.`}</p>
+    {replie ? (
+      <details class="not-prose rounded-lg border border-navy-200 bg-white px-4 py-3">
+        <summary class="cursor-pointer font-medium text-navy-900">{lang === 'en' ? `Show the ${sources.length} documents` : `${H2[lang] ?? H2.en} (${sources.length})`}</summary>
+        <ul class="mt-3 list-disc space-y-1.5 pl-5 text-sm">
+          {sources.map((s) => (
+            <li><a href={s.url} rel="nofollow noopener" target="_blank" class="text-accent-700 underline">{s.label[lang] ?? s.label.en}</a></li>
+          ))}
+        </ul>
+      </details>
+    ) : (
     <ul>
       {sources.map((s) => (
         <li><a href={s.url} rel="nofollow noopener" target="_blank">{s.label[lang] ?? s.label.en}</a></li>
       ))}
     </ul>
+    )}
   </>
 )}

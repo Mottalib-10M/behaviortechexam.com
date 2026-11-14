@@ -2,7 +2,7 @@ import { definePage } from '../../lib/guide-types';
 export default definePage({
   id: 'bcba-practice-test', group: 'bcba', order: 610,
   tool: { kind: 'quiz', props: { exam: 'bcba', mode: 'practice', n: 10 } },
-  mini: { kind: 'mini:bcbadomains', props: { n: 50 } },
+  mini: { kind: 'mini:bcbadomains', props: { n: 20 } },
   related: ['bcba-exam', 'bcba-fieldwork-hours', 'rbt-practice-test', 'review-mistakes'],
   sources: ['bcba_tco', 'bcba_handbook'],
   en: {

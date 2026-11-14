@@ -216,17 +216,19 @@ const SPECS: Record<string, () => MiniSpec> = {
     run: (v) => {
       const n = clamp(Math.round(v.n ?? 30), 1, 300);
       const s = splitByDomain('rbt', n);
-      return { head: ['Largest domain', `${s.reduce((a, b) => (b.n > a.n ? b : a)).short}`], rows: s.map((d) => [`${d.code}. ${d.short}`, n0(d.n)] as [string, string]), note: `Split in proportion to the ${RBT.scored} scored questions of the outline (3rd ed.).` };
+      const top = s.reduce((a, b) => (b.n > a.n ? b : a));
+      return { head: ['Most questions', `${top.code}. ${top.short}`], rows: s.map((d) => [`${d.code}. ${d.short}`, n0(d.n)] as [string, string]), note: `Split in proportion to the ${RBT.scored} scored questions of the outline (3rd ed.).` };
     },
   }),
   bcbadomains: () => ({
-    title: 'BCBA questions per domain in a set', cta: 'BCBA practice',
+    title: 'How many questions of each BCBA domain to put in a study set', cta: 'BCBA practice',
     exemple: (v) => `Example for a set of ${n0(v.n ?? 0)} questions`,
-    inputs: [{ id: 'n', label: 'Questions in your practice set', def: 50, max: 400 }],
+    inputs: [{ id: 'n', label: 'Questions in the set you plan', def: 20, max: 400 }],
     run: (v) => {
-      const n = clamp(Math.round(v.n ?? 50), 1, 400);
+      const n = clamp(Math.round(v.n ?? 20), 1, 400);
       const s = splitByDomain('bcba', n);
-      return { head: ['Largest domain', `${s.reduce((a, b) => (b.n > a.n ? b : a)).short}`], rows: s.map((d) => [`${d.code}. ${d.short}`, n0(d.n)] as [string, string]), note: `Split in proportion to the ${BCBA.scored} scored questions of the BCBA outline (6th ed.).` };
+      const top = s.reduce((a, b) => (b.n > a.n ? b : a));
+      return { head: ['Most questions', `${top.code}. ${top.short}`], rows: s.map((d) => [`${d.code}. ${d.short}`, n0(d.n)] as [string, string]), note: `Split in proportion to the ${BCBA.scored} scored questions of the BCBA outline (6th ed.). Use it to plan a set from your course materials: this site's BCBA bank is only a sample.` };
     },
   }),
   timeline: () => ({

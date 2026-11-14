@@ -73,7 +73,7 @@ export default function MiniSimAutonome({ kind, lang = 'en', href, locale = 'en-
   const visibles = spec.inputs.filter((i) => !locked.includes(i.id) && (!i.showIf || i.showIf(v)));
   const fixes = spec.inputs.filter((i) => locked.includes(i.id));
   const avances = visibles.filter((i) => i.avance);
-  const valeur = (i: MiniInput) => (i.options ? (i.options.find((o) => o.value === String(v[i.id]))?.label ?? '') : `${new Intl.NumberFormat(locale, { maximumFractionDigits: i.decimals ?? 0 }).format(v[i.id])}${i.unit ? `\u00a0${i.unit}` : ''}`);
+  const valeur = (i: MiniInput) => (i.options ? (i.options.find((o) => o.value === String(v[i.id]))?.label ?? '') : i.unit === '$' ? `$${new Intl.NumberFormat(locale, { maximumFractionDigits: i.decimals ?? 0 }).format(v[i.id])}` : `${new Intl.NumberFormat(locale, { maximumFractionDigits: i.decimals ?? 0 }).format(v[i.id])}${i.unit ? `\u00a0${i.unit}` : ''}`);
   const suppose = exemple ?? exempleSuppose(spec.exemple, v);
   const lien: [string, string] | undefined = out.go ?? (href && spec.cta ? [`${spec.cta} →`, href] : undefined);
   const champ = (i: MiniInput) => (i.options

@@ -42,7 +42,7 @@ export default function StateRules({ state: s0 = 'Washington', idPrefix = 'sr', 
           {cost.lines.filter((l) => l.amount > 0).map((l) => <tr key={l.label}><td className="py-1.5 pr-2 text-navy-700">{l.label}</td><td className="tabular-nums py-1.5 text-right text-navy-900">{money(l.amount)}</td></tr>)}
           <tr><td className="py-1.5 pr-2 font-semibold text-navy-900">First attempt, fees only</td><td className="tabular-nums py-1.5 text-right font-semibold text-navy-900">{money(cost.total)}</td></tr>
         </tbody></table>
-        <p className="mt-3 text-xs text-navy-700">Licensure list: BACB, read on {dateL(P.retrieved_at)}. Training and background checks are not counted here.</p>
+        <p className="mt-3 text-xs text-navy-700">Licensure list: BACB, read on {dateL(P.retrieved_at)}. Not counted here: your training and the background checks your employer runs{st?.techBackgroundFee ? `; the ${st.name} state background clearance above is counted` : ''}.</p>
       </div>
     </div>
   );

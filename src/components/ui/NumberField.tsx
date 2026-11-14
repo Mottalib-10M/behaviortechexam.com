@@ -1,4 +1,5 @@
 import { type ChangeEvent, useCallback, useLayoutEffect, useRef, useState } from 'react';
+// Unité « $ » placée devant le nombre ($0, pas 0 $) : testeurs naïfs américains, 2026-11-14.
 import { formatNumber, parseLocaleNumber } from '../../lib/format';
 
 interface Props { id: string; label: string; value: number; onChange: (v: number) => void; unit?: string; min?: number; max?: number; help?: string; className?: string; decimals?: number }
@@ -29,11 +30,12 @@ export default function NumberField({ id, label, value, onChange, unit = '', min
       <label htmlFor={id} className="mb-1 block text-sm font-medium text-navy-700">{label}</label>
       <div className="relative self-start">
         <input ref={input} id={id} onMouseUp={(e) => { if (guardMouseUp.current) { guardMouseUp.current = false; e.preventDefault(); } }} type="text" inputMode="decimal" value={display} onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur} placeholder="0" aria-describedby={help || over ? `${id}-help` : undefined}
-          className={`tabular-nums w-full rounded-lg border border-navy-300 bg-white h-12 px-4 ${unit ? 'pr-14' : ''} text-right text-lg text-navy-900 focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/20`} />
-        {unit && <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-navy-500" aria-hidden="true">{unit}</span>}
+          className={`tabular-nums w-full rounded-lg border border-navy-300 bg-white h-12 px-4 ${unit === '$' ? 'pl-8' : unit ? 'pr-14' : ''} text-right text-lg text-navy-900 focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/20`} />
+        {unit === '$' && <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm text-navy-500" aria-hidden="true">$</span>}
+        {unit && unit !== '$' && <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-navy-500" aria-hidden="true">{unit}</span>}
       </div>
       {over
-        ? <p id={`${id}-help`} role="status" className="mt-1 text-xs font-medium text-amber-700">≤ {formatNumber(max, Number.isInteger(max) ? 0 : decimals)}{unit ? ` ${unit}` : ''}</p>
+        ? <p id={`${id}-help`} role="status" className="mt-1 text-xs font-medium text-amber-700">≤ {unit === '$' ? '$' : ''}{formatNumber(max, Number.isInteger(max) ? 0 : decimals)}{unit && unit !== '$' ? ` ${unit}` : ''}</p>
         : help && <p id={`${id}-help`} className="mt-1 text-xs text-navy-500">{help}</p>}
     </div>
   );
