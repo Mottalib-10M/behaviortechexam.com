@@ -64,9 +64,9 @@ const SPECS: Record<string, () => MiniSpec> = {
   }),
   retake: () => ({
     title: 'Retakes left in your authorization', cta: 'Retake rules',
-    exemple: (v) => `Example for ${plural(Math.round(v.f ?? 1), 'failed attempt')}, approval in ${MONTHS[clamp(Math.round(v.am ?? 1), 1, 12) - 1]} ${v.ay}`,
+    exemple: (v) => `Example for ${plural(Math.round(v.f ?? 1), 'attempt')} taken, approval in ${MONTHS[clamp(Math.round(v.am ?? 1), 1, 12) - 1]} ${v.ay}`,
     inputs: [
-      { id: 'f', label: 'Attempts already failed', def: 1, max: RBT.attemptsMax },
+      { id: 'f', label: 'Attempts already taken', def: 1, max: RBT.attemptsMax },
       { id: 'am', label: 'Month your application was approved', def: 9, options: MONTH_OPT },
       { id: 'ay', label: 'Year of approval', def: 2026, options: YEAR_OPT },
       { id: 'lm', label: 'Month of your last attempt', def: 11, options: MONTH_OPT },
@@ -164,18 +164,18 @@ const SPECS: Record<string, () => MiniSpec> = {
     },
   }),
   fieldwork: () => ({
-    title: 'BCBA fieldwork months left', cta: 'BCBA requirements',
+    title: 'How many months until your BCBA fieldwork is done?', cta: 'BCBA requirements',
     exemple: (v) => `Example for ${n0(v.s ?? 0)} supervised and ${n0(v.c ?? 0)} concentrated hours done, ${n0(v.m ?? 0)} hours a month`,
     inputs: [
       { id: 's', label: 'Supervised fieldwork hours done', def: 600, unit: 'h', max: 2000, help: 'Regular fieldwork: your supervisor oversees at least 5% of your hours' },
-      { id: 'c', label: 'Concentrated hours done', def: 0, unit: 'h', max: 1500, help: 'Fieldwork with closer supervision (10% of hours); each hour counts as 1.33 regular hours' },
+      { id: 'c', label: 'Concentrated hours done', def: 0, unit: 'h', max: 1500, help: 'Fieldwork with closer supervision (10% of hours); every 3 concentrated hours count as 4 regular hours' },
       { id: 'm', label: 'Hours you can log a month', def: 100, unit: 'h', max: 200 },
     ],
     run: (v) => {
       const f = fieldwork(v.s ?? 0, v.c ?? 0, v.m ?? 0);
       return {
         head: ['Months to go', f.months == null ? 'Too few hours a month' : n0(f.months)],
-        rows: [['Hours still needed', n0(Math.ceil(f.left))], [`Hours already counted toward the ${n0(BCBA.fieldworkSupervised)}`, n0(Math.round(f.credit))], ['Of all your hours, hands-off work at least (writing plans, analyzing data)', `${n0(f.unrestrictedMin)} h, ${pct(BCBA.unrestrictedShare)}`]],
+        rows: [['Hours still needed', n0(Math.ceil(f.left))], [`Hours already counted toward the ${n0(BCBA.fieldworkSupervised)}`, n0(Math.round(f.credit))], ['Hands-off work you need, such as writing plans or analyzing data', `at least ${n0(f.unrestrictedMin)} h (${pct(BCBA.unrestrictedShare)} of your hours)`]],
         alert: f.tooFew ? `Months under ${BCBA.monthMinHours} hours do not count` : f.capped ? `Only ${BCBA.monthMaxHours} hours a month can count` : undefined,
         note: `Each concentrated hour counts ${BCBA.concentratedMultiplier} regular hours toward the ${n0(BCBA.fieldworkSupervised)}-hour total (BCBA Handbook). The handbook calls the hands-off work “unrestricted activities”.`,
       };
@@ -190,18 +190,18 @@ const SPECS: Record<string, () => MiniSpec> = {
       const total = BCBA.feeApplication + BCBA.feeExam * a + BCBA.feeRetakeApplication * (a - 1);
       return {
         head: ['BACB and exam fees', money(total)],
-        rows: [['Application', money(BCBA.feeApplication)], [`Exam appointment × ${a}`, money(BCBA.feeExam * a)], [`Retake fee, ${money(BCBA.feeRetakeApplication)} for each attempt after the first × ${a - 1}`, money(BCBA.feeRetakeApplication * (a - 1))]],
+        rows: [['Application', money(BCBA.feeApplication)], [`Exam appointment × ${a}`, money(BCBA.feeExam * a)], [`Retake fees (${a - 1} × ${money(BCBA.feeRetakeApplication)})`, money(BCBA.feeRetakeApplication * (a - 1))]],
         note: `Fees of the BCBA Handbook. ${BCBA.retakeWaitDays} days between attempts.`,
       };
     },
   }),
   fieldpace: () => ({
-    title: 'Hours a month to finish your BCBA fieldwork in time', cta: 'BCBA requirements',
+    title: 'How many hours a month to finish your BCBA fieldwork by your date?', cta: 'BCBA requirements',
     exemple: (v) => `Example for ${n0(v.s ?? 0)} hours done and ${plural(Math.round(v.mo ?? 1), 'month')} to finish`,
     inputs: [
       { id: 's', label: 'Supervised fieldwork hours done', def: 600, unit: 'h', max: 2000 },
       { id: 'mo', label: 'Months you want to finish in', def: 12, max: 120 },
-      { id: 'c', label: 'Concentrated hours done', def: 0, unit: 'h', max: 1500, avance: true, help: 'Each hour with closer supervision counts as 1.33 regular hours' },
+      { id: 'c', label: 'Concentrated hours done', def: 0, unit: 'h', max: 1500, avance: true, help: 'Fieldwork with closer supervision: every 3 concentrated hours count as 4 regular hours' },
     ],
     run: (v) => {
       const f = fieldwork(v.s ?? 0, v.c ?? 0, BCBA.monthMinHours);
@@ -219,8 +219,8 @@ const SPECS: Record<string, () => MiniSpec> = {
   }),
   bcbaretake: () => ({
     title: 'BCBA retakes: what the next attempt costs and how many are left', cta: 'BCBA exam format',
-    exemple: (v) => `Example after ${plural(Math.round(v.f ?? 1), 'failed attempt')}`,
-    inputs: [{ id: 'f', label: 'Attempts already failed', def: 1, max: BCBA.attemptsMax }],
+    exemple: (v) => `Example after ${plural(Math.round(v.f ?? 1), 'attempt')} taken`,
+    inputs: [{ id: 'f', label: 'Attempts already taken', def: 1, max: BCBA.attemptsMax }],
     run: (v) => {
       const f = clamp(Math.round(v.f ?? 1), 0, BCBA.attemptsMax);
       const left = BCBA.attemptsMax - f;
@@ -255,18 +255,18 @@ const SPECS: Record<string, () => MiniSpec> = {
       const n = clamp(Math.round(v.n ?? 30), 1, 300);
       const s = splitByDomain('rbt', n);
       const t = topOfSplit('rbt', s);
-      return { head: ['Most questions', topLabel(t)], rows: s.map((d) => [`${d.code}. ${d.short}`, n0(d.n)] as [string, string]), note: `Split in proportion to the ${RBT.scored} scored questions of the board's exam plan (3rd ed.). On the real exam, the biggest domain is ${t.official.code}. ${t.official.short}, with ${t.official.items} of the ${RBT.scored}.` };
+      return { head: [t.tied.length > 1 ? 'Take the most questions from' : 'Most questions', topLabel(t)], rows: s.map((d) => [`${d.code}. ${d.short}`, n0(d.n)] as [string, string]), note: `Split in proportion to the ${RBT.scored} scored questions of the board's exam plan (3rd ed.).${t.tied.length > 1 ? ' In a set this small, several domains get the same count.' : ''} On the real exam, the biggest domain is ${t.official.code}. ${t.official.short}, with ${t.official.items} of the ${RBT.scored}.` };
     },
   }),
   bcbadomains: () => ({
-    title: 'Building your own BCBA study set? How many questions to take from each domain', cta: 'BCBA practice',
+    title: 'Studying from your own course questions? How many to take from each BCBA domain', cta: 'BCBA practice',
     exemple: (v) => `Example for a set of ${n0(v.n ?? 0)} questions`,
     inputs: [{ id: 'n', label: 'Questions in the set you plan', def: 20, max: 400 }],
     run: (v) => {
       const n = clamp(Math.round(v.n ?? 20), 1, 400);
       const s = splitByDomain('bcba', n);
       const t = topOfSplit('bcba', s);
-      return { head: ['Most questions', topLabel(t)], rows: s.map((d) => [`${d.code}. ${d.short}`, n0(d.n)] as [string, string]), note: `Split in proportion to the ${BCBA.scored} scored questions of the BCBA exam plan (6th ed.). On the real exam, the biggest domain is ${t.official.code}. ${t.official.short}, with ${t.official.items} of the ${BCBA.scored}. Use it to pick questions from your course materials: this site's BCBA bank is only a sample.` };
+      return { head: [t.tied.length > 1 ? 'Take the most questions from' : 'Most questions', topLabel(t)], rows: s.map((d) => [`${d.code}. ${d.short}`, n0(d.n)] as [string, string]), note: `Split in proportion to the ${BCBA.scored} scored questions of the BCBA exam plan (6th ed.), so your set has the same mix as the exam.${t.tied.length > 1 ? ' In a set this small, several domains get the same count.' : ''} On the real exam, the biggest domain is ${t.official.code}. ${t.official.short}, with ${t.official.items} of the ${BCBA.scored}. Use it to pick questions from your course materials: this site's BCBA bank is only a sample.` };
     },
   }),
   timeline: () => ({

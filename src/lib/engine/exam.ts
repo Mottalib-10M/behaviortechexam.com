@@ -129,10 +129,11 @@ export function topOfSplit(exam: ExamId, split: Array<{ code: string; short: str
   const official = domainsOf(exam).reduce((a, b) => (b.items > a.items ? b : a));
   return { max, tied, official };
 }
-/** "B. Concepts" or "Tie: B, E, F and G (3 each)". */
+/** "B. Concepts", or for a tie "Concepts, Ethics, Assessment and Behavior change (3 each)". */
 export function topLabel(t: ReturnType<typeof topOfSplit>): string {
   if (t.tied.length === 1) return `${t.tied[0].code}. ${t.tied[0].short}`;
-  const codes = t.tied.map((d) => d.code);
-  const list = codes.length === 2 ? codes.join(' and ') : `${codes.slice(0, -1).join(', ')} and ${codes[codes.length - 1]}`;
-  return `Tie: ${list} (${t.max} each)`;
+  // Domain names, not letters: "Tie: B, E, F and G" meant nothing to the testers (2026-11-14, tour 3).
+  const names = t.tied.map((d) => d.short);
+  const list = names.length === 2 ? names.join(' and ') : `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}`;
+  return `${list} (${t.max} each)`;
 }

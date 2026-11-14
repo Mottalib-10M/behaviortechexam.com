@@ -110,7 +110,7 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
           <div className="grid gap-3 sm:grid-cols-2">
             {pick && <SelectField id={`${idPrefix}-exam`} label="Exam" value={exam} onChange={(v) => { const ex = v as ExamId; setExam(ex); setDomain(null); draw(ex, null, seedRef.current); }} options={EXAM_IDS.map((id) => ({ value: id, label: `${LABEL(id)}: ${examOf(id).name.replace(' certification examination', '')}` }))} />}
             {mode === 'practice' && !topic && <SelectField id={`${idPrefix}-domain`} label="Outline domain" value={domain ?? ''} onChange={(v) => { const d = v || null; setDomain(d); draw(exam, d, seedRef.current); }} options={[{ value: '', label: 'All domains, mixed' }, ...domainsOf(exam).map((d) => ({ value: d.code, label: `${d.code}. ${d.short}` }))]} />}
-            {isMock && <SelectField id={`${idPrefix}-pilot`} className="sm:col-span-2" label="Exam length" value={pilot ? '1' : '0'} onChange={(v) => { const p = v === '1'; setPilot(p); draw(exam, null, seedRef.current, p); }} options={[{ value: '0', label: `${x.scored} questions that count, ${minsScored} min` }, { value: '1', label: `All ${x.items} questions in ${hm(x.minutes)}, like the real exam` }]} help={`The real exam has ${x.items} questions in ${hm(x.minutes)}. ${x.unscored} of them are trial questions that do not count, so this mock gives you the ${x.scored} that count in ${minsScored} min, the same speed. Want all ${x.items}? Pick it in this list.`} />}
+            {isMock && <SelectField id={`${idPrefix}-pilot`} className="sm:col-span-2" label="Exam length" value={pilot ? '1' : '0'} onChange={(v) => { const p = v === '1'; setPilot(p); draw(exam, null, seedRef.current, p); }} options={[{ value: '0', label: `${x.scored} questions that count, ${minsScored} min` }, { value: '1', label: `All ${x.items} questions in ${hm(x.minutes)}, like the real exam` }]} help={`Real exam: ${x.items} questions in ${hm(x.minutes)}, but only ${x.scored} count. This mock gives you those ${x.scored} in ${minsScored} min, the same pace.`} />}
           </div>
         )}
         <div className="rounded-lg border border-navy-300 bg-white">
@@ -147,7 +147,7 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
                   {cur > 0 && <button type="button" onClick={() => setCur(cur - 1)} className="h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 border border-navy-300 px-3 font-medium text-navy-800 hover:bg-navy-50">Back</button>}
                   {cur < n - 1 && <button type="button" onClick={() => setCur(cur + 1)} className="h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 bg-accent-700 px-3 font-semibold text-white hover:bg-accent-800">Next question</button>}
                   {isMock && !done && answeredN > 0 && <button type="button" onClick={() => setDone(true)} className="h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 border border-accent-700 px-3 font-semibold text-accent-800 hover:bg-accent-50">Finish and mark</button>}
-                  <button type="button" onClick={newSet} className="h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 border border-navy-300 px-3 font-medium text-navy-800 hover:bg-navy-50">{isMock ? 'New mock' : 'New questions'}</button>
+                  {!isMock && <button type="button" onClick={newSet} className="h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 border border-navy-300 px-3 font-medium text-navy-800 hover:bg-navy-50">New questions</button>}
                   {isMock && !done && <button type="button" onClick={() => setFlags((f) => f.map((v, j) => (j === cur ? !v : v)))} aria-pressed={flags[cur]} title="Marks this question so you can find it again in the question map" className={`h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 border px-3 font-medium ${flags[cur] ? 'border-amber-700 bg-amber-50 text-amber-900' : 'border-navy-300 bg-white text-navy-800 hover:bg-navy-50'}`}>{flags[cur] ? 'Flagged' : 'Flag for later'}</button>}
                 </div>
                 {isMock && !done && a === null && cur === 0 && answeredN === 0 && <p className="mt-3 text-sm text-navy-700">Tap the answer you think is right: the clock starts then. You can skip a question, flag it to come back to it, and you see every correction when you end the test.</p>}
@@ -156,7 +156,7 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
           </div>
           {isMock && n > 1 && (
             <div className="border-t border-navy-200 px-4 py-3">
-              <button type="button" onClick={() => setMapOpen((o) => !o)} aria-expanded={mapOpen} aria-controls={`${idPrefix}-map`} className="h-11 rounded-lg border border-navy-300 px-4 text-sm font-medium text-navy-800 hover:bg-navy-50">{mapOpen ? 'Hide question map' : `Show question map (${n})`}{flags.some(Boolean) ? ` · ${flags.filter(Boolean).length} flagged` : ''}</button>
+              <button type="button" onClick={() => setMapOpen((o) => !o)} aria-expanded={mapOpen} aria-controls={`${idPrefix}-map`} className="h-11 rounded-lg border border-navy-300 px-4 text-sm font-medium text-navy-800 hover:bg-navy-50">{mapOpen ? 'Hide question map' : `Question map: jump to any of the ${n}`}{flags.some(Boolean) ? ` · ${flags.filter(Boolean).length} flagged` : ''}</button>
               {mapOpen && <p className="mt-2 mb-2 text-xs font-medium text-navy-700">Tap a number to go to that question{flags.some(Boolean) ? ' · amber = flagged' : ''}</p>}
               <div id={`${idPrefix}-map`} hidden={!mapOpen} className="flex flex-wrap gap-1">
                 {qs.map((v, i) => {
@@ -164,6 +164,8 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
                   return <button key={v.id} type="button" onClick={() => setCur(i)} aria-current={i === cur ? 'step' : undefined} aria-label={`Go to question ${i + 1}`} className={`tabular-nums h-8 w-9 rounded border text-xs ${st} ${i === cur ? 'ring-2 ring-navy-900' : ''}`}>{i + 1}</button>;
                 })}
               </div>
+              {/* Away from "Next question": testers feared losing their answers with one wrong tap (2026-11-14, tour 3). */}
+              <button type="button" onClick={newSet} className="mt-3 block text-sm font-medium text-navy-700 underline underline-offset-2 hover:text-navy-900">{done || answeredN === 0 ? 'Start a new mock with other questions' : 'Start a new mock (clears your answers to this one)'}</button>
             </div>
           )}
         </div>
@@ -179,13 +181,15 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
       </form>
       <div {...(secondary ? {} : { 'data-resultat': '' })} aria-live="polite" className="h-fit rounded-lg border-t-4 border-accent-700 bg-navy-50 p-4 lg:sticky lg:top-20">
         <p className="text-sm font-medium text-navy-700">{LABEL(exam)} · {isMock ? 'mock exam' : mode === 'review' ? 'review of mistakes' : topic ? 'topic practice' : 'practice'}</p>
-        <p className="tabular-nums mt-1 text-4xl font-bold text-navy-900">{reveal && answeredN ? right : answeredN}<span className="text-xl font-semibold text-navy-700"> / {reveal && answeredN ? answeredCounted : n}</span></p>
-        <p className="text-sm text-navy-700">{reveal && answeredN ? 'correct out of answered' : 'answered'}</p>
-        <div className="mt-3 h-2 w-full overflow-hidden rounded bg-navy-200" aria-hidden="true"><div className="h-2 bg-accent-700" style={{ width: `${(answeredN / Math.max(1, n)) * 100}%` }} /></div>
-        <p className={`mt-3 text-base font-semibold ${tone}`}>{status}</p>
+        {answeredN ? (<>
+          <p className="tabular-nums mt-1 text-4xl font-bold text-navy-900">{reveal ? right : answeredN}<span className="text-xl font-semibold text-navy-700"> / {reveal ? answeredCounted : n}</span></p>
+          <p className="text-sm text-navy-700">{reveal ? 'correct out of answered' : 'answered'}</p>
+          <div className="mt-3 h-2 w-full overflow-hidden rounded bg-navy-200" aria-hidden="true"><div className="h-2 bg-accent-700" style={{ width: `${(answeredN / Math.max(1, n)) * 100}%` }} /></div>
+          <p className={`mt-3 text-base font-semibold ${tone}`}>{status}</p>
+        </>) : <p className="mt-1 text-lg font-semibold text-navy-900">Your score shows here once you answer</p>}
         <table className="mt-2 w-full text-sm"><tbody className="divide-y divide-navy-200">
           <tr><td className="py-1.5 text-navy-700">Study target: {target} of {counted.length || 0} (at least {Math.round(x.target * 100)}%), set by this site, not an official passing score</td></tr>
-          {isMock && <tr><td className="tabular-nums py-1.5 text-navy-700">Time left: {clock} of {mins} min{!pilot ? ` (${n} questions; the real exam gives ${hm(x.minutes)} for ${x.items})` : ''}</td></tr>}
+          {isMock && <tr><td className="tabular-nums py-1.5 text-navy-700">Time left: {clock} of {mins} min</td></tr>}
           {isMock && <tr><td className="py-1.5 text-navy-700">{x.passText}</td></tr>}
         </tbody></table>
         {reveal && answeredN > 0 && byDomain.length > 1 && (

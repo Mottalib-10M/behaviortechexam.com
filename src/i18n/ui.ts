@@ -10,6 +10,8 @@ const en = {
   footerPopular: 'Practice',
   notFound: 'There is no page at this address. The free behavior technician practice exam, the cost calculator and the state rules start on the home page.',
   readMore: 'Read more', back: 'Home',
+  // Inner pages: one short line, so the tool is not pushed down (testeurs naïfs 2026-11-14, tour 3); full wording on the home page.
+  independentShort: 'Independent site, not the BACB (Behavior Analyst Certification Board, which grants the certificate) or Pearson VUE (its test centers), where you apply and book.',
   independent: 'Independent site, not the certification board or its testing company. You apply and pay on the website of the BACB (Behavior Analyst Certification Board, the board that grants the certificate) and book your exam seat with Pearson VUE, the company that runs its test centers.',
 };
 export function t(_lang: Locale = 'en') { return en; }

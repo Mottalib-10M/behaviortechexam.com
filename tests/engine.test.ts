@@ -42,7 +42,7 @@ describe('marking', () => {
     const s = splitByDomain('bcba', 20);
     const t = topOfSplit('bcba', s);
     expect(t.tied.map((d) => d.code)).toEqual(['B', 'E', 'F', 'G']);
-    expect(topLabel(t)).toBe('Tie: B, E, F and G (3 each)');
+    expect(topLabel(t)).toBe('Concepts, Ethics, Assessment and Behavior change (3 each)');
     expect(t.official.code).toBe('G');
     expect(t.official.items).toBeGreaterThan(domainsOf('bcba').find((d) => d.code === 'B')!.items);
     // A single top domain is named alone.

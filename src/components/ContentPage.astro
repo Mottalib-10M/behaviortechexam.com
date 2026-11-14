@@ -42,7 +42,7 @@ for (let i = 0; i < parts.length; i += 3) { chunks.push({ html: parts[i] }); if 
       <p class="mb-1 text-xs font-semibold uppercase tracking-wide text-accent-600">{groupLabel(page.group)}</p>
       <h1 class="mt-0 text-[1.75rem] font-bold text-navy-900 max-sm:leading-tight sm:text-3xl md:text-4xl">{T.h1}</h1>
       <p class="mt-2 text-base text-navy-700 sm:text-lg">{T.intro}</p>
-      <p data-chrome data-independant class="mt-1 text-xs font-medium text-navy-600">{ui.independent}</p>
+      <p data-chrome data-independant class="mt-1 text-xs font-medium text-navy-600">{ui.independentShort}</p>
     </header>
     {page.tool && <div data-outil class="mb-4"><Tool tool={page.tool} primary={true} seedKey={page.id} /></div>}
     <Clamp text={T.resume(h)} id={`clamp-${page.id}`} lang={lang} class="mb-3" />

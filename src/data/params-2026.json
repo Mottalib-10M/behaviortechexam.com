@@ -674,7 +674,7 @@
   {
    "id": "nv",
    "name": "Nevada",
-   "techCredential": "Registered behavior technician (state registration)",
+   "techCredential": "State registration of RBTs (a separate card, on top of the national RBT)",
    "techRequired": true,
    "techFee": 70,
    "techBackgroundFee": 40,
