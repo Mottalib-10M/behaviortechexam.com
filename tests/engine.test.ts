@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { execFileSync } from 'node:child_process';
 import { BANK } from '../src/lib/banks-build';
-import { buildMock, buildPractice, pool, score, atLeast, splitByDomain, targetCount, examOf, domainsOf } from '../src/lib/engine/exam';
+import { buildMock, buildPractice, pool, score, atLeast, splitByDomain, targetCount, examOf, domainsOf, topOfSplit, topLabel } from '../src/lib/engine/exam';
 import { totalCost, supervision, fieldwork, trainingPlan, rescheduleFee, retakePlan, applicationWindow, recertification } from '../src/lib/engine/rules';
 import { getSpec, SPEC_IDS } from '../src/lib/mini-specs';
 
@@ -36,6 +36,23 @@ describe('marking', () => {
   it('split by domain sums to the set size', () => {
     for (const n of [1, 10, 37, 75]) expect(splitByDomain('rbt', n).reduce((a, b) => a + b.n, 0)).toBe(n);
     expect(splitByDomain('rbt', 75).map((d) => d.n)).toEqual([13, 8, 19, 14, 10, 11]);
+  });
+  it('biggest share of a split shows ties and never names one domain of a tie', () => {
+    // 20 BCBA questions: B, E, F and G get 3 each (testeurs naïfs 2026-11-14, tour 2).
+    const s = splitByDomain('bcba', 20);
+    const t = topOfSplit('bcba', s);
+    expect(t.tied.map((d) => d.code)).toEqual(['B', 'E', 'F', 'G']);
+    expect(topLabel(t)).toBe('Tie: B, E, F and G (3 each)');
+    expect(t.official.code).toBe('G');
+    expect(t.official.items).toBeGreaterThan(domainsOf('bcba').find((d) => d.code === 'B')!.items);
+    // A single top domain is named alone.
+    const r = topOfSplit('rbt', splitByDomain('rbt', 75));
+    expect(topLabel(r)).toBe('C. ' + domainsOf('rbt').find((d) => d.code === 'C')!.short);
+    for (const n of [1, 7, 20, 50, 185]) {
+      const x = topOfSplit('bcba', splitByDomain('bcba', n));
+      for (const d of splitByDomain('bcba', n)) expect(d.n).toBeLessThanOrEqual(x.max);
+      expect(x.tied.every((d) => d.n === x.max)).toBe(true);
+    }
   });
 });
 describe('rules', () => {

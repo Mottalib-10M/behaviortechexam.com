@@ -185,15 +185,15 @@
    "exam": "rbt",
    "domain": "C",
    "ref": "C.3",
-   "q": "Massed trials of the same target give way to mixed trials of several targets. What is this mixing called?",
+   "q": "A new target was taught alone, trial after trial. The technician now presents it among trials of targets the learner already knows. What is this procedure called?",
    "options": [
-    "Extinction of known targets",
+    "Massed trials",
     "Forward chaining",
-    "Interspersal or mixing of targets",
+    "Interspersal of targets",
     "Overcorrection"
    ],
    "answer": 2,
-   "explain": "After a target is acquired in massed trials, technicians often mix it with other targets so the learner must discriminate among cues. Interspersing known targets also keeps reinforcement rates up. The other options are unrelated procedures.",
+   "explain": "Teaching one target trial after trial is massed trials; presenting it among known targets is interspersal, so the learner must discriminate among cues and reinforcement stays frequent. Forward chaining teaches the steps of a chain in order, and overcorrection is a reduction procedure.",
    "topics": [
     "dtt"
    ]

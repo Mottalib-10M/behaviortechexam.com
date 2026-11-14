@@ -16,7 +16,7 @@ export default definePage({
     faqs: (h) => [
       { q: 'How many times can you take the RBT exam?', a: `Up to ${h.X('rbt').attemptsMax} attempts within ${h.X('rbt').authorizationMonths} months of the approval of your initial application. Each attempt is a new ${h.usd(h.X('rbt').feeExam)} appointment, at least ${h.X('rbt').retakeWaitDays} days after the previous one. After the eighth attempt or the twelfth month, you must apply again. The retake calculator gives your dates.` },
       { q: 'Do I have to pay the board again to retake?', a: 'Not on the handbook read for this page: it says a fee is not currently required to submit the retake application. You do pay Pearson VUE again for each new appointment. If you have to start a new certification application after your authorization ends, the application fee is due again.' },
-      { q: 'What should I study before an RBT retake?', a: 'Start from where you lost points. Take a full mock to see the weak domains, then practice those domains and the questions you miss. Read the explanations, not just the answers. Many candidates who fail know the definitions but mix up neighboring procedures, such as DRO and DRA or partial and whole interval.' },
+      { q: 'What should I study before an RBT retake?', a: 'Start from where you lost points. Take a full mock to see the weak domains, then practice those domains and the questions you miss. Read the explanations, not just the answers. Many candidates who fail know the definitions but mix up neighboring procedures, such as DRO and DRA (rewarding the absence of a behavior versus rewarding a named replacement) or partial and whole interval.' },
     ],
     body: (h) => `
 <h2>RBT exam retake rules in one table</h2>

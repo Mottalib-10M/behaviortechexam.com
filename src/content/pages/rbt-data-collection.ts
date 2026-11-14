@@ -28,7 +28,7 @@ ${h.table(['Method', 'What it records', 'Typical use'], [
   ['Whole interval', 'Behavior throughout each interval', 'Behaviors to increase, such as engagement'],
   ['Momentary time sampling', 'Behavior at the moment the interval ends', 'Several learners or a busy session'],
   ['Permanent product', 'The lasting result of behavior', 'Worksheets, items assembled, a made bed'],
-], 'Our summary of tasks A.1 to A.3 of the outline.', ['l', 'l', 'l'])}
+], 'Our summary of tasks A.1 to A.3 of the board’s exam plan.', ['l', 'l', 'l'])}
 <h2>Operational definitions</h2>
 <p>Task A.5 asks you to describe behavior and environment in observable and measurable terms. A good definition lets two people watching the same session agree on every instance. It names what the behavior looks like, not why it happens or how the learner feels: "hits the table with an open hand hard enough to be heard" rather than "gets angry". On the exam, wrong options often contain a label such as aggressive, defiant or anxious.</p>
 <h2>Summarizing and graphing</h2>

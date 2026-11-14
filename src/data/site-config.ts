@@ -12,7 +12,7 @@ export const YEAR = 2026;
 export const SITE_FOUNDED = '2026';
 export const LAST_UPDATED = '2026-11-13';
 export const AUTHOR_NAME = 'Radif Partners';
-export const AUTHOR_ROLE: Record<string, string> = {"en": "Independent publisher of free practice exams and cost calculators for the behavior technician certification exam, written from the public BACB test content outline"};
+export const AUTHOR_ROLE: Record<string, string> = {"en": "Independent publisher of free practice exams and cost calculators for the behavior technician certification exam, written from the public exam plan of the BACB (Behavior Analyst Certification Board)"};
 export const AUTHOR_DESC: Record<string, string> = {"en": "Radif Partners reads the public documents of the Behavior Analyst Certification Board, the RBT Handbook, the Test Content Outline (3rd ed.), the 40-hour training requirements and the competency assessment packet, then writes its own practice questions, one per task of the outline, with an explanation and the task code. Mock exams follow the published count of 75 scored questions, the 90-minute limit and the six domain weights. Every fee, deadline and state rule links to the BACB page or the state board page it was read on, with the date. Radif Partners is not the BACB, Pearson VUE, a training provider or an employer, and it sells nothing."};
 /** Sujets sur lesquels l'editeur est competent (schema.org knowsAbout). Ce sont les
  *  themes reellement traites par le site, pas une liste de mots-cles : un sujet

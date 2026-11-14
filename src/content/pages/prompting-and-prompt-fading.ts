@@ -9,7 +9,7 @@ export default definePage({
     title: 'Prompting and Prompt Fading: RBT Exam Practice Questions',
     description: 'Prompting and prompt fading practice for the RBT exam: prompt types, most-to-least, least-to-most, time delay, stimulus fading and errorless teaching.',
     h1: 'Prompting and prompt fading practice',
-    intro: 'Prompting and prompt fading, task C.7, is one of the most tested skills on the exam; these eight questions cover the prompt types and every fading method named in it.',
+    intro: 'Prompting and prompt fading is one of the most tested skills on the exam; these eight questions cover the prompt types and every fading method named in it.',
     resume: (h) => `A prompt is extra help that makes a correct response more likely: a gesture toward the right card, a spoken hint, a model of the response, a hand guiding the learner, or a change in the materials themselves. Response prompts act on the learner's behavior; stimulus prompts change the cue, such as a darker picture or a card placed closer. All prompts are temporary. If they stay, the learner may learn to wait for them, which is prompt dependence. Fading moves control from the prompt to the natural cue. Most-to-least starts with the most help the learner needs and steps down, which keeps errors rare. Least-to-most starts with a chance to answer alone and adds help step by step. Time delay inserts a wait between the instruction and the prompt, constant or growing. Stimulus fading makes the added feature fainter over trials. Errorless teaching combines immediate prompts with planned fading. The exam asks you to name, rank and choose these methods from short scenarios.`,
     faqs: (h) => [
       { q: 'Which prompt is the most intrusive?', a: 'A full physical prompt, where the technician guides the learner through the whole response hand over hand. Partial physical prompts, models, gestures and verbal prompts follow in most hierarchies, though the exact order varies by source. Physical prompts are used only as the plan allows and with respect for the learner’s comfort.' },
@@ -26,7 +26,7 @@ ${h.table(['Prompt', 'Example', 'Kind'], [
   ['Verbal', 'A spoken hint or the first sound', 'Response prompt'],
   ['Positional', 'The right card placed closer', 'Stimulus prompt'],
   ['Within-stimulus', 'The right picture drawn darker', 'Stimulus prompt, faded by stimulus fading'],
-], 'Our summary for task C.7; hierarchies differ from one program to another.', ['l', 'l', 'l'])}
+], 'Our summary for task C.7 of the board’s exam plan; hierarchies differ from one program to another.', ['l', 'l', 'l'])}
 <h2>Choosing a prompt fading method</h2>
 <p>The supervisor chooses; the exam checks that you recognize each one. Most-to-least suits errorless learning. Least-to-most gives the learner the chance to show independence first. Time delay transfers control from the prompt to the instruction without changing the kind of prompt. Stimulus fading removes help built into the materials. Graduated guidance adjusts physical help moment to moment.</p>
 <h2>Prompts in the data</h2>

@@ -24,7 +24,7 @@ ${h.table(['Function', 'Antecedent example', 'Differential reinforcement example
   ['Escape', 'Easier tasks first, high-p requests, demand fading', 'Teach asking for a break', 'The task stays in place'],
   ['Tangible', 'Scheduled access, warnings before transitions', 'Teach asking for the item', 'The item is not given after the behavior'],
   ['Automatic', 'Enriched environment, matched alternatives', 'Reinforce incompatible behavior', 'Sensory consequence reduced, as the plan sets'],
-], 'Our examples for tasks D.1 to D.4; the supervisor writes the actual plan.', ['l', 'l', 'l', 'l'])}
+], 'Our examples for tasks D.1 to D.4 of the board’s exam plan; the supervisor writes the actual plan.', ['l', 'l', 'l', 'l'])}
 <h2>Differential reinforcement in brief</h2>
 <p>All differential reinforcement procedures reinforce one thing and not another. DRO reinforces the absence of the target behavior over an interval. DRA reinforces an alternative behavior. DRI reinforces a behavior that cannot happen at the same time. DRL reinforces a lower rate of a behavior that is fine in small amounts, such as asking the same question. FCT teaches a communication response that produces the same reinforcer as the problem behavior. The ${h.a('functions-of-behavior', 'functions page')} drills these.</p>
 <h2>Punishment and its side effects</h2>

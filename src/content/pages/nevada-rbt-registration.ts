@@ -2,16 +2,16 @@ import { definePage } from '../../lib/guide-types';
 export default definePage({
   id: 'nevada-rbt-registration', group: 'states', order: 440,
   tool: { kind: 'mini:cost', props: { st: 3, a: 1, locked: 'st' } },
-  mini: { kind: 'states', props: { state: 'Nevada' } },
+  mini: { kind: 'states', props: { state: 'Nevada', headline: 'fee' } },
   related: ['rbt-requirements-by-state', 'louisiana-registered-line-technician', 'rbt-certification-cost', 'rbt-renewal'],
   sources: ['nv_board', 'rbt_handbook', 'bacb_licensure'],
   demarche: true,
   en: {
-    slug: 'nevada-rbt-registration', nav: 'Nevada: RBT registration', card: 'State registration with the Nevada ABA Board: $70 fee, LiveScan clearance, timing.',
+    slug: 'nevada-rbt-registration', nav: 'Nevada: RBT registration', card: 'State registration with the Nevada ABA Board: $70 fee, fingerprint background check (LiveScan), timing.',
     title: 'Nevada RBT Registration: State Fee, LiveScan and Timing',
     description: 'Nevada RBT registration with the state ABA board: the $70 fee, the $40 LiveScan clearance plus vendor fee, 10 to 14 days for results, and the full totals.',
     h1: 'Nevada RBT registration with the state board',
-    intro: 'Nevada RBT registration is filed with the state’s Applied Behavior Analysis Board; the calculator below adds its fee and the LiveScan clearance to the board certification.',
+    intro: 'Nevada RBT registration is filed with the state’s Applied Behavior Analysis Board; the calculator below adds its fee and the LiveScan fingerprint check to the board certification.',
     resume: (h) => `Nevada was among the first states to license behavior analysts, in ${h.state('nv').analystLaw}, and its Applied Behavior Analysis Board also registers technicians who hold the board certification. The board's licensing page describes an online initial application in two parts and a registration fee of ${h.usd(h.state('nv').techFee)}, due when you apply and not refundable. A state and federal background clearance is required: in Nevada it is requested through LiveScan, at a cost of ${h.usd(h.state('nv').techBackgroundFee ?? 0)} plus the fee of the fingerprint vendor, with results sent to the board in about 10 to 14 days. LiveScan is not available outside the state, so out-of-state applicants follow another process described in the application. The board warns that results received before an application is started are destroyed and must be requested again. With the board certification fees, a first attempt costs ${h.usd(h.floor + h.state('nv').techFee + (h.state('nv').techBackgroundFee ?? 0))} before the vendor's fingerprint fee.`,
     faqs: (h) => [
       { q: 'Do RBTs need a state registration in Nevada?', a: 'Yes: the Nevada Applied Behavior Analysis Board lists registered behavior technicians among the credentials it handles, with its own initial application, fee and background clearance. Technicians practice under the direction of a supervisor or requirements coordinator, as with the board certification. Check the board page for current forms.' },

@@ -2,16 +2,16 @@ import { definePage } from '../../lib/guide-types';
 export default definePage({
   id: 'washington-certified-behavior-technician', group: 'states', order: 420,
   tool: { kind: 'mini:cost', props: { st: 1, a: 1, locked: 'st' } },
-  mini: { kind: 'states', props: { state: 'Washington' } },
+  mini: { kind: 'states', props: { state: 'Washington', headline: 'fee' } },
   related: ['rbt-requirements-by-state', 'rbt-certification-cost', 'oregon-behavior-analysis-interventionist', 'rbt-supervision'],
   sources: ['wa_wac_300', 'wa_wac_990', 'wa_doh', 'rbt_handbook'],
   demarche: true,
   en: {
-    slug: 'washington-certified-behavior-technician', nav: 'Washington: certified behavior technician', card: 'The CBT credential of the Department of Health: proofs, $95 fee, $150 renewal.',
+    slug: 'washington-certified-behavior-technician', nav: 'Washington: certified behavior technician', card: 'The certified behavior technician (CBT) credential of the Department of Health: proofs, $95 fee, $150 renewal.',
     title: 'Washington Certified Behavior Technician (CBT): Rules, Fees',
     description: 'Washington certified behavior technician (CBT): proofs under WAC 246-805-300, the $95 fee and $150 renewal, the named clinical supervisor, and your total cost.',
     h1: 'Washington certified behavior technician (CBT)',
-    intro: 'A Washington certified behavior technician holds a CBT credential from the Department of Health; the calculator below adds its fee to the board certification cost.',
+    intro: 'A Washington certified behavior technician holds this state credential (CBT) from the Department of Health; the calculator below adds its fee to the board certification cost.',
     resume: (h) => `Washington licenses behavior analysts and assistant behavior analysts through its Department of Health, under a law dating from ${h.state('wa').analystLaw}, and certifies behavior technicians too. Under WAC 246-805-300, an applicant for an initial certified behavior technician credential sends the department the fee and application, proof of being at least 18, proof of a high school diploma or equivalent, and either a current behavior technician registration or certification from a professional credentialing entity, verified directly by that entity, or completion of a training program described in WAC 246-805-310. The application also names the clinical supervisor, as proof of ongoing supervision. WAC 246-805-990 sets the fees: ${h.usd(h.state('wa').techFee)} for the application and initial credential, ${h.usd(h.state('wa').techRenewal ?? 0)} for a renewal, and a ${h.usd(h.state('wa').techLateFee ?? 0)} late renewal penalty. With the board certification route, the first-year fees come to ${h.usd(h.floor + h.state('wa').techFee)}.`,
     faqs: (h) => [
       { q: 'Do I need RBT certification to be a CBT in Washington?', a: 'Not necessarily. WAC 246-805-300 accepts either a current registration or certification from a professional credentialing entity, which the board certification is, or the completion of a behavior technician training program meeting WAC 246-805-310. Many applicants use the board certification, sent directly by the board to the department.' },

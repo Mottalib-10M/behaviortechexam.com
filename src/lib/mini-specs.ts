@@ -6,7 +6,7 @@ import type { MiniSpec } from './mini-types';
 import P from '../data/params-2026.json';
 import PR from '../data/pass-rates-2025.json';
 import { money, formatNumberL, pct, dateL } from './format-l';
-import { examOf, atLeast, targetCount, splitByDomain } from './engine/exam';
+import { examOf, atLeast, targetCount, splitByDomain, topOfSplit, topLabel } from './engine/exam';
 import { STATES, totalCost, supervision, fieldwork, trainingPlan, rescheduleFee, retakePlan, recertification, applicationWindow, addMonths } from './engine/rules';
 
 const n0 = (v: number, d = 0) => formatNumberL(v, 'en', d);
@@ -167,17 +167,17 @@ const SPECS: Record<string, () => MiniSpec> = {
     title: 'BCBA fieldwork months left', cta: 'BCBA requirements',
     exemple: (v) => `Example for ${n0(v.s ?? 0)} supervised and ${n0(v.c ?? 0)} concentrated hours done, ${n0(v.m ?? 0)} hours a month`,
     inputs: [
-      { id: 's', label: 'Supervised fieldwork hours done', def: 600, unit: 'h', max: 2000 },
-      { id: 'c', label: 'Concentrated hours done', def: 0, unit: 'h', max: 1500 },
+      { id: 's', label: 'Supervised fieldwork hours done', def: 600, unit: 'h', max: 2000, help: 'Regular fieldwork: your supervisor oversees at least 5% of your hours' },
+      { id: 'c', label: 'Concentrated hours done', def: 0, unit: 'h', max: 1500, help: 'Fieldwork with closer supervision (10% of hours); each hour counts as 1.33 regular hours' },
       { id: 'm', label: 'Hours you can log a month', def: 100, unit: 'h', max: 200 },
     ],
     run: (v) => {
       const f = fieldwork(v.s ?? 0, v.c ?? 0, v.m ?? 0);
       return {
         head: ['Months to go', f.months == null ? 'Too few hours a month' : n0(f.months)],
-        rows: [['Hours still needed', n0(Math.ceil(f.left))], ['Credit so far', n0(Math.round(f.credit))], ['Unrestricted activities, minimum', `${n0(f.unrestrictedMin)} h over the whole fieldwork`]],
+        rows: [['Hours still needed', n0(Math.ceil(f.left))], [`Hours already counted toward the ${n0(BCBA.fieldworkSupervised)}`, n0(Math.round(f.credit))], ['Of all your hours, hands-off work at least (writing plans, analyzing data)', `${n0(f.unrestrictedMin)} h, ${pct(BCBA.unrestrictedShare)}`]],
         alert: f.tooFew ? `Months under ${BCBA.monthMinHours} hours do not count` : f.capped ? `Only ${BCBA.monthMaxHours} hours a month can count` : undefined,
-        note: `Concentrated hours count ${BCBA.concentratedMultiplier} times toward the ${n0(BCBA.fieldworkSupervised)}-hour supervised total (BCBA Handbook).`,
+        note: `Each concentrated hour counts ${BCBA.concentratedMultiplier} regular hours toward the ${n0(BCBA.fieldworkSupervised)}-hour total (BCBA Handbook). The handbook calls the hands-off work “unrestricted activities”.`,
       };
     },
   }),
@@ -190,8 +190,46 @@ const SPECS: Record<string, () => MiniSpec> = {
       const total = BCBA.feeApplication + BCBA.feeExam * a + BCBA.feeRetakeApplication * (a - 1);
       return {
         head: ['BACB and exam fees', money(total)],
-        rows: [['Application', money(BCBA.feeApplication)], [`Exam appointment × ${a}`, money(BCBA.feeExam * a)], ['Retake applications', money(BCBA.feeRetakeApplication * (a - 1))]],
+        rows: [['Application', money(BCBA.feeApplication)], [`Exam appointment × ${a}`, money(BCBA.feeExam * a)], [`Retake fee, ${money(BCBA.feeRetakeApplication)} for each attempt after the first × ${a - 1}`, money(BCBA.feeRetakeApplication * (a - 1))]],
         note: `Fees of the BCBA Handbook. ${BCBA.retakeWaitDays} days between attempts.`,
+      };
+    },
+  }),
+  fieldpace: () => ({
+    title: 'Hours a month to finish your BCBA fieldwork in time', cta: 'BCBA requirements',
+    exemple: (v) => `Example for ${n0(v.s ?? 0)} hours done and ${plural(Math.round(v.mo ?? 1), 'month')} to finish`,
+    inputs: [
+      { id: 's', label: 'Supervised fieldwork hours done', def: 600, unit: 'h', max: 2000 },
+      { id: 'mo', label: 'Months you want to finish in', def: 12, max: 120 },
+      { id: 'c', label: 'Concentrated hours done', def: 0, unit: 'h', max: 1500, avance: true, help: 'Each hour with closer supervision counts as 1.33 regular hours' },
+    ],
+    run: (v) => {
+      const f = fieldwork(v.s ?? 0, v.c ?? 0, BCBA.monthMinHours);
+      const mo = clamp(Math.round(v.mo ?? 12), 1, 120);
+      const need = f.left > 0 ? Math.ceil(f.left / mo) : 0;
+      const perMonth = f.left > 0 ? Math.max(need, BCBA.monthMinHours) : 0;
+      const fastest = Math.ceil(f.left / BCBA.monthMaxHours);
+      return {
+        head: ['Hours to log each month', f.left <= 0 ? 'None: you are done' : n0(perMonth)],
+        rows: [['Hours still needed', n0(Math.ceil(f.left))], ['Hours that can count in one month', `${BCBA.monthMinHours} to ${BCBA.monthMaxHours}`], ['Fastest possible finish', f.left > 0 ? plural(fastest, 'month') : 'now']],
+        alert: need > BCBA.monthMaxHours ? `Too fast: only ${BCBA.monthMaxHours} hours a month count, so plan at least ${plural(fastest, 'month')}` : need > 0 && need < BCBA.monthMinHours ? `Months under ${BCBA.monthMinHours} hours do not count, so log at least ${BCBA.monthMinHours}` : undefined,
+        note: `Total of ${n0(BCBA.fieldworkSupervised)} hours, each concentrated hour counting ${BCBA.concentratedMultiplier} (BCBA Handbook).`,
+      };
+    },
+  }),
+  bcbaretake: () => ({
+    title: 'BCBA retakes: what the next attempt costs and how many are left', cta: 'BCBA exam format',
+    exemple: (v) => `Example after ${plural(Math.round(v.f ?? 1), 'failed attempt')}`,
+    inputs: [{ id: 'f', label: 'Attempts already failed', def: 1, max: BCBA.attemptsMax }],
+    run: (v) => {
+      const f = clamp(Math.round(v.f ?? 1), 0, BCBA.attemptsMax);
+      const left = BCBA.attemptsMax - f;
+      const next = f === 0 ? BCBA.feeExam : BCBA.feeRetakeApplication + BCBA.feeExam;
+      return {
+        head: ['Next attempt costs', left > 0 ? money(next) : 'No attempt left'],
+        rows: [['Attempts left', n0(left)], ['Wait after a failed attempt', `${BCBA.retakeWaitDays} days`], ['Time to use the attempts', `${BCBA.authorizationMonths} months from approval`], ...(f > 0 ? [['Made of', `${money(BCBA.feeRetakeApplication)} retake fee + ${money(BCBA.feeExam)} appointment`] as [string, string]] : [])],
+        alert: left <= 0 ? 'All attempts are used: a new application is needed' : undefined,
+        note: `Fees and limits of the BCBA Handbook. Spent before: ${money(BCBA.feeApplication)} application and ${money(BCBA.feeExam)} for the first appointment.`,
       };
     },
   }),
@@ -216,19 +254,19 @@ const SPECS: Record<string, () => MiniSpec> = {
     run: (v) => {
       const n = clamp(Math.round(v.n ?? 30), 1, 300);
       const s = splitByDomain('rbt', n);
-      const top = s.reduce((a, b) => (b.n > a.n ? b : a));
-      return { head: ['Most questions', `${top.code}. ${top.short}`], rows: s.map((d) => [`${d.code}. ${d.short}`, n0(d.n)] as [string, string]), note: `Split in proportion to the ${RBT.scored} scored questions of the outline (3rd ed.).` };
+      const t = topOfSplit('rbt', s);
+      return { head: ['Most questions', topLabel(t)], rows: s.map((d) => [`${d.code}. ${d.short}`, n0(d.n)] as [string, string]), note: `Split in proportion to the ${RBT.scored} scored questions of the board's exam plan (3rd ed.). On the real exam, the biggest domain is ${t.official.code}. ${t.official.short}, with ${t.official.items} of the ${RBT.scored}.` };
     },
   }),
   bcbadomains: () => ({
-    title: 'How many questions of each BCBA domain to put in a study set', cta: 'BCBA practice',
+    title: 'Building your own BCBA study set? How many questions to take from each domain', cta: 'BCBA practice',
     exemple: (v) => `Example for a set of ${n0(v.n ?? 0)} questions`,
     inputs: [{ id: 'n', label: 'Questions in the set you plan', def: 20, max: 400 }],
     run: (v) => {
       const n = clamp(Math.round(v.n ?? 20), 1, 400);
       const s = splitByDomain('bcba', n);
-      const top = s.reduce((a, b) => (b.n > a.n ? b : a));
-      return { head: ['Most questions', `${top.code}. ${top.short}`], rows: s.map((d) => [`${d.code}. ${d.short}`, n0(d.n)] as [string, string]), note: `Split in proportion to the ${BCBA.scored} scored questions of the BCBA outline (6th ed.). Use it to plan a set from your course materials: this site's BCBA bank is only a sample.` };
+      const t = topOfSplit('bcba', s);
+      return { head: ['Most questions', topLabel(t)], rows: s.map((d) => [`${d.code}. ${d.short}`, n0(d.n)] as [string, string]), note: `Split in proportion to the ${BCBA.scored} scored questions of the BCBA exam plan (6th ed.). On the real exam, the biggest domain is ${t.official.code}. ${t.official.short}, with ${t.official.items} of the ${BCBA.scored}. Use it to pick questions from your course materials: this site's BCBA bank is only a sample.` };
     },
   }),
   timeline: () => ({
@@ -261,6 +299,6 @@ export const SPEC_IDS = Object.keys(SPECS);
 /** Page each calculator's link goes to (Tool.astro reads it). */
 export const CTA_PAGE: Record<string, string> = {
   cost: 'rbt-certification-cost', supervision: 'rbt-supervision', retake: 'rbt-exam-retake', reschedule: 'rbt-exam-scheduling', training: 'rbt-40-hour-training',
-  application: 'how-to-become-an-rbt', recert: 'rbt-renewal', readiness: 'rbt-mock-exam', pace: 'rbt-study-plan', fieldwork: 'bcba-fieldwork-hours', bcbacost: 'bcba-exam',
+  application: 'how-to-become-an-rbt', recert: 'rbt-renewal', readiness: 'rbt-mock-exam', pace: 'rbt-study-plan', fieldwork: 'bcba-fieldwork-hours', fieldpace: 'bcba-fieldwork-hours', bcbaretake: 'bcba-exam', bcbacost: 'bcba-exam',
   passrate: 'rbt-pass-rates', domains: 'rbt-exam-questions', bcbadomains: 'bcba-practice-test', timeline: 'how-to-become-an-rbt',
 };

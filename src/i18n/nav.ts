@@ -5,8 +5,8 @@ import type { Group } from '../lib/guide-types';
 export interface NavLink { href: string; label: string } export interface NavCategory { label: string; links: NavLink[] }
 const CORE: Record<string, string> = { home: 'Practice exam', method: 'Method and sources', about: 'About', widget: 'Embed the quiz', contact: 'Contact', editorial: 'Editorial policy', privacy: 'Privacy', terms: 'Legal notice', cookies: 'Cookies' };
 /** Short labels for the top menu (one or two words, MASTERFACTORY §10.3); full labels in the footer and on the home page. */
-const GROUP_SHORT: Record<Group, string> = { practice: 'Practice exams', domains: 'Domains', topics: 'Topics', become: 'Certification', states: 'States', maintain: 'Renewal', bcba: 'BCBA', plan: 'Plan' };
-const GROUP_LABEL: Record<Group, string> = { practice: 'Practice exams and mocks', domains: 'Practice by outline domain', topics: 'Practice by topic', become: 'Becoming certified: steps, cost, training', states: 'Rules and fees by state', maintain: 'Keeping the certification', bcba: 'BCBA exam', plan: 'Study plan and review' };
+const GROUP_SHORT: Record<Group, string> = { practice: 'Practice exams', domains: 'Domains', topics: 'Topics', become: 'Certification', states: 'States', maintain: 'Renewal', bcba: 'BCBA (next level)', plan: 'Plan' };
+const GROUP_LABEL: Record<Group, string> = { practice: 'Practice exams and mocks', domains: 'Practice by outline domain', topics: 'Practice by topic', become: 'Becoming certified: steps, cost, training', states: 'Rules and fees by state', maintain: 'Keeping the certification', bcba: 'BCBA exam: the analyst level above RBT', plan: 'Study plan and review' };
 export const GROUPS_ORDER: Group[] = ['practice', 'domains', 'topics', 'become', 'states', 'maintain', 'bcba', 'plan'];
 export const groupLabel = (g: Group, _lang: Locale = 'en') => GROUP_LABEL[g];
 export const label = (id: string, _lang: Locale = 'en') => CORE[id] ?? pageById(id)?.en.nav ?? id;

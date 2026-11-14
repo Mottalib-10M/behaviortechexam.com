@@ -2,12 +2,12 @@ import { definePage } from '../../lib/guide-types';
 export default definePage({
   id: 'louisiana-registered-line-technician', group: 'states', order: 450,
   tool: { kind: 'mini:cost', props: { st: 4, a: 1, locked: 'st' } },
-  mini: { kind: 'states', props: { state: 'Louisiana' } },
+  mini: { kind: 'states', props: { state: 'Louisiana', headline: 'fee' } },
   related: ['rbt-requirements-by-state', 'nevada-rbt-registration', 'rbt-supervision', 'rbt-certification-cost'],
   sources: ['la_rules', 'la_forms', 'rbt_handbook'],
   demarche: true,
   en: {
-    slug: 'louisiana-registered-line-technician', nav: 'Louisiana: registered line technician', card: 'The RLT registered by your supervising analyst: $50, $50 a year, 10-day notice when supervision ends.',
+    slug: 'louisiana-registered-line-technician', nav: 'Louisiana: registered line technician', card: 'The registered line technician (RLT), registered by your supervising analyst: $50, $50 a year, 10-day notice when supervision ends.',
     title: 'Louisiana Registered Line Technician (RLT): Rules and Fees',
     description: 'Louisiana registered line technician (RLT): filed by the supervising analyst, background check, $50 fee, $50 yearly renewal, and the 10-day notice rule.',
     h1: 'Louisiana registered line technician (RLT)',

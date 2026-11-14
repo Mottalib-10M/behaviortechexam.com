@@ -5,11 +5,11 @@ export default definePage({
   related: ['rbt-behavior-assessment', 'discrete-trial-teaching', 'rbt-skill-acquisition', 'rbt-competency-assessment'],
   sources: ['rbt_tco', 'rbt_competency'],
   en: {
-    slug: 'preference-assessments', nav: 'Preference assessments', card: 'MSWO, paired stimulus, free operant: eight questions on how reinforcers are found.',
+    slug: 'preference-assessments', nav: 'Preference assessments', card: 'How to find what a learner will work for: MSWO (multiple stimulus without replacement), paired stimulus, free operant.',
     title: 'Preference Assessments: RBT Exam Practice Questions (B.1)',
     description: 'Preference assessment practice for the RBT exam: MSWO, paired stimulus, free operant and single stimulus formats, and preference versus a true reinforcer.',
     h1: 'Preference assessments: practice for technicians',
-    intro: 'A preference assessment finds the items a learner is most likely to work for; these eight questions train task B.1, which is also task 4 of the competency assessment.',
+    intro: 'A preference assessment finds the items a learner is most likely to work for; these eight questions cover each format, also checked in the competency assessment.',
     resume: (h) => `Preference assessments are where reinforcement starts. Before teaching, the technician needs items or activities the learner wants enough to work for, and wants today, not last month. Task B.1 of the outline names three formats as examples: multiple stimulus, paired stimulus and free operant. Each answers a slightly different question. A multiple stimulus assessment without replacement ranks several items quickly; with replacement, it finds the single favorite. A paired stimulus assessment gives a precise order at the cost of many trials. A free operant observation records time spent with items the learner can reach freely, and it avoids the frustration of having an item taken away. The exam asks you to name the format from a description, to run it properly, and to remember that preference predicts but does not prove that an item will reinforce behavior. The competency assessment asks you to run one, with a client or in role-play.`,
     faqs: (h) => [
       { q: 'How often should a preference assessment be done?', a: 'As often as the supervisor’s plan says, which for many learners means brief checks at the start of sessions and fuller assessments from time to time. Preferences shift with satiation, deprivation and new experiences, so an item that ranked first a month ago may not work today.' },
@@ -23,7 +23,7 @@ ${h.table(['Format', 'Trials', 'Output'], [
   ['Multiple stimulus with replacement', 'Several, chosen item returned', 'The favorite, sometimes a top few'],
   ['Paired stimulus (forced choice)', 'One per pair of items', 'A precise order'],
   ['Free operant', 'One observation of several minutes', 'Time with each item'],
-], 'Our summary for task B.1.', ['l', 'l', 'l'])}
+], 'Our summary for task B.1 of the board’s exam plan.', ['l', 'l', 'l'])}
 <h2>Running an MSWO step by step</h2>
 <ol>
 <li>Let the learner sample each item briefly.</li>

@@ -40,7 +40,7 @@ const pre = idPrefix ?? (primary ? 'p' : 'm');
 {kind === 'quiz' && <Quiz client:load exam={exam} mode={mode} domain={domain} topic={topic} n={n} pick={!!props.pick} initial={initial} seed={seed} idPrefix={pre} secondary={!primary} />}
 {kind === 'bank' && <Bank client:load exam={exam} domain={bankDomain} initial={bankInitial} total={pool(BANK, exam).length} idPrefix={pre} />}
 {kind === 'progress' && <Progress client:load exam={exam} reviewHref={link('review-mistakes')} idPrefix={pre} secondary={!primary} />}
-{kind === 'states' && <StateRules client:load state={String(props.state ?? 'Washington')} idPrefix={pre} secondary={!primary} />}
+{kind === 'states' && <StateRules client:load state={String(props.state ?? 'Washington')} headline={props.headline === 'fee' ? 'fee' : 'total'} idPrefix={pre} secondary={!primary} />}
 {kind === 'passrates' && <PassRates client:load minN={Number(props.minN ?? 500)} idPrefix={pre} secondary={!primary} />}
 {kind === 'checklist' && <Competency client:load idPrefix={pre} secondary={!primary} />}
 {mini && <MiniSim client:load kind={mini} href={CTA_PAGE[mini] === pageId ? undefined : link(CTA_PAGE[mini])} defaults={numDefaults} idPrefix={pre} title={title} locked={locked} />}

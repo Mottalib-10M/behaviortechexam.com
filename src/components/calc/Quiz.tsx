@@ -30,6 +30,7 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
   const [answers, setAnswers] = useState<Array<number | null>>(() => initial.map(() => null));
   const [flags, setFlags] = useState<boolean[]>(() => initial.map(() => false));
   const [cur, setCur] = useState(0);
+  const [mapOpen, setMapOpen] = useState(false);
   const [done, setDone] = useState(false);
   const [loading, setLoading] = useState(false);
   const [left, setLeft] = useState<number | null>(null);
@@ -98,7 +99,6 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
   }).filter((d) => d.n);
   const secs = left == null ? mins * 60 : left;
   const clock = `${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, '0')}`;
-  const shown = reveal ? right : answeredN;
   const status = !answeredN ? 'Pick an answer to start' : !reveal ? `${n - answeredN} question${n - answeredN === 1 ? '' : 's'} left to answer` : right >= target ? 'At or above our study target' : `${target - right} more correct to reach our study target`;
   const tone = !answeredN || !reveal ? 'text-navy-800' : right >= target ? 'text-green-800' : 'text-red-700';
   const domName = (code: string) => domainsOf(exam).find((d) => d.code === code)?.short ?? code;
@@ -110,19 +110,18 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
           <div className="grid gap-3 sm:grid-cols-2">
             {pick && <SelectField id={`${idPrefix}-exam`} label="Exam" value={exam} onChange={(v) => { const ex = v as ExamId; setExam(ex); setDomain(null); draw(ex, null, seedRef.current); }} options={EXAM_IDS.map((id) => ({ value: id, label: `${LABEL(id)}: ${examOf(id).name.replace(' certification examination', '')}` }))} />}
             {mode === 'practice' && !topic && <SelectField id={`${idPrefix}-domain`} label="Outline domain" value={domain ?? ''} onChange={(v) => { const d = v || null; setDomain(d); draw(exam, d, seedRef.current); }} options={[{ value: '', label: 'All domains, mixed' }, ...domainsOf(exam).map((d) => ({ value: d.code, label: `${d.code}. ${d.short}` }))]} />}
-            {isMock && <SelectField id={`${idPrefix}-pilot`} className="sm:col-span-2" label="Exam length" value={pilot ? '1' : '0'} onChange={(v) => { const p = v === '1'; setPilot(p); draw(exam, null, seedRef.current, p); }} options={[{ value: '0', label: `${x.scored} questions that count, ${minsScored} min` }, { value: '1', label: `All ${x.items} questions in ${hm(x.minutes)}, like the real exam` }]} help={`Real exam: ${x.items} questions in ${hm(x.minutes)}, ${x.unscored} of them trial questions that do not count. Here: the ${x.scored} that count, same pace.`} />}
+            {isMock && <SelectField id={`${idPrefix}-pilot`} className="sm:col-span-2" label="Exam length" value={pilot ? '1' : '0'} onChange={(v) => { const p = v === '1'; setPilot(p); draw(exam, null, seedRef.current, p); }} options={[{ value: '0', label: `${x.scored} questions that count, ${minsScored} min` }, { value: '1', label: `All ${x.items} questions in ${hm(x.minutes)}, like the real exam` }]} help={`The real exam has ${x.items} questions in ${hm(x.minutes)}. ${x.unscored} of them are trial questions that do not count, so this mock gives you the ${x.scored} that count in ${minsScored} min, the same speed. Want all ${x.items}? Pick it in this list.`} />}
           </div>
         )}
         <div className="rounded-lg border border-navy-300 bg-white">
           {isMock && !done && n > 0 && (
             <div data-chrono className="sticky top-16 z-10 flex flex-wrap items-center justify-between gap-x-3 gap-y-0.5 rounded-t-lg border-b border-navy-200 bg-navy-50 px-4 py-2 text-sm text-navy-800">
-              <span className="tabular-nums font-semibold">Time left {clock}{started.current == null ? ' (starts at first answer)' : ''}</span>
+              <span className="tabular-nums font-semibold">Time left {clock}{started.current == null ? ' (starts when you tap an answer)' : ''}</span>
               <span className="tabular-nums">{answeredN} of {n} answered</span>
             </div>
           )}
           <div className="flex flex-wrap items-center justify-between gap-2 border-b border-navy-200 px-4 py-2.5 text-sm text-navy-700">
             <span className="tabular-nums font-medium">{n ? `Question ${cur + 1} of ${n}` : LABEL(exam)}{q && <span className="font-normal text-navy-600"> · {domName(q.domain)}</span>}</span>
-            {q && isMock && !done && <button type="button" onClick={() => setFlags((f) => f.map((v, j) => (j === cur ? !v : v)))} aria-pressed={flags[cur]} className={`h-9 rounded border px-3 text-xs font-semibold ${flags[cur] ? 'border-amber-700 bg-amber-50 text-amber-900' : 'border-navy-300 bg-white text-navy-700 hover:bg-navy-50'}`}>{flags[cur] ? 'Flagged' : 'Flag for later'}</button>}
           </div>
           <div className="p-4 sm:p-5">
             {loading && <p className="text-navy-700">Loading the questions…</p>}
@@ -140,23 +139,26 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
                 {a !== null && reveal && (
                   <div className="mt-4 border-l-4 border-accent-700 bg-accent-50 px-4 py-3 text-sm text-navy-800" aria-live="polite">
                     <p><strong>{a === q.answer ? 'Right.' : `Not quite: the answer is ${LETTERS[q.answer]}.`}</strong> {q.explain}</p>
-                    <p className="mt-1 text-xs text-navy-600">Outline task {q.ref} · {x.editionLabel}{unscored.has(q.id) ? ' · unscored pilot question in this mock' : ''}</p>
+                    <p className="mt-1 text-xs text-navy-600">Skill {q.ref} on the board's list of exam skills ({x.editionLabel}){unscored.has(q.id) ? ' · trial question that does not count in this mock' : ''}</p>
                   </div>
                 )}
                 {a !== null && !reveal && <p className="mt-3 text-sm text-navy-700">Answer saved. As on the real exam, the corrections come when you end the test.</p>}
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {cur > 0 && <button type="button" onClick={() => setCur(cur - 1)} className="h-12 rounded-lg border border-navy-300 px-4 font-medium text-navy-800 hover:bg-navy-50">Back</button>}
-                  {cur < n - 1 && <button type="button" onClick={() => setCur(cur + 1)} className="h-12 rounded-lg bg-accent-700 px-5 font-semibold text-white hover:bg-accent-800">Next question</button>}
-                  {isMock && !done && answeredN > 0 && <button type="button" onClick={() => setDone(true)} className="h-12 rounded-lg border border-accent-700 px-4 font-semibold text-accent-800 hover:bg-accent-50">End and mark the test</button>}
-                  <button type="button" onClick={newSet} className="h-12 rounded-lg border border-navy-300 px-4 font-medium text-navy-800 hover:bg-navy-50">{isMock ? 'New mock' : 'New questions'}</button>
+                <div className="mt-4 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
+                  {cur > 0 && <button type="button" onClick={() => setCur(cur - 1)} className="h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 border border-navy-300 px-3 font-medium text-navy-800 hover:bg-navy-50">Back</button>}
+                  {cur < n - 1 && <button type="button" onClick={() => setCur(cur + 1)} className="h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 bg-accent-700 px-3 font-semibold text-white hover:bg-accent-800">Next question</button>}
+                  {isMock && !done && answeredN > 0 && <button type="button" onClick={() => setDone(true)} className="h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 border border-accent-700 px-3 font-semibold text-accent-800 hover:bg-accent-50">Finish and mark</button>}
+                  <button type="button" onClick={newSet} className="h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 border border-navy-300 px-3 font-medium text-navy-800 hover:bg-navy-50">{isMock ? 'New mock' : 'New questions'}</button>
+                  {isMock && !done && <button type="button" onClick={() => setFlags((f) => f.map((v, j) => (j === cur ? !v : v)))} aria-pressed={flags[cur]} title="Marks this question so you can find it again in the question map" className={`h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 border px-3 font-medium ${flags[cur] ? 'border-amber-700 bg-amber-50 text-amber-900' : 'border-navy-300 bg-white text-navy-800 hover:bg-navy-50'}`}>{flags[cur] ? 'Flagged' : 'Flag for later'}</button>}
                 </div>
+                {isMock && !done && a === null && cur === 0 && answeredN === 0 && <p className="mt-3 text-sm text-navy-700">Tap the answer you think is right: the clock starts then. You can skip a question, flag it to come back to it, and you see every correction when you end the test.</p>}
               </fieldset>
             )}
           </div>
           {isMock && n > 1 && (
             <div className="border-t border-navy-200 px-4 py-3">
-              <p className="mb-2 text-xs font-medium text-navy-700">Question map{flags.some(Boolean) ? ' · amber = flagged' : ''}</p>
-              <div className="flex flex-wrap gap-1">
+              <button type="button" onClick={() => setMapOpen((o) => !o)} aria-expanded={mapOpen} aria-controls={`${idPrefix}-map`} className="h-11 rounded-lg border border-navy-300 px-4 text-sm font-medium text-navy-800 hover:bg-navy-50">{mapOpen ? 'Hide question map' : `Show question map (${n})`}{flags.some(Boolean) ? ` · ${flags.filter(Boolean).length} flagged` : ''}</button>
+              {mapOpen && <p className="mt-2 mb-2 text-xs font-medium text-navy-700">Tap a number to go to that question{flags.some(Boolean) ? ' · amber = flagged' : ''}</p>}
+              <div id={`${idPrefix}-map`} hidden={!mapOpen} className="flex flex-wrap gap-1">
                 {qs.map((v, i) => {
                   const st = done ? (answers[i] === v.answer ? 'border-green-700 bg-green-50 text-green-900' : 'border-red-700 bg-red-50 text-red-900') : flags[i] ? 'border-amber-700 bg-amber-50 text-amber-900' : answers[i] !== null ? 'border-accent-700 bg-accent-700 text-white' : 'border-navy-300 bg-white text-navy-700';
                   return <button key={v.id} type="button" onClick={() => setCur(i)} aria-current={i === cur ? 'step' : undefined} aria-label={`Go to question ${i + 1}`} className={`tabular-nums h-8 w-9 rounded border text-xs ${st} ${i === cur ? 'ring-2 ring-navy-900' : ''}`}>{i + 1}</button>;
@@ -170,15 +172,15 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
             {left === 0 && <p className="mb-2 font-medium text-red-700">Time is up: the test was marked as it stood.</p>}
             <p className="font-semibold text-navy-900">Questions to read again</p>
             {qs.every((v, i) => answers[i] === v.answer) ? <p className="mt-2 text-navy-700">None: every answer was right.</p> : (
-              <ol className="mt-2 list-decimal space-y-2 pl-5 text-navy-800">{qs.map((v, i) => (answers[i] !== v.answer ? <li key={v.id}><span className="font-medium">{v.q}</span> Answer: {v.options[v.answer]}. <span className="text-navy-700">{v.explain}</span>{unscored.has(v.id) && <span className="text-navy-600"> (unscored)</span>}</li> : null))}</ol>
+              <ol className="mt-2 list-decimal space-y-2 pl-5 text-navy-800">{qs.map((v, i) => (answers[i] !== v.answer ? <li key={v.id}><span className="font-medium">{v.q}</span> Answer: {v.options[v.answer]}. <span className="text-navy-700">{v.explain}</span>{unscored.has(v.id) && <span className="text-navy-600"> (trial question, does not count)</span>}</li> : null))}</ol>
             )}
           </div>
         )}
       </form>
       <div {...(secondary ? {} : { 'data-resultat': '' })} aria-live="polite" className="h-fit rounded-lg border-t-4 border-accent-700 bg-navy-50 p-4 lg:sticky lg:top-20">
         <p className="text-sm font-medium text-navy-700">{LABEL(exam)} · {isMock ? 'mock exam' : mode === 'review' ? 'review of mistakes' : topic ? 'topic practice' : 'practice'}</p>
-        <p className="tabular-nums mt-1 text-4xl font-bold text-navy-900">{shown}<span className="text-xl font-semibold text-navy-700"> / {reveal ? answeredCounted : n}</span></p>
-        <p className="text-sm text-navy-700">{reveal ? 'correct out of answered' : 'answered'}</p>
+        <p className="tabular-nums mt-1 text-4xl font-bold text-navy-900">{reveal && answeredN ? right : answeredN}<span className="text-xl font-semibold text-navy-700"> / {reveal && answeredN ? answeredCounted : n}</span></p>
+        <p className="text-sm text-navy-700">{reveal && answeredN ? 'correct out of answered' : 'answered'}</p>
         <div className="mt-3 h-2 w-full overflow-hidden rounded bg-navy-200" aria-hidden="true"><div className="h-2 bg-accent-700" style={{ width: `${(answeredN / Math.max(1, n)) * 100}%` }} /></div>
         <p className={`mt-3 text-base font-semibold ${tone}`}>{status}</p>
         <table className="mt-2 w-full text-sm"><tbody className="divide-y divide-navy-200">
@@ -190,7 +192,7 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
           <div className="mt-3"><p className="text-sm font-semibold text-navy-900">By outline domain</p>
             <ul className="mt-1 space-y-1.5 text-xs text-navy-700">{byDomain.map((b) => <li key={b.code}><div className="flex justify-between gap-2"><span>{b.code}. {b.short}</span><span className="tabular-nums">{b.r}/{b.n}</span></div><div className="mt-0.5 h-1.5 w-full rounded bg-navy-200" aria-hidden="true"><div className="h-1.5 rounded bg-accent-700" style={{ width: `${(b.r / b.n) * 100}%` }} /></div></li>)}</ul></div>
         )}
-        <p className="mt-3 text-xs text-navy-700">Practice questions written by Radif Partners from the public outline, not questions from the real exam. Progress stays in this browser.</p>
+        <p className="mt-3 text-xs text-navy-700">Practice questions written by Radif Partners, the independent company that publishes this site, from the board's public list of exam skills: not questions from the real exam. Progress stays in this browser.</p>
       </div>
     </div>
   );

@@ -118,3 +118,21 @@ export function splitByDomain(exam: ExamId, n: number): Array<{ code: string; sh
   for (const [, i] of order) { if (left <= 0) break; base[i]++; left--; }
   return ds.map((d, i) => ({ code: d.code, short: d.short, n: base[i] }));
 }
+/**
+ * Biggest share of a split: every domain at the highest count, so that a tie is shown as a tie
+ * (testeurs naïfs, 2026-11-14 tour 2: "Most questions: B" when B, E, F and G had 3 each), and the
+ * domain with the most scored questions on the official outline.
+ */
+export function topOfSplit(exam: ExamId, split: Array<{ code: string; short: string; n: number }>) {
+  const max = Math.max(...split.map((d) => d.n));
+  const tied = split.filter((d) => d.n === max);
+  const official = domainsOf(exam).reduce((a, b) => (b.items > a.items ? b : a));
+  return { max, tied, official };
+}
+/** "B. Concepts" or "Tie: B, E, F and G (3 each)". */
+export function topLabel(t: ReturnType<typeof topOfSplit>): string {
+  if (t.tied.length === 1) return `${t.tied[0].code}. ${t.tied[0].short}`;
+  const codes = t.tied.map((d) => d.code);
+  const list = codes.length === 2 ? codes.join(' and ') : `${codes.slice(0, -1).join(', ')} and ${codes[codes.length - 1]}`;
+  return `Tie: ${list} (${t.max} each)`;
+}

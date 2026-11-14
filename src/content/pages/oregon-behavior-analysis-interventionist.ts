@@ -2,7 +2,7 @@ import { definePage } from '../../lib/guide-types';
 export default definePage({
   id: 'oregon-behavior-analysis-interventionist', group: 'states', order: 430,
   tool: { kind: 'mini:cost', props: { st: 2, a: 1, locked: 'st' } },
-  mini: { kind: 'states', props: { state: 'Oregon' } },
+  mini: { kind: 'states', props: { state: 'Oregon', headline: 'fee' } },
   related: ['rbt-requirements-by-state', 'washington-certified-behavior-technician', 'rbt-certification-cost', 'how-to-become-an-rbt'],
   sources: ['or_form', 'or_hlo', 'rbt_handbook'],
   demarche: true,

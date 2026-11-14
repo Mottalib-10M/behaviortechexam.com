@@ -77,7 +77,7 @@
    "exam": "rbt",
    "domain": "B",
    "ref": "B.1",
-   "q": "In an MSWO, a learner chooses the same tablet game first in every round. What can the technician conclude?",
+   "q": "In an MSWO (multiple stimulus without replacement) preference assessment, a learner chooses the same tablet game first in every round. What can the technician conclude?",
    "options": [
     "The game is a highly preferred item",
     "The game is proven to be a reinforcer for every task",

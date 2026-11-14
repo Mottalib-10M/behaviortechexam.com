@@ -7,7 +7,7 @@ export default definePage({
   sources: ['rbt_handbook', 'rbt_renewal_competency', 'rbt_page'],
   demarche: true,
   en: {
-    slug: 'rbt-renewal', nav: 'RBT renewal', card: 'Old annual rules one last time in 2026, then a two-year cycle with 12 PDUs: your dates.',
+    slug: 'rbt-renewal', nav: 'RBT renewal', card: 'Old annual rules one last time in 2026, then a two-year cycle with 12 hours of training (PDUs): your dates.',
     title: 'RBT Renewal 2026: Two-Year Cycle, PDUs, Fees and Dates',
     description: 'RBT renewal in 2026 and after: the last annual renewal with a competency assessment, then two-year cycles with 12 PDUs, the $50 fee and the late fees.',
     h1: 'RBT renewal: your next date under the 2026 rules',
@@ -16,7 +16,7 @@ export default definePage({
     faqs: (h) => [
       { q: 'How often do RBTs renew now?', a: `Every ${h.R.recertification.cycleYears} years under the 2026 maintenance requirements, with ${h.R.recertification.pduHours} hours of professional development per cycle. Technicians whose date falls by December 31, 2026 renew once more under the old annual rules with a competency assessment, then move to the two-year cycle.` },
       { q: 'What happens if I miss my RBT renewal date?', a: `You have a ${h.R.recertification.reinstatementDays}-day reinstatement period with a ${h.usd(h.R.recertification.lateFee)} late fee on top of the ${h.usd(h.R.recertification.fee)} renewal fee. You cannot practice as an RBT during that period. After it, the certification expires and you would apply again from the start, with training, competency assessment and exam.` },
-      { q: 'What counts as an RBT professional development unit?', a: 'Three types: in-service training on behavior-analytic service delivery given by a BCaBA or BCBA at your organization, events from an Authorized Continuing Education provider, and behavior-analytic university courses passed with a C or better. Ongoing supervision, client-specific training and BCBA fieldwork do not count, and missed units cannot be made up after the date.' },
+      { q: 'What counts as an RBT professional development unit?', a: 'Three types: in-service training on behavior-analytic service delivery given by a board-certified analyst or assistant analyst (BCBA or BCaBA) at your organization, events from an Authorized Continuing Education provider, and behavior-analytic university courses passed with a C or better. Ongoing supervision, client-specific training and BCBA fieldwork do not count, and missed units cannot be made up after the date.' },
       { q: 'Can I put my RBT certification on hold?', a: `The handbook offers a voluntary inactive status for a fee of ${h.usd(h.R.recertification.voluntaryInactiveFee)}, for up to ${h.R.recertification.voluntaryInactiveMaxYears} years. You may not practice as an RBT while inactive, and the conditions for returning to active status are set out in the handbook. The fee is not refundable.` },
     ],
     body: (h) => `
