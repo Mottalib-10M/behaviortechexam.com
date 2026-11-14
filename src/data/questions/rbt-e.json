@@ -209,6 +209,60 @@
    ],
    "answer": 1,
    "explain": "Technicians can describe what occurred objectively, within the limits set by the supervisor and the workplace. Opinions on the plan and plan changes are the supervisor's domain, and other clients' information is confidential."
+  },
+  {
+   "id": "rbt-e-s01",
+   "exam": "rbt",
+   "domain": "E",
+   "ref": "E.4",
+   "q": "A technician writes the note at the end of a session. Which entry would the supervisor accept as objective?",
+   "options": [
+    "The learner was in a bad mood all afternoon",
+    "The learner seemed lazy during table work",
+    "The learner cried for 4 minutes after the tablet was removed",
+    "The learner was manipulative with the parent"
+   ],
+   "answer": 2,
+   "explain": "An objective entry describes what was seen and measured: the behavior, its length and what happened just before it. Words like bad mood, lazy or manipulative are interpretations of inner states or intent, which another observer could not check and which can be unfair to the learner and family.",
+   "topics": [
+    "session"
+   ]
+  },
+  {
+   "id": "rbt-e-s02",
+   "exam": "rbt",
+   "domain": "E",
+   "ref": "E.3",
+   "q": "During a home session, the technician notices a new large bruise on a learner's arm. What should they do?",
+   "options": [
+    "Tell the supervisor now and follow the reporting rules",
+    "Ask a sibling what happened and keep it quiet",
+    "Wait to see if more bruises appear next week",
+    "Photograph it on a personal phone for coworkers"
+   ],
+   "answer": 0,
+   "explain": "Possible signs of harm are reported at once to the supervisor and handled under the employer's policy and the reporting laws that apply. Asking siblings, waiting or sharing photos from a personal phone delays help and breaks confidentiality. The note records only what was observed.",
+   "topics": [
+    "session"
+   ]
+  },
+  {
+   "id": "rbt-e-s03",
+   "exam": "rbt",
+   "domain": "E",
+   "ref": "E.1",
+   "q": "A parent asks the technician to start a new toilet training program the parent read about online. What is the best response?",
+   "options": [
+    "Start it today since the parent requested it",
+    "Refuse and say the plan can never change",
+    "Pass the request on to the supervisor",
+    "Try it for a week and report the results"
+   ],
+   "answer": 2,
+   "explain": "The technician implements the plan the supervisor wrote and passes caregiver requests to that supervisor, who decides whether and how to add a program. Starting or trialing a program alone goes beyond the role, and refusing outright ignores a reasonable family request.",
+   "topics": [
+    "session"
+   ]
   }
  ]
 }

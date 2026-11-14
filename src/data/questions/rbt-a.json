@@ -296,6 +296,60 @@
    ],
    "answer": 1,
    "explain": "Supervisors change goals and procedures based on the data. Values filled in from memory are less accurate, so a skill may be marked mastered too early or a behavior plan judged ineffective when it was working. Record during or right after the session."
+  },
+  {
+   "id": "rbt-a-s01",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.3",
+   "q": "At the end of a work skills session, the technician counts the envelopes the learner stuffed and sealed in 20 minutes instead of watching each one being made. Which kind of measurement is this?",
+   "options": [
+    "Momentary time sampling",
+    "Permanent product recording",
+    "Whole interval recording",
+    "Latency recording"
+   ],
+   "answer": 1,
+   "explain": "Counting the lasting results of a behavior after it happened is permanent product recording. It works when each product reliably shows the behavior. Time sampling and interval recording need observation during the session, and latency times the delay before a response starts.",
+   "topics": [
+    "session"
+   ]
+  },
+  {
+   "id": "rbt-a-s02",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.8",
+   "q": "Halfway through a session the data sheet gets soaked and the marks can no longer be read. The technician roughly remembers how the trials went. How should the data be handled?",
+   "options": [
+    "Rebuild the sheet from memory so the graph has no gap",
+    "Copy the scores of the previous session into the sheet",
+    "Estimate an average and mark it as observed",
+    "Leave out the lost trials and note what happened"
+   ],
+   "answer": 3,
+   "explain": "Data filled in from memory, copied or estimated is unreliable and misleads the supervisor who makes decisions from the graph. The honest choice is to record only what was actually captured and write a short note explaining the loss, then tell the supervisor.",
+   "topics": [
+    "session"
+   ]
+  },
+  {
+   "id": "rbt-a-s03",
+   "exam": "rbt",
+   "domain": "A",
+   "ref": "A.7",
+   "q": "A learner's correct responses on a skill graph read 40%, 42%, 39%, 41% and 40% across five sessions. How should the technician describe this to the supervisor?",
+   "options": [
+    "An increasing trend",
+    "A decreasing trend",
+    "A stable level with little change",
+    "High variability between sessions"
+   ],
+   "answer": 2,
+   "explain": "The data points stay within a few points of 40% with no direction up or down, so the level is stable and variability is low. A trend needs a consistent rise or fall, and high variability means points that jump far apart.",
+   "topics": [
+    "session"
+   ]
   }
  ]
 }

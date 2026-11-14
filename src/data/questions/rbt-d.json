@@ -326,6 +326,60 @@
    ],
    "answer": 3,
    "explain": "Danger to the learner comes before any reduction procedure. Elopement plans usually describe safe responses. The technician acts as trained and the plan allows, then documents and reports to the supervisor. Extinction never applies to immediate danger."
+  },
+  {
+   "id": "rbt-d-s01",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.2",
+   "q": "Before asking a learner to clean up, the technician gives three quick requests the learner usually follows, such as a high five, and praises each one. What is this?",
+   "options": [
+    "Differential reinforcement of other behavior",
+    "Extinction",
+    "High probability request sequence",
+    "Response cost"
+   ],
+   "answer": 2,
+   "explain": "A high probability request sequence is an antecedent strategy: a few easy requests with reinforcement build momentum, and the harder request comes right after. DRO reinforces the absence of a behavior over time, extinction withholds a reinforcer, and response cost removes a reinforcer after behavior.",
+   "topics": [
+    "session"
+   ]
+  },
+  {
+   "id": "rbt-d-s02",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.1",
+   "q": "A learner covers their ears and hums loudly in an empty room, with or without anyone nearby and with no task given. Which function is most likely?",
+   "options": [
+    "Automatic reinforcement",
+    "Attention from adults",
+    "Escape from demands",
+    "Access to tangible items"
+   ],
+   "answer": 0,
+   "explain": "The behavior happens when no one is present and no demand is placed, so it does not depend on attention, escape or items given by others. That pattern points to automatic reinforcement, where the behavior produces its own sensory consequence. The supervisor confirms the function through assessment.",
+   "topics": [
+    "session"
+   ]
+  },
+  {
+   "id": "rbt-d-s03",
+   "exam": "rbt",
+   "domain": "D",
+   "ref": "D.6",
+   "q": "Weeks after a learner's tantrums for candy stopped under extinction, a tantrum suddenly appears again at the store checkout. What is this called?",
+   "options": [
+    "Extinction burst",
+    "Spontaneous recovery",
+    "Negative punishment",
+    "Stimulus generalization"
+   ],
+   "answer": 1,
+   "explain": "Spontaneous recovery is the brief return of a behavior after it had stopped during extinction, often in a familiar setting. If the behavior still produces no reinforcement, it fades again. An extinction burst is the increase at the start of extinction, not a return after a pause.",
+   "topics": [
+    "session"
+   ]
   }
  ]
 }

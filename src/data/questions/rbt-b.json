@@ -203,6 +203,60 @@
    ],
    "answer": 3,
    "explain": "Descriptive assessment observes behavior in natural settings without changing conditions, often with ABC recording. A functional analysis, by contrast, arranges test and control conditions on purpose."
+  },
+  {
+   "id": "rbt-b-s01",
+   "exam": "rbt",
+   "domain": "B",
+   "ref": "B.2",
+   "q": "During a skills assessment probe, the learner answers an item wrong. The supervisor's instructions say probes are run without prompts and without reinforcement for answers. What should the technician do?",
+   "options": [
+    "Model the right answer, then repeat the item",
+    "Record the response and present the next item",
+    "Give praise anyway so the learner stays motivated",
+    "Skip the item and come back to it at the end"
+   ],
+   "answer": 1,
+   "explain": "A probe measures what the learner can do on their own, so the technician follows the written conditions: record the response as it happened and move on. Modeling, praising answers or changing the order would change the conditions and make the result less accurate.",
+   "topics": [
+    "session"
+   ]
+  },
+  {
+   "id": "rbt-b-s02",
+   "exam": "rbt",
+   "domain": "B",
+   "ref": "B.3",
+   "q": "A learner hits a peer right after the teacher says it is time to put the toys away, and the teacher then lets the learner keep playing. In ABC terms, what is the teacher letting the learner keep playing?",
+   "options": [
+    "The antecedent",
+    "The behavior",
+    "The setting event",
+    "The consequence"
+   ],
+   "answer": 3,
+   "explain": "In an ABC record the antecedent comes just before the behavior (the instruction to clean up), the behavior is the hit, and the consequence is what follows it. Being allowed to keep playing follows the hit, so it is the consequence, and it may be maintaining the behavior.",
+   "topics": [
+    "session"
+   ]
+  },
+  {
+   "id": "rbt-b-s03",
+   "exam": "rbt",
+   "domain": "B",
+   "ref": "B.1",
+   "q": "Before a session, the technician gives a learner open access to six toys for five minutes and writes down how long the learner engages with each one. Which assessment is this?",
+   "options": [
+    "Free operant preference assessment",
+    "Paired stimulus preference assessment",
+    "Multiple stimulus without replacement",
+    "Functional analysis"
+   ],
+   "answer": 0,
+   "explain": "Free operant assessments let the learner move freely among items while the technician records time spent with each, with no trials and no items removed. Paired stimulus offers two items per trial, multiple stimulus asks the learner to pick from an array, and a functional analysis tests functions of problem behavior.",
+   "topics": [
+    "session"
+   ]
   }
  ]
 }

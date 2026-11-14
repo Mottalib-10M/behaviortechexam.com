@@ -239,6 +239,60 @@
    ],
    "answer": 3,
    "explain": "Cultural humility involves ongoing self-reflection, learning about each family's values, and raising biases in supervision so services stay respectful and effective. Ignoring a bias or imposing one's own practices does not serve the client."
+  },
+  {
+   "id": "rbt-f-s01",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.9",
+   "q": "A caregiver texts the technician late at night with several questions about the treatment plan. What is the most professional response?",
+   "options": [
+    "Answer each question in detail right away",
+    "Ignore every message from the caregiver",
+    "Give an opinion on whether the plan works",
+    "Refer plan questions to the supervisor in work hours"
+   ],
+   "answer": 3,
+   "explain": "Professional boundaries call for communication through the agreed channels and hours, and questions about the plan belong to the supervisor who designed it. Ignoring the family harms the relationship, and detailed answers or opinions about the plan go beyond the technician's role.",
+   "topics": [
+    "session"
+   ]
+  },
+  {
+   "id": "rbt-f-s02",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.10",
+   "q": "A family asks that no sessions be scheduled during a religious holiday the technician has never heard of. What reflects cultural humility?",
+   "options": [
+    "Ask the family about it and inform the supervisor",
+    "Keep the usual schedule because data matter most",
+    "Decide alone which holidays are important enough",
+    "Tell the family the request is not standard"
+   ],
+   "answer": 0,
+   "explain": "Cultural humility means learning from the family about what matters to them, respecting it, and involving the supervisor in any change to the schedule. Overriding the request, judging which holidays count or calling it nonstandard puts the technician's own view above the family's values.",
+   "topics": [
+    "session"
+   ]
+  },
+  {
+   "id": "rbt-f-s03",
+   "exam": "rbt",
+   "domain": "F",
+   "ref": "F.7",
+   "q": "A technician's cousin enrolls her child at the clinic, and the technician is assigned to the case. What should the technician do?",
+   "options": [
+    "Accept the case since they already know the child",
+    "Tell the supervisor about the relationship before starting",
+    "Work with the child but keep it from the team",
+    "Ask the cousin to keep the relationship private"
+   ],
+   "answer": 1,
+   "explain": "A family tie with a client is a multiple relationship that can affect objectivity. The technician discloses it to the supervisor before services start so the case can be reassigned or managed. Hiding it or relying on familiarity creates exactly the conflict the code seeks to avoid.",
+   "topics": [
+    "session"
+   ]
   }
  ]
 }

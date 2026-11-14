@@ -497,6 +497,78 @@
    "topics": [
     "reinforcement"
    ]
+  },
+  {
+   "id": "rbt-c-s01",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.2",
+   "q": "A technician wants praise to start working as a reinforcer for a new learner who does not respond to it yet. What is the usual procedure?",
+   "options": [
+    "Give praise alone, many times, before any snack is used",
+    "Pair praise with items the learner already values",
+    "Remove all snacks until the learner responds to praise",
+    "Use praise only after problem behavior stops"
+   ],
+   "answer": 1,
+   "explain": "A conditioned reinforcer gains its value by being paired with reinforcers that already work. Saying praise just before or while delivering a preferred item, many times, makes praise itself reinforcing. Praise alone has no value yet, and withholding snacks or tying praise to problem behavior does not build the pairing.",
+   "topics": [
+    "session"
+   ]
+  },
+  {
+   "id": "rbt-c-s02",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.8",
+   "q": "A learner greets the technician at the clinic every day but does not greet any other adult. Which step best promotes generalization?",
+   "options": [
+    "Practice greetings with several adults in different places",
+    "Run more greeting trials with the same technician",
+    "Stop reinforcing greetings to the technician",
+    "Teach a new skill and come back to greetings later"
+   ],
+   "answer": 0,
+   "explain": "Generalization is promoted by teaching across people, places and materials, so the skill comes under control of many cues rather than one technician. More trials with the same person strengthen the skill only in that context, and stopping reinforcement would weaken the greeting.",
+   "topics": [
+    "session"
+   ]
+  },
+  {
+   "id": "rbt-c-s03",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.6",
+   "q": "During a session, the learner touches the red card every time, whichever color the technician names. What is missing in the learner's responding?",
+   "options": [
+    "Generalization across settings",
+    "Maintenance over time",
+    "Motivation for the token board",
+    "Stimulus control by the spoken color name"
+   ],
+   "answer": 3,
+   "explain": "The learner responds the same way whatever the instruction, so the spoken color name does not control the choice. Discrimination training reinforces the right card only when its name is said, until each name reliably sets the occasion for touching its own card. Generalization and maintenance come after that.",
+   "topics": [
+    "session"
+   ]
+  },
+  {
+   "id": "rbt-c-s04",
+   "exam": "rbt",
+   "domain": "C",
+   "ref": "C.11",
+   "q": "In a token system, a learner has earned four of the five tokens needed when problem behavior occurs. The plan has no response cost. What should the technician do?",
+   "options": [
+    "Take back one token as a consequence",
+    "Give the backup reinforcer early to calm the learner",
+    "Keep the tokens and follow the written plan",
+    "Double the tokens needed for the next exchange"
+   ],
+   "answer": 2,
+   "explain": "Tokens already earned stay earned unless the plan includes response cost, which this one does not. The technician follows the plan as written for the problem behavior and reports it. Removing tokens, changing the exchange rate or giving the backup early are changes only the supervisor can make.",
+   "topics": [
+    "session"
+   ]
   }
  ]
 }
