@@ -93,6 +93,7 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
     if (!isMock) recordAnswer(q.id, i === q.answer);
   };
   const newSet = () => { if (isMock && !done && answeredN > 0 && !window.confirm('Start a new mock? Your answers to this one will be cleared.')) return; const s = Math.floor(Math.random() * 2 ** 31); if (!secondary) updateURL({ set: s }); draw(exam, domain, s); };
+  const endTest = () => { const open = n - answeredN; if (open > 0 && !window.confirm(answeredN ? `${open} question${open === 1 ? ' is' : 's are'} not answered yet. End the test and see your score on the ${answeredN} you answered?` : 'You have not answered any question yet. End the test anyway?')) return; setDone(true); };
   const byDomain = domainsOf(exam).map((d) => {
     const idx = counted.filter((i) => qs[i].domain === d.code);
     return { code: d.code, short: d.short, n: idx.length, r: idx.filter((i) => answers[i] === qs[i].answer).length };
@@ -116,17 +117,22 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
         <div className="rounded-lg border border-navy-300 bg-white">
           {isMock && !done && n > 0 && (
             <div data-chrono className="sticky top-16 z-10 flex flex-wrap items-center justify-between gap-x-3 gap-y-0.5 rounded-t-lg border-b border-navy-200 bg-navy-50 px-4 py-2 text-sm text-navy-800">
-              <span className="tabular-nums font-semibold">Time left {clock}{started.current == null ? ' (starts when you tap an answer)' : ''}</span>
+              {/* Before the first answer, a calm line, not a countdown: "Time left 79:00" scared testers (2026-11-14, tour 4). */}
+              {started.current == null ? <span className="text-navy-700">{mins} min to answer · the clock waits for your first answer</span> : <span className="tabular-nums font-semibold">Time left {clock}</span>}
               <span className="tabular-nums">{answeredN} of {n} answered</span>
             </div>
           )}
           <div className="flex flex-wrap items-center justify-between gap-2 border-b border-navy-200 px-4 py-2.5 text-sm text-navy-700">
             <span className="tabular-nums font-medium">{n ? `Question ${cur + 1} of ${n}` : LABEL(exam)}{q && <span className="font-normal text-navy-600"> · {domName(q.domain)}</span>}</span>
+            {/* Short quizzes: the start note sits in this line, so the first answer stays in the first screen (check-premier-ecran). */}
+            {!isMock && q && answeredN === 0 && <span data-consigne className="font-semibold text-accent-800">Tap an answer to start: each is corrected at once</span>}
           </div>
           <div className="p-4 sm:p-5">
             {loading && <p className="text-navy-700">Loading the questions…</p>}
             {!loading && empty && <p className="text-navy-700">No missed question is saved in this browser for the {LABEL(exam)} yet. Answer a practice set or a mock first: every question you miss comes back here until you get it right.</p>}
-            {q && !loading && (
+            {q && !loading && (<>
+              {/* Above question 1, not under the answers: testers did not know how to start (2026-11-14, tour 4). */}
+              {isMock && !done && answeredN === 0 && cur === 0 && <p data-consigne className="mb-3 rounded-md bg-accent-50 px-3 py-2 text-sm text-navy-800"><strong>Tap an answer to start.</strong> The clock starts then. Skip any question, flag it to come back, and tap “End test and see my score” whenever you want your corrections.</p>}
               <fieldset>
                 <legend className="text-lg font-semibold leading-snug text-navy-900">{q.q}</legend>
                 <div className="mt-4 grid gap-2">
@@ -145,14 +151,16 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
                 {a !== null && !reveal && <p className="mt-3 text-sm text-navy-700">Answer saved. As on the real exam, the corrections come when you end the test.</p>}
                 <div className="mt-4 grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
                   {cur > 0 && <button type="button" onClick={() => setCur(cur - 1)} className="h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 border border-navy-300 px-3 font-medium text-navy-800 hover:bg-navy-50">Back</button>}
-                  {cur < n - 1 && <button type="button" onClick={() => setCur(cur + 1)} className="h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 bg-accent-700 px-3 font-semibold text-white hover:bg-accent-800">Next question</button>}
-                  {isMock && !done && answeredN > 0 && <button type="button" onClick={() => setDone(true)} className="h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 border border-accent-700 px-3 font-semibold text-accent-800 hover:bg-accent-50">Finish and mark</button>}
-                  {!isMock && <button type="button" onClick={newSet} className="h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 border border-navy-300 px-3 font-medium text-navy-800 hover:bg-navy-50">New questions</button>}
+                  {/* No answer yet: a quiet "Skip for now", not a dark button that looks like the way to start (2026-11-14, tour 4). */}
+                  {cur < n - 1 && (a === null
+                    ? <button type="button" onClick={() => setCur(cur + 1)} className="h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 border border-navy-300 bg-white px-3 font-medium text-navy-700 hover:bg-navy-50">Skip for now</button>
+                    : <button type="button" onClick={() => setCur(cur + 1)} className="h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 bg-accent-700 px-3 font-semibold text-white hover:bg-accent-800">Next question</button>)}
                   {isMock && !done && <button type="button" onClick={() => setFlags((f) => f.map((v, j) => (j === cur ? !v : v)))} aria-pressed={flags[cur]} title="Marks this question so you can find it again in the question map" className={`h-12 whitespace-nowrap rounded-lg text-[15px] sm:px-4 border px-3 font-medium ${flags[cur] ? 'border-amber-700 bg-amber-50 text-amber-900' : 'border-navy-300 bg-white text-navy-800 hover:bg-navy-50'}`}>{flags[cur] ? 'Flagged' : 'Flag for later'}</button>}
+                  {isMock && !done && <button type="button" onClick={endTest} className="col-span-2 h-12 rounded-lg text-[15px] sm:px-4 border border-accent-700 px-3 font-semibold text-accent-800 hover:bg-accent-50">End test and see my score</button>}
                 </div>
-                {isMock && !done && a === null && cur === 0 && answeredN === 0 && <p className="mt-3 text-sm text-navy-700">Tap the answer you think is right: the clock starts then. You can skip a question, flag it to come back to it, and you see every correction when you end the test.</p>}
+                {!isMock && <button type="button" onClick={newSet} className="mt-3 block text-sm font-medium text-navy-700 underline underline-offset-2 hover:text-navy-900">Start a new set of {size} questions</button>}
               </fieldset>
-            )}
+            </>)}
           </div>
           {isMock && n > 1 && (
             <div className="border-t border-navy-200 px-4 py-3">
@@ -188,7 +196,7 @@ export default function Quiz({ exam: e0, mode = 'practice', domain: d0 = null, t
           <p className={`mt-3 text-base font-semibold ${tone}`}>{status}</p>
         </>) : <p className="mt-1 text-lg font-semibold text-navy-900">Your score shows here once you answer</p>}
         <table className="mt-2 w-full text-sm"><tbody className="divide-y divide-navy-200">
-          <tr><td className="py-1.5 text-navy-700">Study target: {target} of {counted.length || 0} (at least {Math.round(x.target * 100)}%), set by this site, not an official passing score</td></tr>
+          <tr><td className="py-1.5 text-navy-700">Study target: {target} of {counted.length || 0} right ({Math.round(x.target * 100)}%{Math.abs(target - x.target * counted.length) > 1e-9 ? ', rounded up' : ''}), set by this site, not an official passing score</td></tr>
           {isMock && <tr><td className="tabular-nums py-1.5 text-navy-700">Time left: {clock} of {mins} min</td></tr>}
           {isMock && <tr><td className="py-1.5 text-navy-700">{x.passText}</td></tr>}
         </tbody></table>

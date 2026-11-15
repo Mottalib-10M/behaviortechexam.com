@@ -21,7 +21,7 @@ export default definePage({
     body: (h) => `
 <h2>How this RBT practice test works</h2>
 <p>Pick a domain in the list above the question, or leave it on all domains for a mixed set. Each question has four options. As soon as you answer, the right option turns green, a short explanation says why it is right and why the tempting wrong options are wrong, and the outline task appears under it. The panel on the side counts right answers and shows how far you are from the study target of ${h.pc(h.X('rbt').target)}. That target is ours: the board reports a pass or a fail, and it does not publish its passing standard as a number of right answers.</p>
-<p>New questions come from the same domain until you change it. A shared link with the set number replays the same questions, which is handy for a study partner or a trainer who wants a group to discuss the same ten.</p>
+<p>A new set comes from the same domain until you change it. A shared link with the set number replays the same questions, which is handy for a study partner or a trainer who wants a group to discuss the same ten.</p>
 <h2>The six domains and how much each one weighs</h2>
 ${h.outline('rbt', `Scored questions per domain, ${h.X('rbt').editionLabel}. ${h.X('rbt').unscored} trial questions that do not count are added on the real exam.`)}
 <p>The weights tell you where to spend time. Skill acquisition and behavior reduction together make up ${h.dom('rbt', 'C').items + h.dom('rbt', 'D').items} of the ${h.X('rbt').scored} scored questions, so prompting, discrete trials, reinforcement and extinction come up again and again. Behavior assessment is the smallest domain with ${h.dom('rbt', 'B').items} questions, mostly on preference assessments and on the technician's part in functional assessment.</p>

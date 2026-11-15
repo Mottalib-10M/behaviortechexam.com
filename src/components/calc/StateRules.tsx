@@ -42,7 +42,7 @@ export default function StateRules({ state: s0 = 'Washington', idPrefix = 'sr', 
         {headline === 'total' ? (<>
           <p className="text-sm font-medium text-navy-700">{name}: total fees for a first attempt</p>
           <p className="tabular-nums mt-1 text-4xl font-bold text-navy-900">{money(cost.total)}</p>
-          <p className="text-sm text-navy-700">{tech ? `includes the ${money(tech.techFee)} ${name} state fee${tech.techRenewal ? `, then ${money(tech.techRenewal)} per state renewal${tech.techRenewalYears === 1 ? ', every year' : ''}` : ''}` : 'national RBT fees only: no state fee for technicians'}</p>
+          <p className="text-sm text-navy-700">{tech ? `includes ${st?.techBackgroundFee ? `${money(tech.techFee + st.techBackgroundFee)} of ${name} fees (${money(tech.techFee)} state fee + ${money(st.techBackgroundFee)} state background check)` : `the ${money(tech.techFee)} ${name} state fee`}${tech.techRenewal ? `, then ${money(tech.techRenewal)} per state renewal${tech.techRenewalYears === 1 ? ', every year' : ''}` : ''}` : 'national RBT fees only: no state fee for technicians'}</p>
         </>) : (<>
           <p className="text-sm font-medium text-navy-700">{name}: state fee for a technician</p>
           <p className="tabular-nums mt-1 text-4xl font-bold text-navy-900">{tech ? money(tech.techFee) : money(0)}</p>

@@ -175,7 +175,7 @@ const SPECS: Record<string, () => MiniSpec> = {
       const f = fieldwork(v.s ?? 0, v.c ?? 0, v.m ?? 0);
       return {
         head: ['Months to go', f.months == null ? 'Too few hours a month' : n0(f.months)],
-        rows: [['Hours still needed', n0(Math.ceil(f.left))], [`Hours already counted toward the ${n0(BCBA.fieldworkSupervised)}`, n0(Math.round(f.credit))], ['Hands-off work you need, such as writing plans or analyzing data', `at least ${n0(f.unrestrictedMin)} h (${pct(BCBA.unrestrictedShare)} of your hours)`]],
+        rows: [['Hours still needed', n0(Math.ceil(f.left))], [`Hours already counted toward the ${n0(BCBA.fieldworkSupervised)}`, n0(Math.round(f.credit))], ['Hands-off work you need, such as writing plans or analyzing data', `at least ${n0(f.unrestrictedMin)} h (${pct(BCBA.unrestrictedShare)} of the ${n0(BCBA.fieldworkSupervised)} total)`]],
         alert: f.tooFew ? `Months under ${BCBA.monthMinHours} hours do not count` : f.capped ? `Only ${BCBA.monthMaxHours} hours a month can count` : undefined,
         note: `Each concentrated hour counts ${BCBA.concentratedMultiplier} regular hours toward the ${n0(BCBA.fieldworkSupervised)}-hour total (BCBA Handbook). The handbook calls the hands-off work “unrestricted activities”.`,
       };
@@ -259,14 +259,15 @@ const SPECS: Record<string, () => MiniSpec> = {
     },
   }),
   bcbadomains: () => ({
-    title: 'Studying from your own course questions? How many to take from each BCBA domain', cta: 'BCBA practice',
+    title: 'Making your own BCBA practice set? How many questions to pick from each domain so it matches the real exam', cta: 'BCBA practice',
     exemple: (v) => `Example for a set of ${n0(v.n ?? 0)} questions`,
     inputs: [{ id: 'n', label: 'Questions in the set you plan', def: 20, max: 400 }],
     run: (v) => {
       const n = clamp(Math.round(v.n ?? 20), 1, 400);
       const s = splitByDomain('bcba', n);
       const t = topOfSplit('bcba', s);
-      return { head: [t.tied.length > 1 ? 'Take the most questions from' : 'Most questions', topLabel(t)], rows: s.map((d) => [`${d.code}. ${d.short}`, n0(d.n)] as [string, string]), note: `Split in proportion to the ${BCBA.scored} scored questions of the BCBA exam plan (6th ed.), so your set has the same mix as the exam.${t.tied.length > 1 ? ' In a set this small, several domains get the same count.' : ''} On the real exam, the biggest domain is ${t.official.code}. ${t.official.short}, with ${t.official.items} of the ${BCBA.scored}. Use it to pick questions from your course materials: this site's BCBA bank is only a sample.` };
+      // The domain list is the answer; a long tie label in large type read as a headline (2026-11-14, tour 4).
+      return { head: ['Most from any one domain', plural(t.max, 'question')], rows: [[t.tied.length > 1 ? 'Domains with the most' : 'Domain with the most', topLabel(t)] as [string, string], ...s.map((d) => [`${d.code}. ${d.short}`, n0(d.n)] as [string, string])], note: `Split in proportion to the ${BCBA.scored} scored questions of the BCBA exam plan (6th ed.), so your set has the same mix as the exam.${t.tied.length > 1 ? ' In a set this small, several domains get the same count.' : ''} On the real exam, the biggest domain is ${t.official.code}. ${t.official.short}, with ${t.official.items} of the ${BCBA.scored}. Use it to pick questions from your course materials: this site's BCBA bank is only a sample.` };
     },
   }),
   timeline: () => ({

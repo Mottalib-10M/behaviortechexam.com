@@ -11,10 +11,10 @@ const GROUP_SHORT: Record<Group, string> = { practice: 'Practice exams', domains
 const GROUP_LABEL: Record<Group, string> = { practice: 'Practice exams and mocks', domains: 'Practice by outline domain', topics: 'Practice by topic', become: 'Becoming certified: steps, cost, training', states: 'Rules and fees by state', maintain: 'Keeping the certification', bcba: 'BCBA exam: the analyst level above RBT', plan: 'Study plan and review' };
 /** Menu labels of the practice pages: what sets each one apart, not its search name (eight near-synonyms confused all three testers, 2026-11-14, tour 3). The footer keeps the page names. */
 const PRACTICE_MENU: Array<[string, string]> = [
-  ['rbt-mock-exam', `Second timed mock, ${SCORED} questions (another draw)`],
+  ['rbt-mock-exam', `Another timed mock: ${SCORED} questions picked at random`],
   ['registered-behavior-technician-practice-exam', 'Quick check: 25 mixed questions'],
   ['rbt-practice-test', '10 questions at a time, mixed or by domain'],
-  ['rbt-practice-questions', '8 questions set in a real session'],
+  ['rbt-practice-questions', '8 questions on scenes from a therapy session'],
   ['rbt-exam-questions', 'Read mode: every question with its answer'],
   ['rbt-passing-score', 'What score do I need?'],
   ['rbt-exam', 'How the real exam works: time, fees, retakes'],
