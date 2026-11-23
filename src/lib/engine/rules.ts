@@ -41,8 +41,10 @@ export function supervision(hoursOfService: number) {
 }
 
 /** BCBA fieldwork: hours still needed, mixing supervised (2,000) and concentrated (1,500, × 1.33) hours. */
-export function fieldwork(supervisedDone: number, concentratedDone: number, hoursPerMonth: number) {
-  const x = examOf('bcba') as unknown as { fieldworkSupervised: number; fieldworkConcentrated: number; concentratedMultiplier: number; monthMinHours: number; monthMaxHours: number; unrestrictedShare: number };
+export function fieldwork(supervisedDone: number, concentratedDone: number, hoursPerMonth: number, rules: 2026 | 2027 = 2026) {
+  const b = examOf('bcba') as unknown as { fieldworkSupervised: number; fieldworkConcentrated: number; concentratedMultiplier: number; monthMinHours: number; monthMaxHours: number; unrestrictedShare: number };
+  // 2027 BCBA requirements: same hour totals, monthly ceiling raised (P.bcba2027.monthMaxHours).
+  const x = rules === 2027 ? { ...b, monthMinHours: P.bcba2027.monthMinHours, monthMaxHours: P.bcba2027.monthMaxHours } : b;
   const perMonth = Math.min(Math.max(0, hoursPerMonth), x.monthMaxHours);
   const credit = Math.max(0, supervisedDone) + Math.max(0, concentratedDone) * x.concentratedMultiplier;
   const left = Math.max(0, x.fieldworkSupervised - credit);

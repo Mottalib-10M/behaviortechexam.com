@@ -15,6 +15,7 @@ const plural = (k: number, w: string) => `${n0(k)} ${w}${k === 1 ? '' : 's'}`;
 const R = P.rules;
 const RBT = examOf('rbt');
 const BCBA = examOf('bcba');
+const P27 = P.bcba2027;
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const MONTH_OPT = MONTHS.map((m, i) => ({ value: String(i + 1), label: m }));
 const YEAR_OPT = [2024, 2025, 2026, 2027].map((y) => ({ value: String(y), label: String(y) }));
@@ -181,6 +182,25 @@ const SPECS: Record<string, () => MiniSpec> = {
       };
     },
   }),
+  field27: () => ({
+    title: 'BCBA fieldwork: months left under the 2022 and 2027 rules', cta: 'BCBA requirements 2027',
+    exemple: (v) => `Example for ${n0(v.s ?? 0)} supervised and ${n0(v.c ?? 0)} concentrated hours done, ${n0(v.m ?? 0)} hours a month`,
+    inputs: [
+      { id: 's', label: 'Supervised fieldwork hours done', def: 600, unit: 'h', max: 2000 },
+      { id: 'c', label: 'Concentrated hours done', def: 0, unit: 'h', max: 1500, help: 'Hours supervised at 7.5% count as concentrated under the 2027 rules only' },
+      { id: 'm', label: 'Hours you can log a month', def: 150, unit: 'h', max: 200 },
+    ],
+    run: (v) => {
+      const a = fieldwork(v.s ?? 0, v.c ?? 0, v.m ?? 0), b = fieldwork(v.s ?? 0, v.c ?? 0, v.m ?? 0, 2027);
+      const mo = (x: typeof a) => (x.months == null ? 'too few hours a month' : plural(x.months, 'month'));
+      return {
+        head: ['Months to go, 2027 rules', b.months == null ? 'Too few hours a month' : n0(b.months)],
+        rows: [['Months to go, 2022 rules (application before 2027)', mo(a)], ['Hours that count a month, 2022 / 2027', `${n0(a.perMonth)} / ${n0(b.perMonth)}`], ['Hours still needed', n0(Math.ceil(b.left))]],
+        alert: b.capped ? `Only ${P27.monthMaxHours} hours a month can count under the 2027 rules` : b.tooFew ? `Months under ${P27.monthMinHours} hours do not count` : undefined,
+        note: `2027 BCBA Requirements: ${P27.monthMinHours} to ${P27.monthMaxHours} hours a month from January 1, 2027, against ${BCBA.monthMinHours} to ${BCBA.monthMaxHours} before. Same ${n0(P27.fieldworkSupervised)}-hour total.`,
+      };
+    },
+  }),
   bcbacost: () => ({
     title: 'BCBA exam cost', cta: 'BCBA exam format',
     exemple: (v) => `Example for ${plural(Math.round(v.a ?? 1), 'attempt')}`,
@@ -300,6 +320,6 @@ export const SPEC_IDS = Object.keys(SPECS);
 /** Page each calculator's link goes to (Tool.astro reads it). */
 export const CTA_PAGE: Record<string, string> = {
   cost: 'rbt-certification-cost', supervision: 'rbt-supervision', retake: 'rbt-exam-retake', reschedule: 'rbt-exam-scheduling', training: 'rbt-40-hour-training',
-  application: 'how-to-become-an-rbt', recert: 'rbt-renewal', readiness: 'rbt-mock-exam', pace: 'rbt-study-plan', fieldwork: 'bcba-fieldwork-hours', fieldpace: 'bcba-fieldwork-hours', bcbaretake: 'bcba-exam', bcbacost: 'bcba-exam',
+  application: 'how-to-become-an-rbt', recert: 'rbt-renewal', readiness: 'rbt-mock-exam', pace: 'rbt-study-plan', fieldwork: 'bcba-fieldwork-hours', fieldpace: 'bcba-fieldwork-hours', field27: 'bcba-requirements-2027', bcbaretake: 'bcba-exam', bcbacost: 'bcba-exam',
   passrate: 'rbt-pass-rates', domains: 'rbt-exam-questions', bcbadomains: 'bcba-practice-test', timeline: 'how-to-become-an-rbt',
 };

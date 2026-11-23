@@ -72,6 +72,11 @@ describe('rules', () => {
     expect(fieldwork(0, 0, 10).months).toBeNull();
     expect(fieldwork(0, 0, 200).capped).toBe(true);
     expect(fieldwork(2000, 0, 100).left).toBe(0);
+    // 2027 BCBA Requirements: 20 to 160 hours a month (1,400 left at 150 a month: 10 months, against 11 at the 130 cap).
+    expect(fieldwork(600, 0, 150, 2027).months).toBe(10);
+    expect(fieldwork(600, 0, 150).months).toBe(11);
+    expect(fieldwork(0, 0, 170, 2027).capped).toBe(true);
+    expect(fieldwork(0, 0, 150, 2027).capped).toBe(false);
   });
   it('40-hour training pace', () => {
     expect(trainingPlan(10).days).toBe(28);

@@ -71,6 +71,18 @@
     "en": "BACB, BCBA Handbook (updated 11/2026): pathways, fieldwork, fees, examination outline"
    }
   },
+  "bcba_2027": {
+   "url": "https://www.bacb.com/bcba-2027-requirements",
+   "label": {
+    "en": "BACB, 2027 BCBA Requirements (updated 02/2026): two pathways, fieldwork, continuing education from January 1, 2027"
+   }
+  },
+  "bacb_changes": {
+   "url": "https://www.bacb.com/upcoming-changes/",
+   "label": {
+    "en": "BACB, Recent and upcoming changes to BACB requirements"
+   }
+  },
   "bcba_tco": {
    "url": "https://www.bacb.com/wp-content/bcba-outline-6thEd/",
    "label": {
@@ -348,6 +360,27 @@
     }
    ]
   }
+ },
+ "bcba2027": {
+  "_source": "BACB, 2027 BCBA Requirements, updated 02/2026, read 2026-11-23: from January 1, 2027, Pathway 1 (accredited or recognized program) and Pathway 2 (behavior-analytic coursework) only; Pathways 3 and 4 discontinued (upcoming-changes page); Pathway 2 removal planned for 2032. Fieldwork: 2,000 supervised or 1,500 concentrated hours; 20 to 160 hours per supervisory period; supervision 5% or 7.5%; observations 60 or 90 minutes cumulative per period; at least 50% individual supervision; at least 60% unrestricted. Exam: BCBA TCO 6th ed. Maintenance: recertification every two years, 32 CEUs per cycle including 4 ethics and 4 supervision (supervisors).",
+  "from": "2027-01-01",
+  "pathways": 2,
+  "pathway2RemovedIn": 2032,
+  "coursework": 315,
+  "fieldworkSupervised": 2000,
+  "fieldworkConcentrated": 1500,
+  "monthMinHours": 20,
+  "monthMaxHours": 160,
+  "supervisionShare": 0.05,
+  "supervisionShareConcentrated": 0.075,
+  "observationMinutes": 60,
+  "observationMinutesConcentrated": 90,
+  "individualShareMin": 0.5,
+  "unrestrictedShare": 0.6,
+  "ceus": 32,
+  "ceusEthics": 4,
+  "ceusSupervision": 4,
+  "cycleYears": 2
  },
  "rules": {
   "eligibility": {
